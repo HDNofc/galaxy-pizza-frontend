@@ -18,6 +18,8 @@ const colors = {
   buttonColorFocus: '#0262ad',
   buttonColorActive: '#60a7de',
   buttonColorTextActive: '#0e79cb',
+
+  radioColorTextFocus: '#0262ad',
 };
 
 const media = {
