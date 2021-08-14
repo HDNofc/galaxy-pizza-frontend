@@ -32,10 +32,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server --watch public/db.json --port=3011"
+    "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3011",
+  "engines": {
+    "node": "14.x"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
