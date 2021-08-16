@@ -49,11 +49,11 @@ const PizzaBlockContainer = (props: PizzaBlockContainerProps): React.ReactElemen
     setPizzaTypesWithRadioId(pizzaItem);
     setInitialPizzaBlockData(pizzaTypesWithRadioId.current);
     setInitialImage(pizzaItem);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     updateAllPizzaData();
-  }, [currentDoughValue, currentSize, currentStuffedCrust]);
+  }, [currentDoughValue, currentSize, currentStuffedCrust]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const setPizzaTypesWithRadioId = (pizzaData: IPizza) => {
     const pizzaDataWithRadioId: any = {}; // TODO Типизировать

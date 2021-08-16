@@ -1,19 +1,19 @@
 import styled from 'styled-components/macro';
 import { StyledPizzaBlock } from '../pizza-block/styles';
 
-interface IStyledPizzaLayout {}
+interface IStyledPizzaSection {}
 
-export const StyledPizzaLayout = styled.section<IStyledPizzaLayout>`
-  display: flex;
-  flex-direction: column;
-
+export const StyledPizzaSection = styled.section<IStyledPizzaSection>`
+  display: grid;
+  /* flex-direction: column; */
+  /*
   @media ${(props) => props.theme.media.desktop} {
     flex-direction: row;
-  }
+  } */
 
-  > ${StyledPizzaBlock} {
+  /* > ${StyledPizzaBlock} {
     &:not(:last-of-type) {
       margin-bottom: 8px;
     }
-  }
+  } */
 `;

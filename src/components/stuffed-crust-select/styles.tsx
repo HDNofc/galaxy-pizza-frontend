@@ -1,6 +1,6 @@
 import { StylesConfig } from 'react-select';
 import styled from 'styled-components/macro';
-import { IReactSelectOption, IsMulti } from './index';
+import { IReactSelectOption, IsMulti } from './stuffed-crust-select';
 
 import crustIcon from './icons/crust-icon.svg';
 import selectedItemIcon from './icons/selected-icon.svg';

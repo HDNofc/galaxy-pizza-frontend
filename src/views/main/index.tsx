@@ -4,7 +4,7 @@ import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { RootState } from 'redux/store/store';
 import { fetchPizzas } from 'redux/actions/pizzas';
 
-import PizzasLayout from 'components/pizzas-layout';
+import PizzasSection from 'components/pizzas-section';
 import MainLayout from 'components/main-layout/index';
 
 const Main = () => {
@@ -18,7 +18,7 @@ const Main = () => {
     dispatch(fetchPizzas());
   }, [dispatch]);
 
-  return <MainLayout>{items && <PizzasLayout pizzas={items} />}</MainLayout>;
+  return <MainLayout>{items && <PizzasSection pizzas={items} />}</MainLayout>;
 };
 
 export default Main;

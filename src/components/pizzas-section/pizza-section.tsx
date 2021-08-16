@@ -1,17 +1,17 @@
 import { IPizza } from '../../redux/store/types';
 import PizzaBlockContainer from '../pizza-block-container';
-import { StyledPizzaLayout } from './styles';
+import { StyledPizzaSection } from './styles';
 
-interface IPizzasLayoutProps {
+interface IPizzasSectionProps {
   pizzas: IPizza[];
 }
 
-const PizzasLayout: React.FC<IPizzasLayoutProps> = ({ pizzas }): React.ReactElement => {
+const PizzasSection = ({ pizzas }: IPizzasSectionProps): React.ReactElement => {
   return (
-    <StyledPizzaLayout>
+    <StyledPizzaSection>
       {pizzas && pizzas.map((pizza) => <PizzaBlockContainer key={pizza._id} pizzaItem={pizza} />)}
-    </StyledPizzaLayout>
+    </StyledPizzaSection>
   );
 };
 
-export default PizzasLayout;
+export default PizzasSection;

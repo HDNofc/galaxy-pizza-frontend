@@ -1,12 +1,12 @@
 import { ButtonText, StyledButton } from './styles';
 
-type ButtonProps = {
+interface ButtonProps {
   children?: React.ReactNode;
   text?: string;
   type?: 'submit' | 'reset' | 'button';
   onClick?(e: React.MouseEvent<HTMLButtonElement>): void;
   standard?: boolean;
-};
+}
 
 const Button = ({
   children = null,

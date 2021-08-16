@@ -25,13 +25,14 @@ export interface IReactSelectOption {
 export type IsMulti = false;
 
 const StuffedCrustSelect = (props: IStuffedCrustSelectProps): React.ReactElement => {
-  const { onChange, selectedStuffedCrust, stuffedCrusts } = props;
+  const { onChange, stuffedCrusts } = props;
 
   const availableOptions = (stuffedCrusts: IStuffedCrustSelectProps['stuffedCrusts']) => {
     const availableCrusts = DOUGH_STUFFED_CRUSTS.filter((crust) => {
       if (stuffedCrusts.includes(crust.value)) {
         return crust;
       }
+      return false;
     });
 
     return doughStuffedCrusts(availableCrusts);
