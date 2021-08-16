@@ -38,4 +38,5 @@ export interface IPizza {
 
 export interface IPizzasInitialState {
   items: IPizza[];
+  isLoaded: boolean;
 }
