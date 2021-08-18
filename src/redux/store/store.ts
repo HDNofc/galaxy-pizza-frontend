@@ -10,13 +10,19 @@ declare global {
   }
 }
 
+const middleware =
+  process.env.NODE_ENV !== 'production'
+    ? [
+        require('redux-immutable-state-invariant').default(),
+        thunk,
+        save({ namespace: 'pizza-cart' }),
+      ]
+    : [thunk, save({ namespace: 'pizza-cart' })];
+
 const composeEnhancers =
   (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
-const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(thunk, save({ namespace: 'pizza-cart' })))
-);
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(...middleware)));
 
 export default store;
 

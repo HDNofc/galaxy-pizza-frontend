@@ -67,6 +67,7 @@
     "@types/lodash": "4.14.172",
     "@types/react-select": "4.0.17",
     "@types/styled-components": "5.1.11",
-    "jest-styled-components": "7.0.5"
+    "jest-styled-components": "7.0.5",
+    "redux-immutable-state-invariant": "2.1.0"
   }
 }
