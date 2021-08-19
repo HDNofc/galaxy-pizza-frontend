@@ -15,4 +15,9 @@ export default createGlobalStyle`
   body {
     font-family: 'Open Sans', arial, helvetica, sans-serif;
   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;

@@ -39,6 +39,7 @@ interface IPizzaBlockProps {
   }) => void;
   onSizeChange: (radioOption: { id: string; value: string | number; checked: boolean }) => void;
   onStuffedCrustChange: (selectedCrust: string) => void;
+  onAddToCartClick: () => void;
   hot: boolean;
   vegan: boolean;
 }
@@ -60,6 +61,7 @@ const PizzaBlock = (props: IPizzaBlockProps): React.ReactElement => {
     onDoughTypeChange,
     onSizeChange,
     onStuffedCrustChange,
+    onAddToCartClick,
     ...otherProps
   } = props;
 
@@ -92,7 +94,7 @@ const PizzaBlock = (props: IPizzaBlockProps): React.ReactElement => {
         </Type>
 
         <ProductPurchase>
-          <AddToCart text="В корзину" standard />
+          <AddToCart text="В корзину" onClick={onAddToCartClick} standard />
           <Price>{`${price} ₽`}</Price>
         </ProductPurchase>
       </PizzaInfo>

@@ -19,6 +19,13 @@ const colors = {
   buttonColorActive: '#60a7de',
   buttonColorTextActive: '#0e79cb',
 
+  buttonColorReverse: 'transparent',
+  buttonColorReverseFocus: 'transparent',
+  buttonColorReverseActive: 'transparent',
+  buttonColorTextReverse: '#60a7de',
+  buttonColorTextReverseFocus: '#0262ad',
+  buttonColorTextReverseActive: '#60a7de',
+
   radioColorTextFocus: '#0262ad',
 };
 

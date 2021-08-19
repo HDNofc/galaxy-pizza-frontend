@@ -1,16 +1,18 @@
-import PizzaBlock from 'components/pizza-block';
-
-import { IPizza, IPizzaCrustTypes, IPizzaDoughTypes } from 'redux/store/types';
+import { uniqueId } from 'lodash';
 import { useEffect, useRef, useState } from 'react';
+
+import PizzaBlock from 'components/pizza-block';
+import { IPizza, IPizzaCrustTypes, IPizzaDoughTypes } from 'redux/store/types';
 import { IRadioItem } from 'components/radio-group';
 import { IPizzaImageUrl } from 'components/pizza-block';
 
-import { uniqueId } from 'lodash';
+import { Dispatch } from 'redux';
+import { useAppDispatch } from 'redux/hooks';
+import { addPizzaToCart } from 'redux/cart/action';
 
 const PIZZA_DOUGH_NAMES = ['Традиционное', 'Тонкое'];
 
 interface PizzaBlockContainerProps {
-  mix?: string | string[];
   pizzaItem: IPizza;
 }
 
@@ -27,6 +29,8 @@ type IFormattedPizzaTypes = {
 
 const PizzaBlockContainer = (props: PizzaBlockContainerProps): React.ReactElement => {
   const { pizzaItem } = props;
+
+  const dispatch: Dispatch<any> = useAppDispatch();
 
   const pizzaTypesWithRadioId = useRef<IFormattedPizzaTypes>({} as IFormattedPizzaTypes);
 
@@ -150,6 +154,26 @@ const PizzaBlockContainer = (props: PizzaBlockContainerProps): React.ReactElemen
     setDoughTypes(updatedArray);
   };
 
+  const onAddToCartClick = () => {
+    const { _id, name, description, imageUrl } = pizzaItem;
+
+    const pizzaToCartObject = {
+      _dbId: _id,
+      cartId: uniqueId('cart-'),
+
+      name,
+      description,
+      price: currentPrice,
+      size: currentSize,
+      dough: currentDoughValue,
+      crust: currentStuffedCrust,
+      imageUrl: imageUrl[currentDoughValue],
+      amount: 1,
+    };
+
+    dispatch(addPizzaToCart(pizzaToCartObject));
+  };
+
   const updateImage = () => {
     const newImage = pizzaItem.imageUrl[currentDoughValue]?.full;
     if (newImage) {
@@ -262,6 +286,7 @@ const PizzaBlockContainer = (props: PizzaBlockContainerProps): React.ReactElemen
       onSizeChange={onSizeChange}
       onStuffedCrustChange={onStuffedCrustChange}
       isStuffedCrustAvailable={isStuffedCrustAvailable}
+      onAddToCartClick={onAddToCartClick}
     />
   );
 };

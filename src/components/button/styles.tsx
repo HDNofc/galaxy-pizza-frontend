@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components/macro';
+import { StyledCounter } from '../counter/styles';
 
 interface IButtonProps {
   standard?: boolean;
@@ -45,6 +46,7 @@ export const StyledButton = styled.button<IButtonProps>`
         background-color: ${(props) => props.theme.colors.buttonColorActive};
       }
     `}
+
   ${({ link }) =>
     link &&
     css`
@@ -81,6 +83,12 @@ export const StyledButton = styled.button<IButtonProps>`
         height: auto;
       }
     `}
+
+  ${StyledCounter} > & {
+    padding: 6px;
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 export const ButtonText = styled.span``;
