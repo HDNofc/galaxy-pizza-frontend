@@ -115,7 +115,7 @@ const PizzaBlockContainer = (props: PizzaBlockContainerProps): React.ReactElemen
     const doughTypes = Object.keys(pizzaData.types);
     const currentDoughType = doughTypes[0] as IPizzaDoughTypes;
 
-    const currentImg = pizzaData.imageUrl[currentDoughType]?.full;
+    const currentImg = pizzaData.imageUrl[currentDoughType]?.crop;
     if (currentImg) {
       setCurrentImage(currentImg);
     }
@@ -175,7 +175,7 @@ const PizzaBlockContainer = (props: PizzaBlockContainerProps): React.ReactElemen
   };
 
   const updateImage = () => {
-    const newImage = pizzaItem.imageUrl[currentDoughValue]?.full;
+    const newImage = pizzaItem.imageUrl[currentDoughValue]?.crop;
     if (newImage) {
       setCurrentImage(newImage);
     }
