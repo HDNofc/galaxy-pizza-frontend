@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components/macro';
 
 interface IButtonProps {
   standard?: boolean;
+  link?: boolean;
+  onlyIcon?: boolean;
 }
 
 export const StyledButton = styled.button<IButtonProps>`
@@ -41,6 +43,42 @@ export const StyledButton = styled.button<IButtonProps>`
       &:active {
         color: ${(props) => props.theme.colors.buttonColorTextActive};
         background-color: ${(props) => props.theme.colors.buttonColorActive};
+      }
+    `}
+  ${({ link }) =>
+    link &&
+    css`
+      color: ${(props) => props.theme.colors.buttonColorTextReverse};
+
+      > ${ButtonText} {
+        display: inline-flex;
+      }
+
+      &:focus,
+      &:hover {
+        color: ${(props) => props.theme.colors.buttonColorTextReverseFocus};
+      }
+
+      &:active {
+        color: ${(props) => props.theme.colors.buttonColorTextReverseActive};
+      }
+    `}
+
+    ${({ onlyIcon }) =>
+    onlyIcon &&
+    css`
+      padding: 2px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      > ${ButtonText} {
+        ${(props) => props.theme.mixins.visuallyHidden}
+      }
+
+      > svg {
+        width: 100%;
+        height: auto;
       }
     `}
 `;
