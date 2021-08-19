@@ -9,6 +9,7 @@ module.exports = {
       rules: {
         'react/jsx-pascal-case': 'off',
         'no-else-return': 'error',
+        'no-case-declarations': 'error',
         'prefer-const': [
           'error',
           {
