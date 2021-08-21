@@ -37,7 +37,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-heroku": "node server.js"
+    "start-heroku": "node server.js",
+    "lint:js": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js ./src/",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:css": "stylelint './src/**/*.ts{,x}' --syntax 'css-in-js'",
+    "lint:css:fix": "npm run lint:css -- --fix",
+    "prepare": "husky install"
   },
   "engines": {
     "node": "14.x"
@@ -64,17 +69,26 @@
     "@types/lodash": "4.14.172",
     "@types/react-select": "4.0.17",
     "@types/styled-components": "5.1.11",
-    "eslint-config-prettier": "8.3.0",
     "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "husky": "7.0.1",
     "jest-styled-components": "7.0.5",
+    "lint-staged": "11.1.2",
     "prettier": "2.3.2",
     "redux-immutable-state-invariant": "2.1.0",
+    "stylelint": "13.13.1",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-rational-order": "0.1.2",
     "stylelint-config-standard": "22.0.0",
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-order": "4.1.0",
-    "stylelint-prettier": "1.2.0",
-    "stylelint": "13.13.1"
+    "stylelint-prettier": "1.2.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "stylelint --fix --syntax 'css-in-js'",
+      "prettier --write"
+    ]
   }
 }
