@@ -1,19 +1,19 @@
 import styled from 'styled-components/macro';
 
 export const StyledRadioGroup = styled.div`
-  border-radius: 100px;
-  border: 1px solid #ededed;
-  display: inline-flex;
   position: relative;
+  display: inline-flex;
   width: 100%;
+  border: 1px solid #ededed;
+  border-radius: 100px;
 `;
 
 export const RadioGroupBox = styled.div`
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  height: 100%;
   background-color: #ededed;
   border-radius: 100px;
-  height: 100%;
-  left: 0;
-  position: absolute;
   transition: left 0.2s ease-in-out;
-  z-index: 0;
 `;

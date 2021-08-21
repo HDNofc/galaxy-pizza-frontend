@@ -8,19 +8,19 @@ interface IButtonProps {
 }
 
 export const StyledButton = styled.button<IButtonProps>`
-  background: none;
-  border-radius: 0;
-  border: 0;
-  box-sizing: border-box;
-  color: inherit;
-  cursor: pointer;
   display: inline-block;
-  font: inherit;
+  box-sizing: border-box;
   margin: 0;
-  outline: none;
   padding: 0;
+  color: inherit;
+  font: inherit;
   text-align: center;
   text-decoration: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
   user-select: none;
 
@@ -85,9 +85,9 @@ export const StyledButton = styled.button<IButtonProps>`
     `}
 
   ${StyledCounter} > & {
-    padding: 6px;
     width: 20px;
     height: 20px;
+    padding: 6px;
   }
 `;
 

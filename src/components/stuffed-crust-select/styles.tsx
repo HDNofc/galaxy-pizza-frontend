@@ -8,25 +8,25 @@ import selectedItemIcon from './icons/selected-icon.svg';
 export const StyledStuffedCrustSelect = styled.div``;
 
 export const SelectItemWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  padding: 4px 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
 `;
 
 export const SelectItemImage = styled.img<{ src: string }>`
-  border-radius: 28px;
   flex-shrink: 0;
-  height: 56px;
   width: 56px;
+  height: 56px;
+  border-radius: 28px;
 `;
 
 export const SelectItemText = styled.span`
-  color: inherit;
   display: inline-flex;
-  font-size: 12px;
+  padding: 0 20px 0 8px;
+  color: inherit;
   font-weight: 700;
-  padding: 0px 20px 0 8px;
+  font-size: 12px;
   text-align: left;
 `;
 
