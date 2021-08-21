@@ -84,7 +84,7 @@ const PizzaBlock = (props: IPizzaBlockProps): React.ReactElement => {
         <RadioGroup name={`dough-${id}`} items={doughType} onChange={onDoughTypeChange} />
         <Type>
           <RadioGroup name={`size-${id}`} items={sizes} onChange={onSizeChange} />
-          {isStuffedCrustAvailable && (
+          {isStuffedCrustAvailable && ( // TODO сделать дефолтным значением 30см, т.к. появляется возможность выбора корочки
             <StuffedCrustSelect
               stuffedCrusts={stuffedCrusts}
               selectedStuffedCrust={selectedCrust}

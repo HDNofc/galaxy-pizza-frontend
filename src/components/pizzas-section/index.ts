@@ -1,1 +1,1 @@
-export { default } from './pizza-section';
+export { default } from './pizzas-section';
