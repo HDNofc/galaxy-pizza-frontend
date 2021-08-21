@@ -52,11 +52,9 @@ const RadioGroup = ({ name, items, onChange }: RadioGroupProps) => {
 
   useEffect(() => {
     fieldRefs.current = [];
-    // console.log('useEffect fieldRefs.current = []');
   }, [items]);
 
   const getSelectedFieldDOM = (selectedId: string): HTMLDivElement => {
-    // console.log('getSelectedFieldDOM.selectedId', selectedId);
     return fieldRefs.current.filter((field) => field.children[0].id === selectedId)[0];
   };
 
@@ -69,7 +67,6 @@ const RadioGroup = ({ name, items, onChange }: RadioGroupProps) => {
     value: string | number;
     checked: boolean;
   }): void => {
-    // console.log('onInputChange.id', id);
     onChange({ id, value, checked });
   };
 
