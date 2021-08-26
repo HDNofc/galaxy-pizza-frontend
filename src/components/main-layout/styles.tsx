@@ -10,7 +10,7 @@ export const MainLayout = styled.div`
   padding: 0 8px;
   background-color: #f8f8f8;
 
-  @media ${(props) => props.theme.media.tabletPortrait} {
+  @media ${({ theme }) => theme.media.tabletPortrait} {
     padding: 0 20px;
   }
 
@@ -21,7 +21,7 @@ export const MainLayout = styled.div`
   }
 
   > ${StyledPizzaSection} {
-    @media ${(props) => props.theme.media.tabletPortrait} {
+    @media ${({ theme }) => theme.media.tabletPortrait} {
       margin-right: 30px;
     }
   }

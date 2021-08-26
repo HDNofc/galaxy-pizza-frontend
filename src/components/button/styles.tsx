@@ -28,8 +28,8 @@ export const Button = styled.button<Props>`
     $standard &&
     css`
       padding: 16px 20px;
-      color: ${(props) => props.theme.colors.buttonColorTextDefault};
-      background-color: ${(props) => props.theme.colors.buttonColorDefault};
+      color: ${({ theme }) => theme.colors.buttonColorTextDefault};
+      background-color: ${({ theme }) => theme.colors.buttonColorDefault};
       border-radius: 24px;
 
       > ${Text} {
@@ -38,19 +38,19 @@ export const Button = styled.button<Props>`
 
       &:focus,
       &:hover {
-        background-color: ${(props) => props.theme.colors.buttonColorFocus};
+        background-color: ${({ theme }) => theme.colors.buttonColorFocus};
       }
 
       &:active {
-        color: ${(props) => props.theme.colors.buttonColorTextActive};
-        background-color: ${(props) => props.theme.colors.buttonColorActive};
+        color: ${({ theme }) => theme.colors.buttonColorTextActive};
+        background-color: ${({ theme }) => theme.colors.buttonColorActive};
       }
     `}
 
   ${({ $link }) =>
     $link &&
     css`
-      color: ${(props) => props.theme.colors.buttonColorTextReverse};
+      color: ${({ theme }) => theme.colors.buttonColorTextReverse};
 
       > ${Text} {
         display: inline-flex;
@@ -58,11 +58,11 @@ export const Button = styled.button<Props>`
 
       &:focus,
       &:hover {
-        color: ${(props) => props.theme.colors.buttonColorTextReverseFocus};
+        color: ${({ theme }) => theme.colors.buttonColorTextReverseFocus};
       }
 
       &:active {
-        color: ${(props) => props.theme.colors.buttonColorTextReverseActive};
+        color: ${({ theme }) => theme.colors.buttonColorTextReverseActive};
       }
     `}
 
@@ -75,7 +75,7 @@ export const Button = styled.button<Props>`
       align-items: center;
 
       > ${Text} {
-        ${(props) => props.theme.mixins.visuallyHidden}
+        ${({ theme }) => theme.mixins.visuallyHidden}
       }
 
       > svg {

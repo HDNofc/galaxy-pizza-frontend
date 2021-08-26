@@ -14,12 +14,12 @@ export const PizzaBlock = styled.article`
 export const Title = styled.h2`
   margin: 0 0 8px;
   padding: 0;
-  color: ${(props) => props.theme.colors.fontColorTitle};
+  color: ${({ theme }) => theme.colors.fontColorTitle};
   font-size: 16px;
-  font-family: ${(props) => props.theme.fonts.fontAdditional};
+  font-family: ${({ theme }) => theme.fonts.fontAdditional};
   line-height: 20px;
 
-  @media ${(props) => props.theme.media.tabletLandscape} {
+  @media ${({ theme }) => theme.media.tabletLandscape} {
     font-size: 18px;
     line-height: 24px;
   }
@@ -27,13 +27,14 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   margin: 0 0 8px;
-  color: ${(props) => props.theme.colors.fontColorText};
+  color: ${({ theme }) => theme.colors.fontColorText};
   font-size: 14px;
   line-height: 18px;
 `;
 
 export const Picture = styled.picture`
   display: flex;
+  min-height: 230px;
 `;
 
 export const Image = styled.img`
@@ -46,7 +47,7 @@ export const Image = styled.img`
 export const Price = styled.span`
   font-weight: 500;
   font-size: 18px;
-  font-family: ${(props) => props.theme.fonts.fontAdditional};
+  font-family: ${({ theme }) => theme.fonts.fontAdditional};
   line-height: 18px;
   white-space: nowrap;
 `;
@@ -56,7 +57,7 @@ export const AddToCart = styled(Button)`
   font-size: 14px;
   line-height: 14px;
 
-  @media ${(props) => props.theme.media.tabletLandscape} {
+  @media ${({ theme }) => theme.media.tabletLandscape} {
     font-size: 18px;
     line-height: 18px;
   }
@@ -68,7 +69,7 @@ export const PizzaInfo = styled.div`
   flex-grow: 1;
   padding: 10px;
 
-  @media ${(props) => props.theme.media.tabletPortrait} {
+  @media ${({ theme }) => theme.media.tabletPortrait} {
     padding: 10px 20px 24px;
   }
 
