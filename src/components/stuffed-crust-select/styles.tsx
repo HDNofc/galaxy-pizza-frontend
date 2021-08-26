@@ -14,7 +14,7 @@ export const SelectItemWrapper = styled.div`
   padding: 4px 0;
 `;
 
-export const SelectItemImage = styled.img<{ src: string }>`
+export const SelectItemImage = styled.img`
   flex-shrink: 0;
   width: 56px;
   height: 56px;

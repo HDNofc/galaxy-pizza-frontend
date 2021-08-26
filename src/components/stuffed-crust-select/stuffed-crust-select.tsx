@@ -4,7 +4,6 @@ import { DOUGH_STUFFED_CRUSTS } from './constants';
 import * as S from './styles';
 
 interface Props {
-  mix?: string | string[];
   stuffedCrusts: string[];
   selectedStuffedCrust: number | string;
   onChange: (selectedSideId: string) => void;
