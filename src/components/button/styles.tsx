@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components/macro';
 import { Counter as StyledCounter } from '../counter/styles';
 
 interface Props {
-  standard?: boolean;
-  link?: boolean;
-  onlyIcon?: boolean;
+  $standard?: boolean;
+  $link?: boolean;
+  $onlyIcon?: boolean;
 }
 
 export const Button = styled.button<Props>`
@@ -24,8 +24,8 @@ export const Button = styled.button<Props>`
   transition: background-color 0.2s, color 0.2s;
   user-select: none;
 
-  ${({ standard }) =>
-    standard &&
+  ${({ $standard }) =>
+    $standard &&
     css`
       padding: 16px 20px;
       color: ${(props) => props.theme.colors.buttonColorTextDefault};
@@ -47,8 +47,8 @@ export const Button = styled.button<Props>`
       }
     `}
 
-  ${({ link }) =>
-    link &&
+  ${({ $link }) =>
+    $link &&
     css`
       color: ${(props) => props.theme.colors.buttonColorTextReverse};
 
@@ -66,8 +66,8 @@ export const Button = styled.button<Props>`
       }
     `}
 
-    ${({ onlyIcon }) =>
-    onlyIcon &&
+  ${({ $onlyIcon }) =>
+    $onlyIcon &&
     css`
       padding: 2px;
       display: inline-flex;

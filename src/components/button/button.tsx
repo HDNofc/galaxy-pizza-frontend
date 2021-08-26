@@ -26,9 +26,9 @@ const Button = ({
     <S.Button
       type={type}
       onClick={onClick}
-      standard={standard}
-      link={link}
-      onlyIcon={onlyIcon}
+      $standard={standard}
+      $link={link}
+      $onlyIcon={onlyIcon}
       {...otherProps}
     >
       {text && <S.Text>{text}</S.Text>}
