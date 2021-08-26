@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const StyledPizzaSection = styled.section`
+export const PizzaSection = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 10px;

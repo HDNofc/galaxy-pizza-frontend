@@ -5,7 +5,7 @@ import { IReactSelectOption, IsMulti } from './stuffed-crust-select';
 import crustIcon from './icons/crust-icon.svg';
 import selectedItemIcon from './icons/selected-icon.svg';
 
-export const StyledStuffedCrustSelect = styled.div``;
+export const StuffedCrustSelect = styled.div``;
 
 export const SelectItemWrapper = styled.div`
   position: relative;

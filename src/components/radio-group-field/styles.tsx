@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const StyledRadioGroupField = styled.div`
+export const RadioGroupField = styled.div`
   z-index: 0;
   display: flex;
   justify-content: center;

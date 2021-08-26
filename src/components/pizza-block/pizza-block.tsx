@@ -3,25 +3,13 @@ import StuffedCrustSelect from 'components/stuffed-crust-select';
 
 import { ReactComponent as Vegan } from './icons/vegan.svg';
 import { ReactComponent as Hot } from './icons/hot.svg';
-import {
-  Description,
-  Image,
-  Title,
-  StyledPizzaBlock,
-  Type,
-  Price,
-  AddToCart,
-  Picture,
-  PizzaInfo,
-  ProductPurchase,
-  Category,
-} from './styles';
+import * as S from './styles';
 
 export interface IPizzaImageUrl {
   jpg: string;
   webp: string;
 }
-interface IPizzaBlockProps {
+interface Props {
   id: string;
   name: string;
   description: string;
@@ -44,7 +32,7 @@ interface IPizzaBlockProps {
   vegan: boolean;
 }
 
-const PizzaBlock = (props: IPizzaBlockProps): React.ReactElement => {
+const PizzaBlock = (props: Props): React.ReactElement => {
   const {
     id,
     name,
@@ -66,23 +54,23 @@ const PizzaBlock = (props: IPizzaBlockProps): React.ReactElement => {
   } = props;
 
   return (
-    <StyledPizzaBlock {...otherProps}>
-      <Picture>
+    <S.PizzaBlock {...otherProps}>
+      <S.Picture>
         <source type="image/webp" srcSet={`${imageUrl.webp}`} />
-        <Image src={imageUrl.jpg} alt="" />
-      </Picture>
+        <S.Image src={imageUrl.jpg} alt="" />
+      </S.Picture>
 
-      <PizzaInfo>
-        <Category>
+      <S.PizzaInfo>
+        <S.Category>
           {hot && <Hot />}
           {vegan && <Vegan />}
-        </Category>
+        </S.Category>
 
-        <Title>{name}</Title>
-        <Description>{description}</Description>
+        <S.Title>{name}</S.Title>
+        <S.Description>{description}</S.Description>
 
         <RadioGroup name={`dough-${id}`} items={doughType} onChange={onDoughTypeChange} />
-        <Type>
+        <S.Type>
           <RadioGroup name={`size-${id}`} items={sizes} onChange={onSizeChange} />
           {isStuffedCrustAvailable && ( // TODO сделать дефолтным значением 30см, т.к. появляется возможность выбора корочки
             <StuffedCrustSelect
@@ -91,14 +79,14 @@ const PizzaBlock = (props: IPizzaBlockProps): React.ReactElement => {
               onChange={onStuffedCrustChange}
             />
           )}
-        </Type>
+        </S.Type>
 
-        <ProductPurchase>
-          <AddToCart text="В корзину" onClick={onAddToCartClick} standard />
-          <Price>{`${price} ₽`}</Price>
-        </ProductPurchase>
-      </PizzaInfo>
-    </StyledPizzaBlock>
+        <S.ProductPurchase>
+          <S.AddToCart text="В корзину" onClick={onAddToCartClick} standard />
+          <S.Price>{`${price} ₽`}</S.Price>
+        </S.ProductPurchase>
+      </S.PizzaInfo>
+    </S.PizzaBlock>
   );
 };
 

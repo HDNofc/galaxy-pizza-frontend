@@ -1,16 +1,9 @@
-// export default {};
 import Select, { ValueType } from 'react-select';
 import { DOUGH_STUFFED_CRUSTS } from './constants';
 
-import {
-  reactSelectCustomStyles,
-  SelectItemImage,
-  SelectItemText,
-  SelectItemWrapper,
-  StyledStuffedCrustSelect,
-} from './styles';
+import * as S from './styles';
 
-interface IStuffedCrustSelectProps {
+interface Props {
   mix?: string | string[];
   stuffedCrusts: string[];
   selectedStuffedCrust: number | string;
@@ -24,10 +17,8 @@ export interface IReactSelectOption {
 
 export type IsMulti = false;
 
-const StuffedCrustSelect = (props: IStuffedCrustSelectProps): React.ReactElement => {
-  const { onChange, stuffedCrusts } = props;
-
-  const availableOptions = (stuffedCrusts: IStuffedCrustSelectProps['stuffedCrusts']) => {
+const StuffedCrustSelect = ({ onChange, stuffedCrusts }: Props): React.ReactElement => {
+  const availableOptions = (stuffedCrusts: Props['stuffedCrusts']) => {
     const availableCrusts = DOUGH_STUFFED_CRUSTS.filter((crust) => {
       if (stuffedCrusts.includes(crust.value)) {
         return crust;
@@ -43,10 +34,10 @@ const StuffedCrustSelect = (props: IStuffedCrustSelectProps): React.ReactElement
       return {
         value: crust.value,
         label: (
-          <SelectItemWrapper>
-            <SelectItemImage src={crust.imageUrl} />
-            <SelectItemText>{crust.text}</SelectItemText>
-          </SelectItemWrapper>
+          <S.SelectItemWrapper>
+            <S.SelectItemImage src={crust.imageUrl} />
+            <S.SelectItemText>{crust.text}</S.SelectItemText>
+          </S.SelectItemWrapper>
         ),
       };
     });
@@ -61,16 +52,16 @@ const StuffedCrustSelect = (props: IStuffedCrustSelectProps): React.ReactElement
   const crusts = availableOptions(stuffedCrusts).reverse();
 
   return (
-    <StyledStuffedCrustSelect>
+    <S.StuffedCrustSelect>
       <Select
-        styles={reactSelectCustomStyles}
+        styles={S.reactSelectCustomStyles}
         isSearchable={false}
         options={crusts}
         defaultValue={crusts[crusts.length - 1]}
         onChange={handleChange}
         menuPlacement={'top'}
       />
-    </StyledStuffedCrustSelect>
+    </S.StuffedCrustSelect>
   );
 };
 

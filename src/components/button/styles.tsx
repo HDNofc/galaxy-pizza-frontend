@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components/macro';
-import { StyledCounter } from '../counter/styles';
+import { Counter as StyledCounter } from '../counter/styles';
 
-interface IButtonProps {
+interface Props {
   standard?: boolean;
   link?: boolean;
   onlyIcon?: boolean;
 }
 
-export const StyledButton = styled.button<IButtonProps>`
+export const Button = styled.button<Props>`
   display: inline-block;
   box-sizing: border-box;
   margin: 0;
@@ -32,7 +32,7 @@ export const StyledButton = styled.button<IButtonProps>`
       background-color: ${(props) => props.theme.colors.buttonColorDefault};
       border-radius: 24px;
 
-      > ${ButtonText} {
+      > ${Text} {
         display: inline-flex;
       }
 
@@ -52,7 +52,7 @@ export const StyledButton = styled.button<IButtonProps>`
     css`
       color: ${(props) => props.theme.colors.buttonColorTextReverse};
 
-      > ${ButtonText} {
+      > ${Text} {
         display: inline-flex;
       }
 
@@ -74,7 +74,7 @@ export const StyledButton = styled.button<IButtonProps>`
       justify-content: center;
       align-items: center;
 
-      > ${ButtonText} {
+      > ${Text} {
         ${(props) => props.theme.mixins.visuallyHidden}
       }
 
@@ -91,4 +91,4 @@ export const StyledButton = styled.button<IButtonProps>`
   }
 `;
 
-export const ButtonText = styled.span``;
+export const Text = styled.span``;

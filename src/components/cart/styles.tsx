@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const StyledCart = styled.aside`
+export const Cart = styled.aside`
   display: none;
   flex-direction: column;
   align-items: center;
@@ -16,20 +16,20 @@ export const StyledCart = styled.aside`
   }
 `;
 
-export const CartHeader = styled.div`
+export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
 `;
 
-export const CartTitle = styled.h3`
+export const Title = styled.h3`
   font-size: 18px;
   font-family: ${(props) => props.theme.fonts.fontAdditional};
   line-height: 18px;
   text-align: center;
 `;
 
-export const CartTitleTotalCount = styled.span`
+export const CartTotalCount = styled.span`
   color: #a69895;
   font-size: 18px;
   font-style: normal;
@@ -45,7 +45,7 @@ export const CartImage = styled.img`
   margin: 12px 0 8px;
 `;
 
-export const CartFooter = styled.div`
+export const Footer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;

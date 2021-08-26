@@ -1,8 +1,7 @@
 import { useRef, useEffect, useCallback } from 'react';
+import RadioGroupField from 'components/radio-group-field';
 
-import RadioGroup__Field from './__field/radio-group__field';
-
-import { RadioGroupBox, StyledRadioGroup } from './styles';
+import * as S from './styles';
 
 export interface IRadioItem {
   id: string;
@@ -11,13 +10,13 @@ export interface IRadioItem {
   checked?: boolean;
 }
 
-interface RadioGroupProps {
+interface Props {
   name: string;
   items: IRadioItem[];
   onChange: (radioOption: { id: string; value: string | number; checked: boolean }) => void;
 }
 
-const RadioGroup = ({ name, items, onChange }: RadioGroupProps) => {
+const RadioGroup = ({ name, items, onChange }: Props) => {
   const boxRef = useRef<HTMLDivElement>(null);
   const fieldRefs = useRef<HTMLDivElement[]>([]);
 
@@ -71,25 +70,23 @@ const RadioGroup = ({ name, items, onChange }: RadioGroupProps) => {
   };
 
   return (
-    <StyledRadioGroup>
-      <RadioGroupBox ref={boxRef} />
+    <S.RadioGroup>
+      <S.RadioGroupBox ref={boxRef} />
       {items &&
         items.map((radio) => (
-          <RadioGroup__Field
+          <RadioGroupField
             ref={addToFieldRefs}
             key={`radio-${radio.id}`}
             id={radio.id}
-            mods={{
-              checked: radio.checked,
-            }}
+            checked={radio.checked}
             name={name}
             value={radio.value}
             onChange={(checked) => onInputChange({ id: radio.id, checked, value: radio.value })}
           >
             {radio.label}
-          </RadioGroup__Field>
+          </RadioGroupField>
         ))}
-    </StyledRadioGroup>
+    </S.RadioGroup>
   );
 };
 

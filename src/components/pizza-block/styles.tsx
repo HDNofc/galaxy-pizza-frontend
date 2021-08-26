@@ -1,9 +1,9 @@
 import styled from 'styled-components/macro';
 import Button from 'components/button';
-import { StyledRadioGroup } from 'components/radio-group/styles';
-import { StyledStuffedCrustSelect } from '../stuffed-crust-select/styles';
+import { RadioGroup as StyledRadioGroup } from 'components/radio-group/styles';
+import { StuffedCrustSelect as StyledStuffedCrustSelect } from '../stuffed-crust-select/styles';
 
-export const StyledPizzaBlock = styled.article`
+export const PizzaBlock = styled.article`
   display: flex;
   flex-direction: column;
   background-color: #fff;

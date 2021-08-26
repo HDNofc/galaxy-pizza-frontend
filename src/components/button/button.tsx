@@ -1,6 +1,6 @@
-import { ButtonText, StyledButton } from './styles';
+import * as S from './styles';
 
-interface ButtonProps {
+interface Props {
   children?: React.ReactNode;
   text?: string;
   icon?: React.ReactElement;
@@ -21,9 +21,9 @@ const Button = ({
   icon,
   onClick = () => {},
   ...otherProps
-}: ButtonProps): React.ReactElement => {
+}: Props): React.ReactElement => {
   return (
-    <StyledButton
+    <S.Button
       type={type}
       onClick={onClick}
       standard={standard}
@@ -31,10 +31,10 @@ const Button = ({
       onlyIcon={onlyIcon}
       {...otherProps}
     >
-      {text && <ButtonText>{text}</ButtonText>}
+      {text && <S.Text>{text}</S.Text>}
       {icon}
       {children}
-    </StyledButton>
+    </S.Button>
   );
 };
 

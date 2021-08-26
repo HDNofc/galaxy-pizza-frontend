@@ -12,7 +12,7 @@ import { addPizzaToCart } from 'redux/cart/action';
 
 const PIZZA_DOUGH_NAMES = ['Традиционное', 'Тонкое'];
 
-interface PizzaBlockContainerProps {
+interface Props {
   pizzaItem: IPizza;
 }
 
@@ -27,9 +27,7 @@ type IFormattedPizzaTypes = {
   [key in IPizzaDoughTypes]: IFormattedPizzaDough;
 };
 
-const PizzaBlockContainer = (props: PizzaBlockContainerProps): React.ReactElement => {
-  const { pizzaItem } = props;
-
+const PizzaBlockContainer = ({ pizzaItem }: Props): React.ReactElement => {
   const dispatch: Dispatch<any> = useAppDispatch();
 
   const pizzaTypesWithRadioId = useRef<IFormattedPizzaTypes>({} as IFormattedPizzaTypes);

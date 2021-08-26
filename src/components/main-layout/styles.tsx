@@ -1,8 +1,8 @@
-import { StyledCart } from 'components/cart/styles';
-import { StyledPizzaSection } from 'components/pizzas-section/styles';
+import { Cart as StyledCart } from 'components/cart/styles';
+import { PizzaSection as StyledPizzaSection } from 'components/pizzas-section/styles';
 import styled from 'styled-components/macro';
 
-export const StyledMainLayout = styled.div`
+export const MainLayout = styled.div`
   position: relative;
   display: flex;
   align-items: flex-start;

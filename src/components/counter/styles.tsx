@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const StyledCounter = styled.div`
+export const Counter = styled.div`
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;

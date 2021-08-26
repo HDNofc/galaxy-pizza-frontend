@@ -2,18 +2,7 @@ import { Dispatch } from 'redux';
 
 import Button from 'components/button';
 
-import {
-  Description,
-  CartImage,
-  CartTitle,
-  StyledCart,
-  CartTitleTotalCount,
-  CartHeader,
-  ClearCartButton,
-  TotalPrice,
-  CartFooter,
-  TotalPriceText,
-} from './styles';
+import * as S from './styles';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { RootState } from 'redux/store/store';
@@ -25,11 +14,11 @@ import cartImage3x from './images/cart@3x.jpg';
 
 import CartList from 'components/cart-list';
 
-interface CartProps {
+interface Props {
   children?: React.ReactNode;
 }
 
-const Cart = (_props: CartProps): React.ReactElement => {
+const Cart = (_props: Props): React.ReactElement => {
   const cart = useAppSelector((state: RootState) => state.cart);
   const dispatch: Dispatch<any> = useAppDispatch();
 
@@ -52,13 +41,13 @@ const Cart = (_props: CartProps): React.ReactElement => {
   const { items } = cart;
 
   return (
-    <StyledCart>
-      <CartHeader>
-        <CartTitle>
-          Корзина <CartTitleTotalCount>({cart.totalCount})</CartTitleTotalCount>
-        </CartTitle>
-        <ClearCartButton as={Button} text="очистить" link onClick={onClearCartClick} />
-      </CartHeader>
+    <S.Cart>
+      <S.Header>
+        <S.Title>
+          Корзина <S.CartTotalCount>({cart.totalCount})</S.CartTotalCount>
+        </S.Title>
+        <S.ClearCartButton as={Button} text="очистить" link onClick={onClearCartClick} />
+      </S.Header>
 
       {items.length > 0 ? (
         <CartList
@@ -68,7 +57,7 @@ const Cart = (_props: CartProps): React.ReactElement => {
           onDeleteItemClick={onDeleteItemClick}
         />
       ) : (
-        <CartImage
+        <S.CartImage
           src={cartImage}
           srcSet={`${cartImage2x} 2x, ${cartImage3x} 3x" alt="empty cart`}
           alt=""
@@ -76,14 +65,14 @@ const Cart = (_props: CartProps): React.ReactElement => {
       )}
 
       {items.length > 0 ? (
-        <CartFooter>
-          <TotalPriceText>Сумма заказа:</TotalPriceText>{' '}
-          <TotalPrice>{`${cart.totalPrice} ₽`}</TotalPrice>
-        </CartFooter>
+        <S.Footer>
+          <S.TotalPriceText>Сумма заказа:</S.TotalPriceText>{' '}
+          <S.TotalPrice>{`${cart.totalPrice} ₽`}</S.TotalPrice>
+        </S.Footer>
       ) : (
-        <Description>Корзина пуста. Выберите пиццу из меню</Description>
+        <S.Description>Корзина пуста. Выберите пиццу из меню</S.Description>
       )}
-    </StyledCart>
+    </S.Cart>
   );
 };
 

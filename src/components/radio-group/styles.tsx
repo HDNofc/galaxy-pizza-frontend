@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const StyledRadioGroup = styled.div`
+export const RadioGroup = styled.div`
   position: relative;
   display: inline-flex;
   width: 100%;

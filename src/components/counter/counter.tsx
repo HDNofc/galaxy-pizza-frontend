@@ -1,23 +1,23 @@
 import Button from 'components/button';
 
-import { StyledCounter, Value } from './styles';
+import * as S from './styles';
 import { ReactComponent as Minus } from './icons/minus.svg';
 import { ReactComponent as Plus } from './icons/plus.svg';
 
-interface CounterProps {
+interface Props {
   children?: React.ReactNode;
   onMinusClick: () => void;
   onPlusClick: () => void;
   count: number;
 }
 
-const Counter = ({ count = 0, onMinusClick, onPlusClick }: CounterProps): React.ReactElement => {
+const Counter = ({ count = 0, onMinusClick, onPlusClick }: Props): React.ReactElement => {
   return (
-    <StyledCounter>
+    <S.Counter>
       <Button standard onlyIcon icon={<Minus />} text="Добавить пиццу" onClick={onMinusClick} />
-      <Value>{count}</Value>
+      <S.Value>{count}</S.Value>
       <Button standard onlyIcon icon={<Plus />} text="Отнять пиццу" onClick={onPlusClick} />
-    </StyledCounter>
+    </S.Counter>
   );
 };
 

@@ -3,18 +3,7 @@ import { PizzaCartItem } from 'redux/cart/contracts/state';
 import Button from 'components/button';
 import Counter from 'components/counter';
 
-import {
-  CartListImage,
-  CartListItem,
-  DeleteButton,
-  ItemBody,
-  ItemInfo,
-  ItemName,
-  ItemShortDescription,
-  ItemSummaryPrice,
-  StyledCartList,
-  ItemPrice,
-} from './styles';
+import * as S from './styles';
 
 import { ReactComponent as Cross } from './icons/cross.svg';
 
@@ -39,38 +28,38 @@ interface Props {
 
 const CartList = ({ items, onDeleteItemClick, onCounterPlusClick, onCounterMinusClick }: Props) => {
   return (
-    <StyledCartList>
+    <S.CartList>
       {items.map((item, index) => (
-        <CartListItem key={item.cartId}>
-          <ItemBody>
+        <S.CartListItem key={item.cartId}>
+          <S.ItemBody>
             <picture>
               <source type="image/webp" srcSet={item.imageUrl?.full.webp} />
-              <CartListImage src={item.imageUrl?.full.jpg} alt="" />
+              <S.CartListImage src={item.imageUrl?.full.jpg} alt="" />
             </picture>
-            <ItemInfo>
-              <ItemName>{item.name}</ItemName>
-              <ItemShortDescription>{getPizzaItemShortDescription(item)}</ItemShortDescription>
-            </ItemInfo>
+            <S.ItemInfo>
+              <S.ItemName>{item.name}</S.ItemName>
+              <S.ItemShortDescription>{getPizzaItemShortDescription(item)}</S.ItemShortDescription>
+            </S.ItemInfo>
 
-            <DeleteButton
+            <S.DeleteButton
               as={Button}
               onClick={() => onDeleteItemClick(index)}
               onlyIcon
               icon={<Cross className="cart-list-item-cross" />}
             />
-          </ItemBody>
+          </S.ItemBody>
 
-          <ItemSummaryPrice>
+          <S.ItemSummaryPrice>
             <Counter
               onPlusClick={() => onCounterPlusClick(index)}
               onMinusClick={() => onCounterMinusClick(index)}
               count={item.amount}
             />
-            <ItemPrice>{`${item.price} ₽`}</ItemPrice>
-          </ItemSummaryPrice>
-        </CartListItem>
+            <S.ItemPrice>{`${item.price} ₽`}</S.ItemPrice>
+          </S.ItemSummaryPrice>
+        </S.CartListItem>
       ))}
-    </StyledCartList>
+    </S.CartList>
   );
 };
 

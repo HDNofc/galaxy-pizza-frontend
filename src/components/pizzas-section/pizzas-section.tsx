@@ -1,16 +1,16 @@
 import { IPizza } from '../../redux/store/types';
 import PizzaBlockContainer from '../pizza-block-container';
-import { StyledPizzaSection } from './styles';
+import * as S from './styles';
 
-interface IPizzasSectionProps {
+interface Props {
   pizzas: IPizza[];
 }
 
-const PizzasSection = ({ pizzas }: IPizzasSectionProps): React.ReactElement => {
+const PizzasSection = ({ pizzas }: Props): React.ReactElement => {
   return (
-    <StyledPizzaSection>
+    <S.PizzaSection>
       {pizzas && pizzas.map((pizza) => <PizzaBlockContainer key={pizza._id} pizzaItem={pizza} />)}
-    </StyledPizzaSection>
+    </S.PizzaSection>
   );
 };
 

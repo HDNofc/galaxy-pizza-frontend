@@ -1,11 +1,11 @@
-import { StyledMainLayout } from './styles';
+import * as S from './styles';
 
-interface IMainLayoutProps {
+interface Props {
   children: React.ReactNode;
 }
 
-const MainLayout = ({ children, ...otherProps }: IMainLayoutProps): React.ReactElement => {
-  return <StyledMainLayout {...otherProps}>{children}</StyledMainLayout>;
+const MainLayout = ({ children, ...otherProps }: Props): React.ReactElement => {
+  return <S.MainLayout {...otherProps}>{children}</S.MainLayout>;
 };
 
 export default MainLayout;

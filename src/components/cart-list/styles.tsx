@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const StyledCartList = styled.ul`
+export const CartList = styled.ul`
   width: 100%;
   margin: 0;
   padding: 0;
