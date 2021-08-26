@@ -19,7 +19,7 @@ interface Props {
 }
 
 const Cart = (_props: Props): React.ReactElement => {
-  const cart = useAppSelector((state: RootState) => state.cart);
+  const cart = useAppSelector(({ cart }: RootState) => cart);
   const dispatch: Dispatch<any> = useAppDispatch();
 
   const onCounterPlusClick = (index: number) => {
@@ -38,13 +38,13 @@ const Cart = (_props: Props): React.ReactElement => {
     dispatch(clearCart());
   };
 
-  const { items } = cart;
+  const { items, totalCount, totalPrice } = cart;
 
   return (
     <S.Cart>
       <S.Header>
         <S.Title>
-          Корзина <S.CartTotalCount>({cart.totalCount})</S.CartTotalCount>
+          Корзина <S.CartTotalCount>({totalCount})</S.CartTotalCount>
         </S.Title>
         <S.ClearCartButton as={Button} text="очистить" link onClick={onClearCartClick} />
       </S.Header>
@@ -67,7 +67,7 @@ const Cart = (_props: Props): React.ReactElement => {
       {items.length > 0 ? (
         <S.Footer>
           <S.TotalPriceText>Сумма заказа:</S.TotalPriceText>{' '}
-          <S.TotalPrice>{`${cart.totalPrice} ₽`}</S.TotalPrice>
+          <S.TotalPrice>{`${totalPrice} ₽`}</S.TotalPrice>
         </S.Footer>
       ) : (
         <S.Description>Корзина пуста. Выберите пиццу из меню</S.Description>
