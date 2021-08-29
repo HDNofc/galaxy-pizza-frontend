@@ -1,6 +1,8 @@
 import { uniqueId } from 'lodash';
 import { useEffect, useRef, useState } from 'react';
 
+import useMount from 'hooks/use-mount';
+
 import PizzaBlock from 'components/pizza-block';
 import { IPizza, IPizzaCrustTypes, IPizzaDoughTypes } from 'redux/store/types';
 import { IRadioItem } from 'components/radio-group';
@@ -47,11 +49,11 @@ const PizzaBlockContainer = ({ pizzaItem }: Props): React.ReactElement => {
   const [isStuffedCrustAvailable, setIsStuffedCrustAvailable] = useState<boolean>(false);
   const [stuffedCrusts, setStuffedCrusts] = useState<string[]>([]);
 
-  useEffect(() => {
+  useMount(() => {
     setPizzaTypesWithRadioId(pizzaItem);
     setInitialPizzaBlockData(pizzaTypesWithRadioId.current);
     setInitialImage(pizzaItem);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  });
 
   useEffect(() => {
     updateAllPizzaData();
