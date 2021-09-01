@@ -29,6 +29,14 @@ const colors = {
   buttonColorTextReverseFocus: '#0262ad',
   buttonColorTextReverseActive: '#60a7de',
 
+  linkColorText: '#60a7de',
+  linkColorTextFocus: '#0262ad',
+  linkColorTextActive: '#60a7de',
+
+  linkColorTextReverse: '#F5F5F5',
+  linkColorTextReverseFocus: '#00c4f5',
+  linkColorTextReverseActive: '#60a7de',
+
   radioColorTextFocus: '#0262ad',
 };
 
