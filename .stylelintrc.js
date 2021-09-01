@@ -24,6 +24,7 @@ module.exports = {
     'value-no-vendor-prefix': true,
     'media-feature-range-operator-space-after': null,
     'media-feature-range-operator-space-before': null,
+    'no-duplicate-selectors': null,
     'rule-empty-line-before': [
       'always',
       {
