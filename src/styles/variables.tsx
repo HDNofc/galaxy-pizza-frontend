@@ -10,7 +10,7 @@ const common = {
 
 const fonts = {
   fontMain: `'Open Sans', arial, helvetica, sans-serif`,
-  fontAdditional: `'Roboto', arial, helvetica, sans-serif`,
+  fontAdditional: `'Montserrat', arial, helvetica, sans-serif`,
 };
 
 const colors = {

@@ -20,6 +20,13 @@ import Roboto900Woff from 'fonts/roboto/roboto-900.woff';
 import RobotoRegularWoff2 from 'fonts/roboto/roboto-regular.woff2';
 import RobotoRegularWoff from 'fonts/roboto/roboto-regular.woff';
 
+import Montserrat500Woff2 from 'fonts/montserrat/montserrat-500.woff2';
+import Montserrat500Woff from 'fonts/montserrat/montserrat-500.woff';
+import Montserrat600Woff2 from 'fonts/montserrat/montserrat-600.woff2';
+import Montserrat600Woff from 'fonts/montserrat/montserrat-600.woff';
+import MontserratRegularWoff2 from 'fonts/montserrat/montserrat-regular.woff2';
+import MontserratRegularWoff from 'fonts/montserrat/montserrat-regular.woff';
+
 const fonts = css`
   // Open Sans
   @font-face {
@@ -92,6 +99,32 @@ const fonts = css`
     font-family: 'Roboto';
     font-style: normal;
     src: url(${Roboto900Woff2}) format('woff2'), url(${Roboto900Woff}) format('woff');
+    font-display: swap;
+  }
+
+  // Montserrat
+  @font-face {
+    font-weight: 500;
+    font-family: 'Montserrat';
+    font-style: normal;
+    src: url(${Montserrat500Woff2}) format('woff2'), url(${Montserrat500Woff}) format('woff');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-style: normal;
+    src: url(${Montserrat600Woff2}) format('woff2'), url(${Montserrat600Woff}) format('woff');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-style: normal;
+    src: url(${MontserratRegularWoff2}) format('woff2'),
+      url(${MontserratRegularWoff}) format('woff');
     font-display: swap;
   }
 `;
