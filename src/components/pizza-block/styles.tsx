@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import Button from 'components/button';
+
 import { RadioGroup as StyledRadioGroup } from 'components/radio-group/styles';
 import { StuffedCrustSelect as StyledStuffedCrustSelect } from '../stuffed-crust-select/styles';
 
@@ -12,12 +12,12 @@ export const PizzaBlock = styled.article`
 `;
 
 export const Title = styled.h2`
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   padding: 0;
   color: ${({ theme }) => theme.colorsMeaning.titleColor};
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
-  line-height: 20px;
+  line-height: 24px;
 
   @media ${({ theme }) => theme.media.tabletLandscape} {
     font-size: 18px;
@@ -26,10 +26,10 @@ export const Title = styled.h2`
 `;
 
 export const Description = styled.p`
-  margin: 0 0 8px;
+  margin: 0 0 16px;
   color: ${({ theme }) => theme.colorsMeaning.bodyColor};
   font-size: 14px;
-  line-height: 18px;
+  line-height: 20px;
 `;
 
 export const Picture = styled.picture`
@@ -50,17 +50,6 @@ export const Price = styled.span`
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
   line-height: 18px;
   white-space: nowrap;
-`;
-
-export const AddToCart = styled(Button)`
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 14px;
-
-  @media ${({ theme }) => theme.media.tabletLandscape} {
-    font-size: 18px;
-    line-height: 18px;
-  }
 `;
 
 export const PizzaInfo = styled.div`

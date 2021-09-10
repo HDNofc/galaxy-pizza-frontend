@@ -1,5 +1,6 @@
 import RadioGroup, { IRadioItem } from 'components/radio-group';
 import StuffedCrustSelect from 'components/stuffed-crust-select';
+import Button from 'components/button';
 
 import { ReactComponent as Vegan } from './icons/vegan.svg';
 import { ReactComponent as Hot } from './icons/hot.svg';
@@ -82,8 +83,8 @@ const PizzaBlock = (props: Props): React.ReactElement => {
         </S.Type>
 
         <S.ProductPurchase>
-          <S.AddToCart text="В корзину" onClick={onAddToCartClick} standard />
-          <S.Price>{`${price} ₽`}</S.Price>
+          <Button text="В корзину" onClick={onAddToCartClick} standard large />
+          <S.Price>{`${price} Р`}</S.Price>
         </S.ProductPurchase>
       </S.PizzaInfo>
     </S.PizzaBlock>
