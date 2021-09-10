@@ -1,4 +1,6 @@
 import { css } from 'styled-components/macro';
+import { colorsMeaning, colors as colorsPalette } from './colors';
+
 export type ThemeType = typeof variables;
 
 const common = {
@@ -11,34 +13,6 @@ const common = {
 const fonts = {
   fontMain: `'Open Sans', arial, helvetica, sans-serif`,
   fontAdditional: `'Montserrat', arial, helvetica, sans-serif`,
-};
-
-const colors = {
-  fontColorTitle: '#000',
-  fontColorText: '#5c6370',
-
-  buttonColorDefault: '#027ad6',
-  buttonColorTextDefault: '#fff',
-  buttonColorFocus: '#0262ad',
-  buttonColorActive: '#60a7de',
-  buttonColorTextActive: '#0e79cb',
-
-  buttonColorReverse: 'transparent',
-  buttonColorReverseFocus: 'transparent',
-  buttonColorReverseActive: 'transparent',
-  buttonColorTextReverse: '#60a7de',
-  buttonColorTextReverseFocus: '#0262ad',
-  buttonColorTextReverseActive: '#60a7de',
-
-  linkColorText: '#60a7de',
-  linkColorTextFocus: '#0262ad',
-  linkColorTextActive: '#60a7de',
-
-  linkColorTextReverse: '#F5F5F5',
-  linkColorTextReverseFocus: '#00c4f5',
-  linkColorTextReverseActive: '#60a7de',
-
-  radioColorTextFocus: '#0262ad',
 };
 
 const media = {
@@ -62,7 +36,8 @@ const variables = {
   common,
   media,
   mixins,
-  colors,
+  colorsMeaning,
+  colorsPalette,
   fonts,
 };
 

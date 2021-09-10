@@ -7,7 +7,10 @@ interface Props {
   type?: 'submit' | 'reset' | 'button';
   onClick?(e: React.MouseEvent<HTMLButtonElement>): void;
   standard?: boolean;
+  secondary?: boolean;
   link?: boolean;
+  medium?: boolean;
+  large?: boolean;
   onlyIcon?: boolean;
 }
 
@@ -16,7 +19,10 @@ const Button = ({
   text = '',
   type = 'button',
   standard = false,
+  secondary = false,
   link = false,
+  medium = false,
+  large = false,
   onlyIcon = false,
   icon,
   onClick = () => {},
@@ -27,7 +33,10 @@ const Button = ({
       type={type}
       onClick={onClick}
       $standard={standard}
+      $secondary={secondary}
       $link={link}
+      $medium={medium}
+      $large={large}
       $onlyIcon={onlyIcon}
       {...otherProps}
     >

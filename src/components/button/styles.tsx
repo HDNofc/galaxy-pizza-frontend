@@ -3,8 +3,12 @@ import { Counter as StyledCounter } from '../counter/styles';
 
 interface Props {
   $standard?: boolean;
+  $secondary?: boolean;
   $link?: boolean;
+  $large?: boolean;
+  $medium?: boolean;
   $onlyIcon?: boolean;
+  $selected?: boolean;
 }
 
 export const Button = styled.button<Props>`
@@ -27,9 +31,8 @@ export const Button = styled.button<Props>`
   ${({ $standard }) =>
     $standard &&
     css`
-      padding: 16px 20px;
-      color: ${({ theme }) => theme.colors.buttonColorTextDefault};
-      background-color: ${({ theme }) => theme.colors.buttonColorDefault};
+      color: ${({ theme }) => theme.colorsMeaning.buttonStandardColorText};
+      background-color: ${({ theme }) => theme.colorsMeaning.buttonStandardBackgroundColor};
       border-radius: 24px;
 
       > ${Text} {
@@ -38,19 +41,54 @@ export const Button = styled.button<Props>`
 
       &:focus,
       &:hover {
-        background-color: ${({ theme }) => theme.colors.buttonColorFocus};
+        color: ${({ theme }) => theme.colorsMeaning.buttonStandardColorTextFocus};
+        background-color: ${({ theme }) => theme.colorsMeaning.buttonStandardBackgroundColorFocus};
       }
 
       &:active {
-        color: ${({ theme }) => theme.colors.buttonColorTextActive};
-        background-color: ${({ theme }) => theme.colors.buttonColorActive};
+        color: ${({ theme }) => theme.colorsMeaning.buttonStandardColorTextActive};
+        background-color: ${({ theme }) => theme.colorsMeaning.buttonStandardBackgroundColorActive};
       }
     `}
+
+  ${({ $secondary, $selected }) => {
+    return (
+      $secondary &&
+      css`
+        color: ${({ theme }) =>
+          $selected
+            ? theme.colorsMeaning.buttonStandardColorTextFocus
+            : theme.colorsMeaning.buttonSecondaryColorText};
+        background-color: ${({ theme }) =>
+          $selected
+            ? theme.colorsMeaning.buttonStandardBackgroundColorFocus
+            : theme.colorsMeaning.buttonSecondaryBackgroundColor};
+        border-radius: 24px;
+
+        > ${Text} {
+          display: inline-flex;
+        }
+
+        &:focus,
+        &:hover {
+          color: ${({ theme }) => theme.colorsMeaning.buttonStandardColorTextFocus};
+          background-color: ${({ theme }) =>
+            theme.colorsMeaning.buttonStandardBackgroundColorFocus};
+        }
+
+        &:active {
+          color: ${({ theme }) => theme.colorsMeaning.buttonStandardColorTextActive};
+          background-color: ${({ theme }) =>
+            theme.colorsMeaning.buttonStandardBackgroundColorActive};
+        }
+      `
+    );
+  }}
 
   ${({ $link }) =>
     $link &&
     css`
-      color: ${({ theme }) => theme.colors.buttonColorTextReverse};
+      color: ${({ theme }) => theme.colorsMeaning.buttonLinkColorText};
 
       > ${Text} {
         display: inline-flex;
@@ -58,11 +96,11 @@ export const Button = styled.button<Props>`
 
       &:focus,
       &:hover {
-        color: ${({ theme }) => theme.colors.buttonColorTextReverseFocus};
+        color: ${({ theme }) => theme.colorsMeaning.buttonLinkColorTextFocus};
       }
 
       &:active {
-        color: ${({ theme }) => theme.colors.buttonColorTextReverseActive};
+        color: ${({ theme }) => theme.colorsMeaning.buttonLinkColorTextActive};
       }
     `}
 
@@ -82,6 +120,24 @@ export const Button = styled.button<Props>`
         width: 100%;
         height: auto;
       }
+    `}
+
+  ${({ $medium }) =>
+    $medium &&
+    css`
+      padding: 7px 20px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+    `}
+
+  ${({ $large }) =>
+    $large &&
+    css`
+      padding: 13px 20px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
     `}
 
   ${StyledCounter} > & {

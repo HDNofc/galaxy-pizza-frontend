@@ -32,7 +32,7 @@ export const ItemInfo = styled.div`
 export const ItemName = styled.span`
   display: inline-block;
   margin-bottom: 4px;
-  color: ${({ theme }) => theme.colors.fontColorTitle};
+  color: ${({ theme }) => theme.colorsMeaning.titleColor};
   font-weight: 700;
   font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
@@ -41,7 +41,7 @@ export const ItemName = styled.span`
 
 export const ItemShortDescription = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.colors.fontColorText};
+  color: ${({ theme }) => theme.colorsMeaning.bodyColor};
   font-size: 12px;
   line-height: 16px;
 `;
@@ -70,7 +70,7 @@ export const ItemSummaryPrice = styled.div`
 `;
 
 export const ItemPrice = styled.span`
-  color: ${({ theme }) => theme.colors.fontColorTitle};
+  color: ${({ theme }) => theme.colorsMeaning.titleColor};
   font-weight: 500;
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.fontAdditional};

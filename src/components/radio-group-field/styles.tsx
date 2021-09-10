@@ -12,7 +12,7 @@ export const Label = styled.label`
   display: inline-block;
   width: 100%;
   padding: 10px 0;
-  color: ${(props) => props.theme.colors.fontColorText};
+  color: ${({ theme }) => theme.colorsMeaning.radioButtonStandardColorText};
   font-size: 14px;
   line-height: 14px;
   text-align: center;
@@ -21,14 +21,18 @@ export const Label = styled.label`
 
   &:hover,
   &:focus {
-    color: ${(props) => props.theme.colors.radioColorTextFocus};
+    color: ${({ theme }) => theme.colorsMeaning.radioButtonStandardColorTextFocus};
+  }
+
+  &:active {
+    color: ${({ theme }) => theme.colorsMeaning.radioButtonStandardColorTextActive};
   }
 `;
 
 export const Input = styled.input`
-  ${(props) => props.theme.mixins.visuallyHidden}
+  ${({ theme }) => theme.mixins.visuallyHidden};
 
   &:focus + ${Label} {
-    color: ${(props) => props.theme.colors.radioColorTextFocus};
+    color: ${({ theme }) => theme.colorsMeaning.radioButtonStandardColorTextFocus};
   }
 `;

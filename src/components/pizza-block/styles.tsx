@@ -14,7 +14,7 @@ export const PizzaBlock = styled.article`
 export const Title = styled.h2`
   margin: 0 0 8px;
   padding: 0;
-  color: ${({ theme }) => theme.colors.fontColorTitle};
+  color: ${({ theme }) => theme.colorsMeaning.titleColor};
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
   line-height: 20px;
@@ -27,7 +27,7 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   margin: 0 0 8px;
-  color: ${({ theme }) => theme.colors.fontColorText};
+  color: ${({ theme }) => theme.colorsMeaning.bodyColor};
   font-size: 14px;
   line-height: 18px;
 `;

@@ -8,7 +8,7 @@ export const Counter = styled.div`
 `;
 
 export const Value = styled.span`
-  color: ${({ theme }) => theme.colors.fontColorText};
+  color: ${({ theme }) => theme.colorsMeaning.bodyColor};
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;

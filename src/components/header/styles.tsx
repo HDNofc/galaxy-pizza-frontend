@@ -6,8 +6,6 @@ import _Hamburger from 'components/hamburger';
 import _Logo from 'components/logo';
 import { ReactComponent as _PhoneIcon } from './icons/phone-icon.svg';
 
-import variables from 'styles/variables';
-
 interface HeaderMenuProps {
   $isOpen: boolean;
 }
@@ -19,10 +17,9 @@ export const Header = styled.header`
   z-index: 10;
   display: flex;
   justify-content: center;
-  min-height: ${variables.common.headerHeightMobile};
+  min-height: ${({ theme }) => theme.common.headerHeightMobile};
   padding: 0 8px;
-  background-color: #fff;
-  border-bottom: 1px solid #d6d6d6;
+  background-color: ${({ theme }) => theme.colorsPalette.oxfordBlue};
 
   @media ${({ theme }) => theme.media.tabletPortrait} {
     padding: 0 20px;
@@ -46,12 +43,12 @@ export const Logotype = styled(_Logo)`
 
 export const HeaderMenu = styled.div<HeaderMenuProps>`
   position: absolute;
-  top: ${variables.common.headerHeightMobile};
+  top: ${({ theme }) => theme.common.headerHeightMobile};
   left: 0;
   z-index: 10;
   display: none;
   width: 100vw;
-  height: calc(100vh - ${variables.common.headerHeightMobile});
+  height: ${({ theme }) => `calc(100vh - ${theme.common.headerHeightMobile}) `};
   margin-left: auto;
   padding: 20px 10px 20px 30px;
   background-color: #28307b;
@@ -161,13 +158,13 @@ export const Note = styled.p`
   margin: 0;
   margin: auto 0 0 auto;
   padding: 0;
-  color: ${({ theme }) => theme.colors.linkColorTextReverse};
+  color: ${({ theme }) => theme.colorsMeaning.linkAlternativeColorText};
   font-size: 12px;
   line-height: 16px;
 `;
 
 export const Sup = styled.sup`
-  color: ${({ theme }) => theme.colors.linkColorTextReverse};
+  color: ${({ theme }) => theme.colorsMeaning.linkAlternativeColorText};
 `;
 
 export const PhoneLinkWrapper = styled.div`
@@ -179,7 +176,7 @@ export const PhoneIcon = styled(_PhoneIcon)`
   width: 24px;
   height: 24px;
   margin-right: 20px;
-  color: ${({ theme }) => theme.colors.linkColorTextReverse};
+  color: ${({ theme }) => theme.colorsMeaning.linkAlternativeColorText};
 
   @media ${({ theme }) => theme.media.desktop} {
     width: 20px;

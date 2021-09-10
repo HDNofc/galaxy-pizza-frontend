@@ -54,7 +54,7 @@ export const Footer = styled.div`
 `;
 
 export const TotalPriceText = styled.span`
-  color: ${({ theme }) => theme.colors.fontColorTitle};
+  color: ${({ theme }) => theme.colorsMeaning.titleColor};
   font-weight: 500;
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
@@ -62,7 +62,7 @@ export const TotalPriceText = styled.span`
 `;
 
 export const TotalPrice = styled.span`
-  color: ${({ theme }) => theme.colors.fontColorTitle};
+  color: ${({ theme }) => theme.colorsMeaning.titleColor};
   font-weight: 500;
   font-size: 18px;
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
@@ -71,7 +71,7 @@ export const TotalPrice = styled.span`
 
 export const Description = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.colors.fontColorText};
+  color: ${({ theme }) => theme.colorsMeaning.bodyColor};
   font-size: 14px;
   line-height: 18px;
   text-align: center;

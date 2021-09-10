@@ -18,30 +18,30 @@ export const StyledLink = css<Props>`
   ${({ $standard }) =>
     $standard &&
     css`
-      color: ${({ theme }) => theme.colors.linkColorText};
+      color: ${({ theme }) => theme.colorsMeaning.linkColorText};
 
       &:focus,
       &:hover {
-        color: ${({ theme }) => theme.colors.linkColorTextFocus};
+        color: ${({ theme }) => theme.colorsMeaning.linkColorTextFocus};
       }
 
       &:active {
-        color: ${({ theme }) => theme.colors.linkColorTextActive};
+        color: ${({ theme }) => theme.colorsMeaning.linkColorTextActive};
       }
     `};
 
   ${({ $light }) =>
     $light &&
     css`
-      color: ${({ theme }) => theme.colors.linkColorTextReverse};
+      color: ${({ theme }) => theme.colorsMeaning.linkAlternativeColorText};
 
       &:focus,
       &:hover {
-        color: ${({ theme }) => theme.colors.linkColorTextReverseFocus};
+        color: ${({ theme }) => theme.colorsMeaning.linkAlternativeColorTextFocus};
       }
 
       &:active {
-        color: ${({ theme }) => theme.colors.linkColorTextReverseActive};
+        color: ${({ theme }) => theme.colorsMeaning.linkAlternativeColorTextActive};
       }
     `};
 `;
@@ -55,7 +55,7 @@ export const NativeLink = styled.a`
 `;
 
 export const Value = styled.span`
-  color: ${(props) => props.theme.colors.fontColorText};
+  color: ${(props) => props.theme.colorsMeaning.bodyColor};
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
