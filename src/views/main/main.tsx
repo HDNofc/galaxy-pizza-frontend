@@ -6,12 +6,17 @@ import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { RootState } from 'redux/store/store';
 import { fetchPizzas, fetchPizzasByTaste } from 'redux/pizzas/thunk';
 
-import PizzasSection from 'components/pizzas-section';
-import MainLayout from 'components/main-layout';
+import AppLayout from 'components/app-layout';
+import MainLayout from 'layouts/main-layout';
+
 import Cart from 'components/cart';
-import PageLayout from 'components/page-layout';
 import PizzaBlockContainer from 'components/pizza-block-container';
 import PizzaBlockLoading from 'components/pizza-block-loading';
+import PromoCarousel from 'components/promo-carousel';
+import Filter from 'components/filter';
+
+import filters from 'constants/filter';
+import promoImages from 'constants/promo-carousel';
 
 const Main = () => {
   const params = useParams();
@@ -29,18 +34,20 @@ const Main = () => {
   }, [dispatch, params]);
 
   return (
-    <PageLayout>
-      <MainLayout>
-        <PizzasSection>
-          {isLoaded
+    <AppLayout>
+      <MainLayout
+        promo={<PromoCarousel items={promoImages} />}
+        filter={<Filter items={filters} />}
+        cart={<Cart />}
+        pizzaSection={
+          isLoaded
             ? pizzas.map((pizza) => <PizzaBlockContainer key={pizza._id} pizzaItem={pizza} />)
             : Array(9)
                 .fill(0)
-                .map((_, index) => <PizzaBlockLoading key={index} />)}
-        </PizzasSection>
-        <Cart />
-      </MainLayout>
-    </PageLayout>
+                .map((_, index) => <PizzaBlockLoading key={index} />)
+        }
+      />
+    </AppLayout>
   );
 };
 

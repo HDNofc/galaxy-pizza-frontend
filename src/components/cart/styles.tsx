@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const Cart = styled.aside`
+export const Cart = styled.div`
   display: none;
   flex-direction: column;
   align-items: center;

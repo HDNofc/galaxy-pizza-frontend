@@ -7,13 +7,13 @@ interface Props {
   children: React.ReactNode;
 }
 
-const PageLayout = ({ children, ...otherProps }: Props): React.ReactElement => {
+const AppLayout = ({ children, ...otherProps }: Props): React.ReactElement => {
   return (
     <>
       <Header links={menuLinks} />
-      <S.PageLayout {...otherProps}>{children}</S.PageLayout>
+      <S.AppLayout {...otherProps}>{children}</S.AppLayout>
     </>
   );
 };
 
-export default PageLayout;
+export default AppLayout;

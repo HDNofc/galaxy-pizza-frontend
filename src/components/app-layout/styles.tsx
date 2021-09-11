@@ -1,9 +1,9 @@
 import styled from 'styled-components/macro';
 
-export const PageLayout = styled.div`
-  position: relative;
+export const AppLayout = styled.div`
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   height: 100%;
 `;
