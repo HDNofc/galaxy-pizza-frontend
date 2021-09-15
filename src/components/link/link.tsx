@@ -7,7 +7,7 @@ export interface Props {
   to?: LinkProps['to'];
   onClick?: () => void;
   href?: string;
-  light?: boolean;
+  alternative?: boolean;
   standard?: boolean;
   selected?: boolean;
   external?: boolean;
@@ -17,7 +17,7 @@ const Link = ({
   to,
   href,
   children,
-  light,
+  alternative,
   standard,
   selected,
   external,
@@ -35,7 +35,7 @@ const Link = ({
     <S.Link
       to={to}
       onClick={onClick}
-      $light={light}
+      $alternative={alternative}
       $standard={standard}
       $selected={selected}
       {...otherProps}
@@ -46,7 +46,7 @@ const Link = ({
     <S.NativeLink
       href={href}
       onClick={onClick}
-      $light={light}
+      $alternative={alternative}
       $standard={standard}
       $selected={selected}
       {...externalLinkProps}

@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components/macro';
 
-const color = '#303030';
+import { colors } from 'styles/colors';
+
+const color = colors.white;
 
 const heightIcon = '16px';
 const widthLine = '24px';
@@ -20,7 +22,6 @@ export const Hamburger = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
   cursor: pointer;
 `;
 

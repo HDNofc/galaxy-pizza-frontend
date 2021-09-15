@@ -21,7 +21,7 @@ export const colors = {
 };
 
 export const colorsMeaning = {
-  titleColor: colors.black,
+  titleColor: colors.eerieBlack,
   bodyColor: colors.dimGray,
 
   buttonStandardBackgroundColor: colors.saphire,

@@ -10,6 +10,7 @@ export const Logo = styled.div`
 export const Title = styled.h1`
   margin: 0;
   padding: 0;
+  color: ${({ theme }) => theme.colorsPalette.white};
   font-size: 18px;
   line-height: 18px;
   word-wrap: normal;

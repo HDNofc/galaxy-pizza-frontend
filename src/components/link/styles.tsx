@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components/macro';
 import { Link as _Link } from 'react-router-dom';
 
 interface Props {
-  $light?: boolean;
+  $alternative?: boolean;
   $standard?: boolean;
   $selected?: boolean;
 }
@@ -14,11 +14,13 @@ export const StyledLink = css<Props>`
   font-size: inherit;
   line-height: inherit;
   text-decoration: none;
+  outline: none;
 
-  ${({ $standard }) =>
+  ${({ $standard, $selected }) =>
     $standard &&
     css`
-      color: ${({ theme }) => theme.colorsMeaning.linkColorText};
+      color: ${({ theme }) =>
+        $selected ? theme.colorsMeaning.linkColorTextFocus : theme.colorsMeaning.linkColorText};
 
       &:focus,
       &:hover {
@@ -30,10 +32,13 @@ export const StyledLink = css<Props>`
       }
     `};
 
-  ${({ $light }) =>
-    $light &&
+  ${({ $alternative, $selected }) =>
+    $alternative &&
     css`
-      color: ${({ theme }) => theme.colorsMeaning.linkAlternativeColorText};
+      color: ${({ theme }) =>
+        $selected
+          ? theme.colorsMeaning.linkAlternativeColorTextFocus
+          : theme.colorsMeaning.linkAlternativeColorText};
 
       &:focus,
       &:hover {

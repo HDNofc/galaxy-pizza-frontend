@@ -7,7 +7,8 @@ const common = {
   tabletPortrait: '768px',
   tabletLandscape: '1020px',
   desktop: '1280px',
-  headerHeightMobile: '48px',
+  headerHeightMobile: '50px',
+  headerHeightDesktop: '70px',
 };
 
 const fonts = {

@@ -2,16 +2,26 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { throttle } from 'lodash';
 
+import { Dispatch } from 'redux';
+import { useAppSelector, useAppDispatch } from 'redux/hooks';
+import { RootState } from 'redux/store/store';
+import { setLocation } from 'redux/location/action';
+
 import * as S from './styles';
+import variables from 'styles/variables';
 import Link from 'components/link';
 import StarRating from 'components/star-rating';
-
 import { LinkProps } from 'components/link';
+import planetsDeliveryRating, { IPlanetsDeliveryRating } from 'constants/planets-delivery-rating';
 
-import variables from 'styles/variables';
+import pluralize from 'helpers/pluralize';
+
+import phoneIcon from './icons/phone-icon.svg';
+import mailIcon from './icons/mail-icon.svg';
 
 interface Props {
   links: {
+    icon?: string | undefined;
     id: string | number;
     to: LinkProps['to'];
     text: React.ReactNode;
@@ -21,6 +31,11 @@ interface Props {
 const Header = ({ links }: Props): React.ReactElement => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const location = useLocation();
+
+  const dispatch: Dispatch<any> = useAppDispatch();
+  const geoLocation = useAppSelector(({ location }: RootState) => location);
 
   const detectMobileWidth = () => {
     const isMobileDetected = !window.matchMedia(`(min-width: ${variables.common.desktop})`).matches;
@@ -52,8 +67,6 @@ const Header = ({ links }: Props): React.ReactElement => {
     }
   }, [isMenuOpen, isMobile]);
 
-  const location = useLocation();
-
   const onMenuItemClick = () => {
     if (isMenuOpen === true) {
       setIsMenuOpen(false);
@@ -61,51 +74,91 @@ const Header = ({ links }: Props): React.ReactElement => {
     window.scrollTo(0, 0);
   };
 
-  return (
-    <>
-      <S.Header>
-        <S.Content>
-          <S.Logotype {...(location.pathname !== '/' && { to: '/' })} />
-          <S.Hamburger active={isMenuOpen} onClick={onBurgerClick} />
-          <S.HeaderMenu $isOpen={isMenuOpen}>
-            <S.Navigation>
-              <S.List>
-                {links.map(({ id, to, text }) => (
-                  <S.ListItem key={id}>
-                    <Link
-                      onClick={onMenuItemClick}
-                      to={to}
-                      {...(isMobile ? { light: true } : { standard: true })}
-                    >
-                      {text}
-                    </Link>
-                  </S.ListItem>
-                ))}
-              </S.List>
-            </S.Navigation>
+  const getGeoLocationSelectorItems = (planets: IPlanetsDeliveryRating) => {
+    return Object.entries(planets).map(([planetName, planetInfo]) => ({
+      value: planetName,
+      label: planetInfo.name,
+    }));
+  };
 
+  const getDeliveryTime = (time: number) => {
+    if (time > 60) {
+      const hours = Math.floor(time / 60);
+      const minutes = time % 60;
+
+      return `${hours} ${pluralize(hours, 'час', 'часа', 'часов')} ${minutes} ${pluralize(
+        minutes,
+        'минута',
+        'минуты',
+        'минут'
+      )}`;
+    }
+
+    return `${time} ${pluralize(time, 'минута', 'минуты', 'минут')}`;
+  };
+
+  const onChangeLocation = (selectedLocation: string) => {
+    dispatch(setLocation(selectedLocation));
+  };
+
+  return (
+    <S.Header>
+      <S.Content>
+        <S.Logotype {...(location.pathname !== '/' && { to: '/' })} />
+        <S.Hamburger active={isMenuOpen} onClick={onBurgerClick} />
+        <S.HeaderMenu $isOpen={isMenuOpen}>
+          <S.HeaderMenuHeader>
+            <S.GeoLocation
+              onChange={onChangeLocation}
+              items={getGeoLocationSelectorItems(planetsDeliveryRating)}
+            />
             <S.Rating>
-              <S.RatingText>4.2</S.RatingText>
+              <S.DeliveryTime>
+                {getDeliveryTime(planetsDeliveryRating[geoLocation.location].time)}
+              </S.DeliveryTime>
+              <S.RatingValue>
+                {planetsDeliveryRating[geoLocation.location].deliveryRating}
+              </S.RatingValue>
               <StarRating
-                rating={4.2}
-                {...(isMobile ? { starAmount: 5 } : { starAmount: 1, size: 18 })}
+                rating={planetsDeliveryRating[geoLocation.location].deliveryRating}
+                starAmount={isMobile ? 5 : 1}
               />
             </S.Rating>
+          </S.HeaderMenuHeader>
 
-            <S.PhoneLinkWrapper>
-              <S.PhoneIcon />
-              <S.PhoneLink
-                to="/"
-                href="tel:+78009999999"
-                {...(isMobile ? { light: true } : { standard: true })}
-              >
-                8 (800) 999-99-99
-              </S.PhoneLink>
-            </S.PhoneLinkWrapper>
-          </S.HeaderMenu>
-        </S.Content>
-      </S.Header>
-    </>
+          <S.HeaderMenuBody>
+            <S.Navigation>
+              <S.List>
+                {links.map(({ id, to, text, icon }) => {
+                  return (
+                    <S.ListItem key={id} $icon={icon ? icon : ''}>
+                      <Link
+                        onClick={onMenuItemClick}
+                        to={to}
+                        alternative
+                        {...(location.pathname === to && { $selected: true })}
+                      >
+                        {text}
+                      </Link>
+                    </S.ListItem>
+                  );
+                })}
+              </S.List>
+            </S.Navigation>
+          </S.HeaderMenuBody>
+
+          <S.HeaderMenuFooter>
+            <S.ContactLink href="tel:+78009999999" alternative $icon={phoneIcon}>
+              8 (800) 999-99-99
+            </S.ContactLink>
+
+            <S.ContactLink href="mailto:mail@example.com" alternative $icon={mailIcon}>
+              mail@example.com
+            </S.ContactLink>
+          </S.HeaderMenuFooter>
+        </S.HeaderMenu>
+      </S.Content>
+    </S.Header>
   );
 };
 

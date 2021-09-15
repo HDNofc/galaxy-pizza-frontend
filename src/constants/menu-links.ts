@@ -1,34 +1,23 @@
+import addUniqueIdToArrayOfObject from 'helpers/add-unique-id-array-of-items';
+
+import personIcon from './icons/person.svg';
+
 const menuLinks = [
   {
-    id: 0,
-    to: '/taste/hot',
-    text: 'Острая',
+    icon: personIcon,
+    to: '/login',
+    text: 'Войти',
   },
   {
-    id: 1,
-    to: '/taste/vegan',
-    text: 'Вегетарианская',
-  },
-  {
-    id: 2,
-    to: '/taste/cheese',
-    text: 'Сырный бортик',
-  },
-  {
-    id: 3,
-    to: '/taste/sausage',
-    text: 'Колбасный бортик',
-  },
-  {
-    id: 4,
     to: '/order',
     text: 'Корзина',
   },
   {
-    id: 5,
     to: '/about',
     text: 'О нас',
   },
 ];
 
-export default menuLinks;
+const menuLinksWithId = addUniqueIdToArrayOfObject(menuLinks, 'menu-');
+
+export default menuLinksWithId;
