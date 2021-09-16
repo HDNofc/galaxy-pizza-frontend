@@ -57,11 +57,7 @@ const Cart = (_props: Props): React.ReactElement => {
           onDeleteItemClick={onDeleteItemClick}
         />
       ) : (
-        <S.CartImage
-          src={cartImage}
-          srcSet={`${cartImage2x} 2x, ${cartImage3x} 3x" alt="empty cart`}
-          alt=""
-        />
+        <S.CartImage src={cartImage} srcSet={`${cartImage2x} 2x, ${cartImage3x} 3x`} alt="" />
       )}
 
       {items.length > 0 ? (
