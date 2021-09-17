@@ -47,7 +47,7 @@ const PromoCarousel = ({ items }: Props): React.ReactElement => {
             </a>
           </li>`,
         }}
-        autoplay={{ delay: 6000 }}
+        autoplay={{ delay: 6000, disableOnInteraction: false }}
         breakpoints={{
           320: {
             slidesPerView: 1,
