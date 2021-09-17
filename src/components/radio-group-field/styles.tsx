@@ -1,4 +1,8 @@
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
+
+interface LabelProps {
+  $selected?: boolean;
+}
 
 export const RadioGroupField = styled.div`
   z-index: 0;
@@ -7,7 +11,7 @@ export const RadioGroupField = styled.div`
   width: 100%;
 `;
 
-export const Label = styled.label`
+export const Label = styled.label<LabelProps>`
   display: flex;
   display: inline-block;
   width: 100%;
@@ -16,16 +20,21 @@ export const Label = styled.label`
   font-size: 14px;
   line-height: 14px;
   text-align: center;
+  cursor: ${({ $selected }) => ($selected ? 'default' : 'pointer')};
   transition: color 0.2s;
 
-  &:hover,
-  &:focus {
-    color: ${({ theme }) => theme.colorsMeaning.radioButtonStandardColorTextFocus};
-  }
+  ${({ $selected }) =>
+    !$selected &&
+    css`
+      &:hover,
+      &:focus {
+        color: ${({ theme }) => theme.colorsMeaning.radioButtonStandardColorTextFocus};
+      }
 
-  &:active {
-    color: ${({ theme }) => theme.colorsMeaning.radioButtonStandardColorTextActive};
-  }
+      &:active {
+        color: ${({ theme }) => theme.colorsMeaning.radioButtonStandardColorTextActive};
+      }
+    `};
 `;
 
 export const Input = styled.input`

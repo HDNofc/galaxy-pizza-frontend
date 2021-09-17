@@ -29,7 +29,9 @@ const RadioGroupField = React.forwardRef<HTMLDivElement, Props>((props, ref) => 
         disabled={disabled}
         onChange={onInputChange}
       />
-      <S.Label htmlFor={id}>{children}</S.Label>
+      <S.Label htmlFor={id} $selected={checked}>
+        {children}
+      </S.Label>
     </S.RadioGroupField>
   );
 });
