@@ -16,8 +16,7 @@ export const Label = styled.label`
   font-size: 14px;
   line-height: 14px;
   text-align: center;
-  cursor: pointer;
-  transition: color 0.35s;
+  transition: color 0.2s;
 
   &:hover,
   &:focus {

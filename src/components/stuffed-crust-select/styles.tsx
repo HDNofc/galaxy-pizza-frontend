@@ -36,7 +36,7 @@ export const reactSelectCustomStyles: StylesConfig<IReactSelectOption, IsMulti> 
     color: state.isSelected ? '#ffd8a6' : state.isFocused ? '#b5a9a7' : '#fff',
     cursor: 'pointer',
     position: 'relative',
-    transition: 'color 0.35s',
+    transition: 'color 0.2s',
 
     '::before': {
       backgroundColor: state.isSelected ? '#ffd8a6' : state.isFocused ? '#fff' : 'transparent',
@@ -49,7 +49,7 @@ export const reactSelectCustomStyles: StylesConfig<IReactSelectOption, IsMulti> 
       right: 4,
       top: '50%',
       transform: 'translateY(-50%)',
-      transition: 'opacity 0.35s, background-color 0.35s, background-image 0.35s',
+      transition: 'opacity 0.2s, background-color 0.2s, background-image 0.2s',
       width: 16,
     },
 
@@ -82,7 +82,7 @@ export const reactSelectCustomStyles: StylesConfig<IReactSelectOption, IsMulti> 
     boxShadow: 'none',
     cursor: 'pointer',
     minHeight: 36,
-    transition: 'background-color 0.35s, border-color 0.35s',
+    transition: 'background-color 0.2s, border-color 0.2s',
     width: 76,
 
     '&:hover': {

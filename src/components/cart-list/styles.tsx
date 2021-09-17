@@ -54,7 +54,7 @@ export const DeleteButton = styled.button`
   padding: 0;
   color: #bfb7b6;
   cursor: pointer;
-  transition: color 0.35s;
+  transition: color 0.2s;
 
   &:hover {
     color: #c21313;
