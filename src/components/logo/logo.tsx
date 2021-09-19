@@ -10,7 +10,7 @@ interface Props {
 const Logo = ({ to }: Props): React.ReactElement => {
   return (
     <S.Logo {...(to && { as: Link, to })}>
-      <S.LogoIcon width="24" height="auto" />
+      <S.LogoIcon width="24" height="100%" />
       <S.Title>Galaxy Pizza</S.Title>
     </S.Logo>
   );
