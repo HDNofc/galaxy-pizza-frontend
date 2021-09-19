@@ -18,6 +18,7 @@ module.exports = {
     'font-weight-notation': 'numeric',
     'order/order': ['custom-properties', 'declarations'],
     'no-empty-source': null,
+    'color-hex-case': 'lower',
     'declaration-empty-line-before': null,
     'no-missing-end-of-source-newline': null,
     'property-no-vendor-prefix': true,

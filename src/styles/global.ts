@@ -10,15 +10,17 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html,
-  body {
+  html {
     height: 100%;
-    min-width: 320px;
-    font-size: 16px;
-    line-height: 22px;
   }
 
   body {
+    position: relative;
+    height: 0;
+    min-height: 100%;
+    min-width: 320px;
+    font-size: 16px;
+    line-height: 22px;
     font-family: 'Open Sans', arial, helvetica, sans-serif;
     background-color: #f8f8f8;
   }
@@ -26,5 +28,9 @@ export default createGlobalStyle`
   img {
     width: 100%;
     height: auto;
+  }
+
+  #root {
+    height: 100%;
   }
 `;

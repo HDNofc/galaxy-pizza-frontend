@@ -68,11 +68,11 @@ export const PizzasContent = styled.div`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  padding: 0 12px;
+  padding: 0 12px 20px;
   background-color: #f8f8f8;
 
   @media ${({ theme }) => theme.media.tabletPortrait} {
-    padding: 0 20px;
+    padding: 0 20px 20px;
   }
 
   @media ${({ theme }) => theme.media.tabletLandscape} {
@@ -81,6 +81,7 @@ export const PizzasContent = styled.div`
 
   @media ${({ theme }) => theme.media.desktop} {
     max-width: 1280px;
+    padding-bottom: 40px;
   }
 `;
 

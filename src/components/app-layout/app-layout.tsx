@@ -1,3 +1,4 @@
+import Footer from 'components/footer';
 import Header from 'components/header';
 import * as S from './styles';
 
@@ -9,10 +10,11 @@ interface Props {
 
 const AppLayout = ({ children, ...otherProps }: Props): React.ReactElement => {
   return (
-    <>
+    <S.AppLayout>
       <Header links={menuLinks} />
-      <S.AppLayout {...otherProps}>{children}</S.AppLayout>
-    </>
+      <S.AppLayoutContent {...otherProps}>{children}</S.AppLayoutContent>
+      <Footer />
+    </S.AppLayout>
   );
 };
 

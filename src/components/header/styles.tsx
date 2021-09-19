@@ -203,7 +203,6 @@ export const ContactLink = styled(Link)<ContactLinkProps>`
   font-size: 18px;
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
   line-height: 24px;
-  list-style: none;
 
   @media ${({ theme }) => theme.media.desktop} {
     font-size: 14px;
