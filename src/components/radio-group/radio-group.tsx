@@ -18,44 +18,25 @@ interface Props {
 
 const RadioGroup = ({ name, items, onChange }: Props) => {
   const boxRef = useRef<HTMLDivElement>(null);
-  const fieldRefs = useRef<HTMLDivElement[]>([]);
 
-  const addToFieldRefs = (field: HTMLDivElement): void => {
-    if (field && !fieldRefs.current.includes(field)) {
-      fieldRefs.current.push(field);
-    }
-  };
+  const setRadioBoxPosition = useCallback((): void => {
+    const boxWidth = `${100 / items.length}%`;
+    const selectedIndex = items.findIndex((el) => el.checked === true);
+    const boxPosition = `${(100 / items.length) * selectedIndex}%`;
 
-  const setRadioBoxPosition = useCallback(
-    (selectedFieldDOM: HTMLDivElement | null): void => {
-      const boxWidth = `${100 / items.length}%`;
-
-      if (boxRef.current && selectedFieldDOM) {
-        boxRef.current.style.cssText = `
+    if (boxRef.current) {
+      boxRef.current.style.cssText = `
         width: ${boxWidth};
-        left: ${selectedFieldDOM.offsetLeft}px;
+        left: ${boxPosition};
       `;
-      }
-    },
-    [items]
-  );
+    }
+  }, [items]);
 
   useEffect(() => {
     if (items && items.length > 0) {
-      const getSelectedId = (items: IRadioItem[]) => items.filter((item) => item.checked)[0].id;
-      const selectedFieldDOM = getSelectedFieldDOM(getSelectedId(items));
-
-      setRadioBoxPosition(selectedFieldDOM);
+      setRadioBoxPosition();
     }
   }, [items, setRadioBoxPosition]);
-
-  useEffect(() => {
-    fieldRefs.current = [];
-  }, [items]);
-
-  const getSelectedFieldDOM = (selectedId: string): HTMLDivElement => {
-    return fieldRefs.current.filter((field) => field.children[0].id === selectedId)[0];
-  };
 
   const onInputChange = ({
     id,
@@ -75,7 +56,6 @@ const RadioGroup = ({ name, items, onChange }: Props) => {
       {items &&
         items.map((radio) => (
           <RadioGroupField
-            ref={addToFieldRefs}
             key={`radio-${radio.id}`}
             id={radio.id}
             checked={radio.checked}
