@@ -73,7 +73,6 @@ export const ClearCartButton = styled.button`
 
 export const Description = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.colorsMeaning.bodyColor};
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -85,7 +84,9 @@ export const Description = styled.p`
 `;
 
 export const CartImage = styled.img`
-  margin: 12px 0 8px;
+  align-self: center;
+  max-width: 280px;
+  margin: 20px;
 `;
 
 export const Header = styled.div`

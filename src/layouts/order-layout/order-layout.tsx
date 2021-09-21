@@ -2,6 +2,8 @@ import * as S from './order-layout.css';
 import Button from 'components/button';
 import Link from 'components/link';
 
+import cartImage from './images/cart.jpg';
+
 interface Props {
   cartList: React.ReactNode;
   onClearCartClick: () => void;
@@ -44,12 +46,15 @@ const OrderLayout = ({
               </S.FooterButtons>
             </>
           ) : (
-            <S.Description>
-              Корзина пуста. Выберите пиццу из{' '}
-              <Link to="/" standard>
-                меню
-              </Link>
-            </S.Description>
+            <>
+              <S.CartImage src={cartImage} alt="" />
+              <S.Description>
+                Корзина пуста. Выберите пиццу из{' '}
+                <Link to="/" standard>
+                  меню
+                </Link>
+              </S.Description>
+            </>
           )}
         </S.Footer>
       </S.OrderLayoutContent>
