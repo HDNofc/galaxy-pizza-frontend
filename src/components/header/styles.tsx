@@ -238,7 +238,7 @@ export const Hamburger = styled(_Hamburger)`
   }
 `;
 
-export const GeoLocation = styled(GeoLocationSelector)`
+export const PlanetLocation = styled(GeoLocationSelector)`
   margin-bottom: 4px;
 
   @media ${({ theme }) => theme.media.desktop} {

@@ -2,12 +2,12 @@ import { combineReducers } from 'redux';
 
 import pizzas from './pizzas/reducer';
 import cart from './cart/reducer';
-import location from './location/reducer';
+import planetLocation from './planet-location/reducer';
 
 const rootReducer = combineReducers({
   pizzas,
   cart,
-  location,
+  planetLocation,
 });
 
 export default rootReducer;

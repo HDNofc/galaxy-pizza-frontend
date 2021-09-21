@@ -4,6 +4,7 @@ import * as S from './styles';
 
 interface Props {
   items: IReactSelectOption[];
+  defaultValue?: IReactSelectOption;
   onChange: (selectedSideId: string) => void;
 }
 
@@ -14,7 +15,12 @@ export interface IReactSelectOption {
 
 export type IsMulti = false;
 
-const GeoLocationSelector = ({ onChange, items, ...otherProps }: Props): React.ReactElement => {
+const GeoLocationSelector = ({
+  onChange,
+  items,
+  defaultValue = items[2],
+  ...otherProps
+}: Props): React.ReactElement => {
   // https://github.com/JedWatson/react-select/issues/2902#issuecomment-481194330
   const handleChange = (selectedOption: ValueType<IReactSelectOption, IsMulti>) => {
     const value = (selectedOption as IReactSelectOption).value;
@@ -27,7 +33,7 @@ const GeoLocationSelector = ({ onChange, items, ...otherProps }: Props): React.R
         styles={S.reactSelectCustomStyles}
         isSearchable={false}
         options={items}
-        defaultValue={items[2]}
+        defaultValue={defaultValue}
         onChange={handleChange}
       />
       <S.Note>изменить</S.Note>

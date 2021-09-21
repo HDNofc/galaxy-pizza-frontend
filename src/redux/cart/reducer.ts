@@ -1,29 +1,18 @@
+import { load } from 'redux-localstorage-simple';
+
 import getIndexEqualPizza from 'helpers/get-index-equal-pizza';
 import { CartAction } from './action';
 import { CartActionsType } from './contracts/action-types';
 import { PizzaCartState } from './contracts/state';
 
-const initialState: PizzaCartState = {
+const defaultState: PizzaCartState = {
   items: [],
   totalCount: 0,
   totalPrice: 0,
 };
 
-const getTotalCount = (items: PizzaCartState['items']) => {
-  let totalCount = 0;
-  items.forEach((item) => {
-    totalCount += item.amount;
-  });
-  return totalCount;
-};
-
-const getTotalPrice = (items: PizzaCartState['items']) => {
-  let totalPrice = 0;
-  items.forEach((item) => {
-    totalPrice += item.price * item.amount;
-  });
-  return totalPrice;
-};
+const savedCart: any = load({ namespace: 'cart', states: ['cart'] });
+const initialState: PizzaCartState = savedCart && savedCart.cart ? savedCart.cart : defaultState;
 
 const cart = (state = initialState, action: CartAction): PizzaCartState => {
   switch (action.type) {
@@ -102,11 +91,27 @@ const cart = (state = initialState, action: CartAction): PizzaCartState => {
     }
 
     case CartActionsType.CLEAR_CART:
-      return initialState;
+      return defaultState;
 
     default:
       return state;
   }
+};
+
+const getTotalCount = (items: PizzaCartState['items']) => {
+  let totalCount = 0;
+  items.forEach((item) => {
+    totalCount += item.amount;
+  });
+  return totalCount;
+};
+
+const getTotalPrice = (items: PizzaCartState['items']) => {
+  let totalPrice = 0;
+  items.forEach((item) => {
+    totalPrice += item.price * item.amount;
+  });
+  return totalPrice;
 };
 
 export default cart;

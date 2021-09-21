@@ -15,9 +15,14 @@ const middleware =
     ? [
         require('redux-immutable-state-invariant').default(),
         thunk,
-        save({ namespace: 'pizza-cart' }),
+        save({ namespace: 'cart', states: ['cart'] }),
+        save({ namespace: 'planetLocation', states: ['planetLocation'] }),
       ]
-    : [thunk, save({ namespace: 'pizza-cart' })];
+    : [
+        thunk,
+        save({ namespace: 'cart', states: ['cart'] }),
+        save({ namespace: 'planetLocation', states: ['planetLocation'] }),
+      ];
 
 const composeEnhancers =
   (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;

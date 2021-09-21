@@ -5,7 +5,7 @@ import { throttle } from 'lodash';
 import { Dispatch } from 'redux';
 import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { RootState } from 'redux/store/store';
-import { setLocation } from 'redux/location/action';
+import { setPlanetLocation } from 'redux/planet-location/action';
 
 import * as S from './styles';
 import variables from 'styles/variables';
@@ -35,7 +35,9 @@ const Header = ({ links }: Props): React.ReactElement => {
   const location = useLocation();
 
   const dispatch: Dispatch<any> = useAppDispatch();
-  const geoLocation = useAppSelector(({ location }: RootState) => location);
+  const planetLocation = useAppSelector(
+    ({ planetLocation }: RootState) => planetLocation.planetLocation
+  );
 
   const detectMobileWidth = () => {
     const isMobileDetected = !window.matchMedia(`(min-width: ${variables.common.desktop})`).matches;
@@ -74,7 +76,7 @@ const Header = ({ links }: Props): React.ReactElement => {
     window.scrollTo(0, 0);
   };
 
-  const getGeoLocationSelectorItems = (planets: IPlanetsDeliveryRating) => {
+  const getPlanetLocationSelectorItems = (planets: IPlanetsDeliveryRating) => {
     return Object.entries(planets).map(([planetName, planetInfo]) => ({
       value: planetName,
       label: planetInfo.name,
@@ -97,8 +99,8 @@ const Header = ({ links }: Props): React.ReactElement => {
     return `${time} ${pluralize(time, 'минута', 'минуты', 'минут')}`;
   };
 
-  const onChangeLocation = (selectedLocation: string) => {
-    dispatch(setLocation(selectedLocation));
+  const onChangePlanetLocation = (selectedLocation: string) => {
+    dispatch(setPlanetLocation(selectedLocation));
   };
 
   return (
@@ -108,19 +110,22 @@ const Header = ({ links }: Props): React.ReactElement => {
         <S.Hamburger active={isMenuOpen} onClick={onBurgerClick} />
         <S.HeaderMenu $isOpen={isMenuOpen}>
           <S.HeaderMenuHeader>
-            <S.GeoLocation
-              onChange={onChangeLocation}
-              items={getGeoLocationSelectorItems(planetsDeliveryRating)}
+            <S.PlanetLocation
+              onChange={onChangePlanetLocation}
+              items={getPlanetLocationSelectorItems(planetsDeliveryRating)}
+              defaultValue={
+                getPlanetLocationSelectorItems({
+                  [planetLocation]: planetsDeliveryRating[planetLocation],
+                })[0]
+              }
             />
             <S.Rating>
               <S.DeliveryTime>
-                {getDeliveryTime(planetsDeliveryRating[geoLocation.location].time)}
+                {getDeliveryTime(planetsDeliveryRating[planetLocation].time)}
               </S.DeliveryTime>
-              <S.RatingValue>
-                {planetsDeliveryRating[geoLocation.location].deliveryRating}
-              </S.RatingValue>
+              <S.RatingValue>{planetsDeliveryRating[planetLocation].deliveryRating}</S.RatingValue>
               <StarRating
-                rating={planetsDeliveryRating[geoLocation.location].deliveryRating}
+                rating={planetsDeliveryRating[planetLocation].deliveryRating}
                 starAmount={isMobile ? 5 : 1}
               />
             </S.Rating>
