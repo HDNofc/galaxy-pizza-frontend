@@ -11,9 +11,14 @@ interface Props {
   count: number;
 }
 
-const Counter = ({ count = 0, onMinusClick, onPlusClick }: Props): React.ReactElement => {
+const Counter = ({
+  count = 0,
+  onMinusClick,
+  onPlusClick,
+  ...otherProps
+}: Props): React.ReactElement => {
   return (
-    <S.Counter>
+    <S.Counter {...otherProps}>
       <Button standard onlyIcon icon={<Minus />} text="Добавить пиццу" onClick={onMinusClick} />
       <S.Value>{count}</S.Value>
       <Button standard onlyIcon icon={<Plus />} text="Отнять пиццу" onClick={onPlusClick} />

@@ -1,4 +1,6 @@
 import styled from 'styled-components/macro';
+import Button from 'components/button';
+import { Button as StyledButton } from 'components/button/styles';
 
 export const Cart = styled.div`
   display: none;
@@ -6,7 +8,7 @@ export const Cart = styled.div`
   align-items: center;
   box-sizing: border-box;
   width: 272px;
-  padding: 20px;
+  padding: 40px 20px 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(34, 60, 80, 0.1);
@@ -18,11 +20,14 @@ export const Cart = styled.div`
 
 export const Header = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 20px;
 `;
 
 export const Title = styled.h3`
+  margin: 0;
   font-size: 18px;
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
   line-height: 18px;
@@ -36,7 +41,7 @@ export const CartTotalCount = styled.span`
   line-height: 18px;
 `;
 
-export const ClearCartButton = styled.button`
+export const ClearCartButton = styled(Button)`
   font-size: 12px;
   line-height: 12px;
 `;
@@ -47,10 +52,17 @@ export const CartImage = styled.img`
 
 export const Footer = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 14px;
+`;
+
+export const PriceWrapper = styled.div`
+  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: 14px;
 `;
 
 export const TotalPriceText = styled.span`
@@ -75,4 +87,8 @@ export const Description = styled.p`
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+`;
+
+export const OrderButton = styled(StyledButton)`
+  margin-top: 12px;
 `;

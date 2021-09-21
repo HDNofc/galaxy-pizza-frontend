@@ -1,11 +1,9 @@
+import * as S from './styles';
 import { PizzaCartItem } from 'redux/cart/contracts/state';
 
-import Button from 'components/button';
 import Counter from 'components/counter';
 
-import * as S from './styles';
-
-import { ReactComponent as Cross } from './icons/cross.svg';
+import { ReactComponent as CrossIcon } from './icons/cross.svg';
 
 const DOUGH_TYPES = {
   fat: 'Традиционное тесто',
@@ -24,11 +22,18 @@ interface Props {
   onDeleteItemClick: (index: number) => void;
   onCounterPlusClick: (index: number) => void;
   onCounterMinusClick: (index: number) => void;
+  size?: 'small' | 'big';
 }
 
-const CartList = ({ items, onDeleteItemClick, onCounterPlusClick, onCounterMinusClick }: Props) => {
+const CartList = ({
+  items,
+  onDeleteItemClick,
+  onCounterPlusClick,
+  onCounterMinusClick,
+  size = 'small',
+}: Props) => {
   return (
-    <S.CartList>
+    <S.CartList $size={size}>
       {items.map((item, index) => (
         <S.CartListItem key={item.cartId}>
           <S.ItemBody>
@@ -39,13 +44,14 @@ const CartList = ({ items, onDeleteItemClick, onCounterPlusClick, onCounterMinus
             <S.ItemInfo>
               <S.ItemName>{item.name}</S.ItemName>
               <S.ItemShortDescription>{getPizzaItemShortDescription(item)}</S.ItemShortDescription>
+              <S.ItemFullDescription>{item.description}</S.ItemFullDescription>
             </S.ItemInfo>
 
             <S.DeleteButton
-              as={Button}
               onClick={() => onDeleteItemClick(index)}
               onlyIcon
-              icon={<Cross className="cart-list-item-cross" />}
+              icon={<CrossIcon className="cart-list-item-cross" />}
+              text="Удалить пиццу из корзины"
             />
           </S.ItemBody>
 

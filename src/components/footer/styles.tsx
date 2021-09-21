@@ -28,6 +28,10 @@ export const Content = styled.div`
   @media ${({ theme }) => theme.media.tabletPortrait} {
     flex-direction: row;
   }
+
+  @media ${({ theme }) => theme.media.desktop} {
+    padding: 20px 0;
+  }
 `;
 
 export const ContactLink = styled(Link)``;

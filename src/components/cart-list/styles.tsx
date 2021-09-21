@@ -1,9 +1,16 @@
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
+import Button from 'components/button';
 
-export const CartList = styled.ul`
+interface Props {
+  $size?: 'small' | 'big';
+}
+
+export const CartList = styled.ul<Props>`
   width: 100%;
   margin: 0;
   padding: 0;
+
+  ${({ $size }) => $size === 'big' && getSizeBigStyles()};
 `;
 
 export const CartListItem = styled.li`
@@ -46,7 +53,15 @@ export const ItemShortDescription = styled.p`
   line-height: 16px;
 `;
 
-export const DeleteButton = styled.button`
+export const ItemFullDescription = styled.p`
+  display: none;
+  margin: 40px 0 0;
+  color: ${({ theme }) => theme.colorsMeaning.bodyColor};
+  font-size: 14px;
+  line-height: 22px;
+`;
+
+export const DeleteButton = styled(Button)`
   flex-shrink: 0;
   width: 10px;
   height: 10px;
@@ -56,6 +71,7 @@ export const DeleteButton = styled.button`
   cursor: pointer;
   transition: color 0.2s;
 
+  &:focus,
   &:hover {
     color: #c21313;
   }
@@ -76,3 +92,106 @@ export const ItemPrice = styled.span`
   font-family: ${({ theme }) => theme.fonts.fontAdditional};
   line-height: 14px;
 `;
+
+// $size = 'big'
+function getSizeBigStyles() {
+  return css`
+    ${ItemName} {
+      @media ${({ theme }) => theme.media.tabletPortrait} {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @media ${({ theme }) => theme.media.desktop} {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    ${ItemInfo} {
+      @media ${({ theme }) => theme.media.desktop} {
+        align-self: center;
+        margin-right: 50px;
+      }
+    }
+
+    ${CartListImage} {
+      @media ${({ theme }) => theme.media.tabletPortrait} {
+        width: 70px;
+      }
+
+      @media ${({ theme }) => theme.media.tabletLandscape} {
+        width: 120px;
+      }
+
+      @media ${({ theme }) => theme.media.desktop} {
+        width: 180px;
+      }
+    }
+
+    ${CartListItem} {
+      @media ${({ theme }) => theme.media.desktop} {
+        padding: 20px 0;
+      }
+    }
+
+    ${ItemBody} {
+      > picture {
+        @media ${({ theme }) => theme.media.tabletLandscape} {
+          margin-right: 12px;
+        }
+
+        @media ${({ theme }) => theme.media.desktop} {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    ${ItemSummaryPrice} {
+      @media ${({ theme }) => theme.media.tabletLandscape} {
+        padding-left: 18px;
+      }
+
+      @media ${({ theme }) => theme.media.desktop} {
+        padding-left: 50px;
+      }
+    }
+
+    ${ItemPrice} {
+      @media ${({ theme }) => theme.media.tabletPortrait} {
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      @media ${({ theme }) => theme.media.desktop} {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
+    ${DeleteButton} {
+      @media ${({ theme }) => theme.media.tabletLandscape} {
+        width: 16px;
+        height: 16px;
+      }
+
+      @media ${({ theme }) => theme.media.desktop} {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
+    ${ItemShortDescription} {
+      @media ${({ theme }) => theme.media.desktop} {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    ${ItemFullDescription} {
+      @media ${({ theme }) => theme.media.desktop} {
+        display: block;
+      }
+    }
+  `;
+}

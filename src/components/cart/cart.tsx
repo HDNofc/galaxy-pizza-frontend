@@ -1,7 +1,5 @@
 import { Dispatch } from 'redux';
 
-import Button from 'components/button';
-
 import * as S from './styles';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
@@ -13,6 +11,7 @@ import cartImage2x from './images/cart@2x.jpg';
 import cartImage3x from './images/cart@3x.jpg';
 
 import CartList from 'components/cart-list';
+import Link from 'components/link';
 
 interface Props {
   children?: React.ReactNode;
@@ -46,7 +45,7 @@ const Cart = (_props: Props): React.ReactElement => {
         <S.Title>
           Корзина <S.CartTotalCount>({totalCount})</S.CartTotalCount>
         </S.Title>
-        <S.ClearCartButton as={Button} text="очистить" link onClick={onClearCartClick} />
+        <S.ClearCartButton text="очистить" link onClick={onClearCartClick} />
       </S.Header>
 
       {items.length > 0 ? (
@@ -62,8 +61,13 @@ const Cart = (_props: Props): React.ReactElement => {
 
       {items.length > 0 ? (
         <S.Footer>
-          <S.TotalPriceText>Сумма заказа:</S.TotalPriceText>{' '}
-          <S.TotalPrice>{`${totalPrice} ₽`}</S.TotalPrice>
+          <S.PriceWrapper>
+            <S.TotalPriceText>Сумма заказа:</S.TotalPriceText>{' '}
+            <S.TotalPrice>{`${totalPrice} ₽`}</S.TotalPrice>
+          </S.PriceWrapper>
+          <S.OrderButton as={Link} to="/order" $standard $large>
+            Оформить
+          </S.OrderButton>
         </S.Footer>
       ) : (
         <S.Description>Корзина пуста. Выберите пиццу из меню</S.Description>
