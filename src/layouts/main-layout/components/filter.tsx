@@ -9,21 +9,28 @@ const Filter = ({ children }: Props): React.ReactElement => {
   const filterRef = useRef<HTMLDivElement>(null);
   const [isFixed, setIsFixed] = useState(false);
 
-  const filterPos = () => {
+  useEffect(() => {
     if (!filterRef.current) return;
 
-    if (window.scrollY >= filterRef.current?.offsetTop) {
-      setIsFixed(true);
-    } else {
-      setIsFixed(false);
-    }
-  };
+    const cachedRef = filterRef.current;
+    const observer = new IntersectionObserver(
+      ([e]) => {
+        if (e.intersectionRatio < 1) {
+          setIsFixed(true);
+        } else {
+          setIsFixed(false);
+        }
+      },
+      {
+        rootMargin: '-1px 0px 0px 0px',
+        threshold: [1],
+      }
+    );
 
-  useEffect(() => {
-    filterPos();
-    window.addEventListener('scroll', filterPos);
+    observer.observe(cachedRef);
+
     return () => {
-      window.removeEventListener('scroll', filterPos);
+      observer.unobserve(cachedRef);
     };
   }, []);
 
