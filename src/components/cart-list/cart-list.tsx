@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './cart-list.styles';
 import { PizzaCartItem } from 'redux/cart/contracts/state';
 
 import Counter from 'components/counter';

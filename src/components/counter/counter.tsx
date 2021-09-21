@@ -1,6 +1,6 @@
 import Button from 'components/button';
 
-import * as S from './styles';
+import * as S from './counter.styles';
 import { ReactComponent as Minus } from './icons/minus.svg';
 import { ReactComponent as Plus } from './icons/plus.svg';
 

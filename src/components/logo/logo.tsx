@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './logo.styles';
 import Link from 'components/link';
 import { LinkProps } from 'components/link';
 

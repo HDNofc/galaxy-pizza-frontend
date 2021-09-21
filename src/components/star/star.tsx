@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './star.styles';
 
 import { ReactComponent as FullStar } from './icons/full.svg';
 import { ReactComponent as HalfStar } from './icons/half.svg';

@@ -1,5 +1,5 @@
 import Filter from './components/filter';
-import * as S from './styles';
+import * as S from './main-layout.styles';
 
 interface Props {
   promo: React.ReactNode;

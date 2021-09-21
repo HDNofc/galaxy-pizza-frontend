@@ -1,7 +1,7 @@
 import { useRef, useEffect, useCallback } from 'react';
 import RadioGroupField from 'components/radio-group-field';
 
-import * as S from './styles';
+import * as S from './radio-group.styles';
 
 export interface IRadioItem {
   id: string;

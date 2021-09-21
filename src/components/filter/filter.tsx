@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/scrollbar/scrollbar.min.css';
 
-import * as S from './styles';
+import * as S from './filter.styles';
 
 interface Props {
   items: {

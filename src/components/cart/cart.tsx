@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux';
 
-import * as S from './styles';
+import * as S from './cart.styles';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { RootState } from 'redux/store/store';

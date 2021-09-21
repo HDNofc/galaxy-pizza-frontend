@@ -1,6 +1,6 @@
 import Footer from 'components/footer';
 import Header from 'components/header';
-import * as S from './styles';
+import * as S from './app-layout.styles';
 
 import menuLinks from 'constants/menu-links';
 

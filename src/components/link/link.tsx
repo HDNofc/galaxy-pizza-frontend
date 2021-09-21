@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './link.styles';
 
 import { LinkProps } from 'react-router-dom';
 

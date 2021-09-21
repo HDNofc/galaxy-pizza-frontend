@@ -7,7 +7,7 @@ import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { RootState } from 'redux/store/store';
 import { setPlanetLocation } from 'redux/planet-location/action';
 
-import * as S from './styles';
+import * as S from './header.styles';
 import variables from 'styles/variables';
 import Link from 'components/link';
 import StarRating from 'components/star-rating';

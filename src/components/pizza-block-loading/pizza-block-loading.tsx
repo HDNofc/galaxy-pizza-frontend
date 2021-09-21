@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './pizza-block-loading.styles';
 
 import ContentLoader from 'react-content-loader';
 

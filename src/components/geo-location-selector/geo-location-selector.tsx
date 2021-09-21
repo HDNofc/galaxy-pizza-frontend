@@ -1,6 +1,6 @@
 import Select, { ValueType } from 'react-select';
 
-import * as S from './styles';
+import * as S from './geo-location-selector.styles';
 
 interface Props {
   items: IReactSelectOption[];

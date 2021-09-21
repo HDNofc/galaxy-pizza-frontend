@@ -4,7 +4,7 @@ import Button from 'components/button';
 
 import { ReactComponent as Vegan } from './icons/vegan.svg';
 import { ReactComponent as Hot } from './icons/hot.svg';
-import * as S from './styles';
+import * as S from './pizza-block.styles';
 
 export interface IPizzaImageUrl {
   jpg: string;

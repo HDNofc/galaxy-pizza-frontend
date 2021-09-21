@@ -1,6 +1,6 @@
 import Star from 'components/star';
 import roundHalf from 'helpers/round-half';
-import * as S from './styles';
+import * as S from './star-rating.styles';
 
 interface Props {
   rating: number;

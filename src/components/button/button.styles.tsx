@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/macro';
-import { Counter as StyledCounter } from '../counter/styles';
+import { Counter as StyledCounter } from '../counter/counter.styles';
 
 interface Props {
   $standard?: boolean;

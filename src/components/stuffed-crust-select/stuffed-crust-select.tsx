@@ -1,7 +1,7 @@
 import Select, { ValueType } from 'react-select';
 import { DOUGH_STUFFED_CRUSTS } from './constants';
 
-import * as S from './styles';
+import * as S from './stuffed-crust-select.styles';
 
 interface Props {
   stuffedCrusts: string[];

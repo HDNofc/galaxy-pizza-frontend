@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro';
 
-import { Logo } from 'components/logo/styles';
+import { Logo } from 'components/logo/logo.styles';
 import Link from 'components/link';
 import _Hamburger from 'components/hamburger';
 import _Logo from 'components/logo';

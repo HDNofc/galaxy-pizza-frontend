@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './footer.styles';
 
 const Footer = (): React.ReactElement => {
   return (

@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 import Button from 'components/button';
-import { Button as StyledButton } from 'components/button/styles';
+import { Button as StyledButton } from 'components/button/button.styles';
 
 export const Cart = styled.div`
   display: none;

@@ -3,7 +3,7 @@ import SwiperCore, { Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 
-import * as S from './styles';
+import * as S from './promo-carousel.styles';
 
 interface Props {
   items: {
