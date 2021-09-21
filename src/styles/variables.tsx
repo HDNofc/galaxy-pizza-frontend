@@ -9,6 +9,7 @@ const common = {
   desktop: '1280px',
   headerHeightMobile: '50px',
   headerHeightDesktop: '70px',
+  navHeight: '52px',
 };
 
 const fonts = {

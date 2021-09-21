@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { Dispatch } from 'redux';
 import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { RootState } from 'redux/store/store';
 import { fetchPizzas, fetchPizzasByTaste } from 'redux/pizzas/thunk';
+
+import variables from 'styles/variables';
 
 import AppLayout from 'components/app-layout';
 import MainLayout from 'layouts/main-layout';
@@ -33,12 +35,30 @@ const Main = () => {
     }
   }, [dispatch, params]);
 
+  const pizzasContainerRef = useRef<HTMLDivElement>({} as HTMLDivElement);
+
+  const getPizzasContainerRef = (ref: HTMLDivElement | null) => {
+    if (ref) {
+      pizzasContainerRef.current = ref;
+    }
+  };
+
+  const onFilterItemClick = () => {
+    const position =
+      pizzasContainerRef.current.offsetTop - Number.parseInt(variables.common.navHeight) - 20;
+
+    if (window.scrollY > position) {
+      window.scrollTo(0, position);
+    }
+  };
+
   return (
     <AppLayout>
       <MainLayout
         promo={<PromoCarousel items={promoImages} />}
-        filter={<Filter items={filters} />}
+        filter={<Filter onFilterItemClick={onFilterItemClick} items={filters} />}
         cart={<Cart />}
+        getPizzasContainerRef={getPizzasContainerRef}
         pizzaSection={
           isLoaded
             ? pizzas.map((pizza) => <PizzaBlockContainer key={pizza._id} pizzaItem={pizza} />)

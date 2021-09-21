@@ -11,9 +11,10 @@ interface Props {
     to: string;
     text: string;
   }[];
+  onFilterItemClick: () => void;
 }
 
-const Filter = ({ items }: Props): React.ReactElement => {
+const Filter = ({ items, onFilterItemClick }: Props): React.ReactElement => {
   const params = useParams<{ taste?: string }>();
 
   return (
@@ -38,6 +39,7 @@ const Filter = ({ items }: Props): React.ReactElement => {
                 to={to}
                 $medium
                 $secondary
+                onClick={onFilterItemClick}
                 {...(params.taste === to.split('/')[2] ? { $selected: true } : {})}
               >
                 {text}

@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components/macro';
 
-const navHeight = 52;
-
 interface FilterProps {
   $withShadow?: boolean;
 }
@@ -27,7 +25,7 @@ export const Filter = styled.nav<FilterProps>`
   top: 0;
   z-index: 1;
   width: 100%;
-  height: ${navHeight}px;
+  height: ${({ theme }) => theme.common.navHeight};
   margin-bottom: 12px;
   transition: box-shadow 0.2s ease-in-out;
 
@@ -87,11 +85,11 @@ export const PizzasContent = styled.div`
 
 export const Cart = styled.aside`
   position: sticky;
-  top: ${navHeight + 12}px;
+  top: ${({ theme }) => Number.parseInt(theme.common.navHeight) + 12}px;
   flex-shrink: 0;
 
   @media ${({ theme }) => theme.media.tabletLandscape} {
-    top: ${navHeight + 20}px;
+    top: ${({ theme }) => Number.parseInt(theme.common.navHeight) + 20}px;
   }
 `;
 

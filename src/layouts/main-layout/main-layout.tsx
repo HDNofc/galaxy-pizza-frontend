@@ -6,14 +6,21 @@ interface Props {
   filter: React.ReactNode;
   pizzaSection: React.ReactNode;
   cart: React.ReactNode;
+  getPizzasContainerRef: (ref: HTMLDivElement | null) => void;
 }
 
-const MainLayout = ({ promo, cart, filter, pizzaSection }: Props): React.ReactElement => {
+const MainLayout = ({
+  promo,
+  cart,
+  filter,
+  pizzaSection,
+  getPizzasContainerRef,
+}: Props): React.ReactElement => {
   return (
     <S.MainLayout>
       <S.Promo>{promo}</S.Promo>
       <Filter>{filter}</Filter>
-      <S.PizzasContent>
+      <S.PizzasContent ref={(el) => getPizzasContainerRef(el)}>
         <S.PizzasSection>{pizzaSection}</S.PizzasSection>
         <S.Cart>{cart}</S.Cart>
       </S.PizzasContent>
