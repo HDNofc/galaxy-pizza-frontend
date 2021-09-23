@@ -1,8 +1,10 @@
-import * as S from './order-layout.css';
+import * as S from './order-layout.styles';
 import Button from 'components/button';
 import Link from 'components/link';
 
 import cartImage from './images/cart.jpg';
+
+import groupDigits from 'helpers/group-digits';
 
 interface Props {
   cartList: React.ReactNode;
@@ -34,7 +36,7 @@ const OrderLayout = ({
             <>
               <S.PriceWrapper>
                 <S.TotalPriceText>Сумма заказа:</S.TotalPriceText>{' '}
-                <S.TotalPrice>{`${totalPrice} ₽`}</S.TotalPrice>
+                <S.TotalPrice>{`${groupDigits(totalPrice)} ₽`}</S.TotalPrice>
               </S.PriceWrapper>
               <S.FooterButtons>
                 <S.GoMainMenuButton as={Link} to="/" $secondary $large>

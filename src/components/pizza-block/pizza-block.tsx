@@ -84,7 +84,7 @@ const PizzaBlock = (props: Props): React.ReactElement => {
 
         <S.ProductPurchase>
           <Button text="В корзину" onClick={onAddToCartClick} standard large />
-          <S.Price>{`${price} Р`}</S.Price>
+          <S.Price>{`${price} ₽`}</S.Price>
         </S.ProductPurchase>
       </S.PizzaInfo>
     </S.PizzaBlock>

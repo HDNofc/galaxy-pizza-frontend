@@ -5,6 +5,8 @@ import Counter from 'components/counter';
 
 import { ReactComponent as CrossIcon } from './icons/cross.svg';
 
+import groupDigits from 'helpers/group-digits';
+
 const DOUGH_TYPES = {
   fat: 'Традиционное тесто',
   slim: 'Тонкое тесто',
@@ -61,7 +63,7 @@ const CartList = ({
               onMinusClick={() => onCounterMinusClick(index)}
               count={item.amount}
             />
-            <S.ItemPrice>{`${item.price} ₽`}</S.ItemPrice>
+            <S.ItemPrice>{`${groupDigits(item.price)} ₽`}</S.ItemPrice>
           </S.ItemSummaryPrice>
         </S.CartListItem>
       ))}

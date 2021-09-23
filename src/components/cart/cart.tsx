@@ -13,6 +13,8 @@ import cartImage3x from './images/cart@3x.jpg';
 import CartList from 'components/cart-list';
 import Link from 'components/link';
 
+import groupDigits from 'helpers/group-digits';
+
 interface Props {
   children?: React.ReactNode;
 }
@@ -63,7 +65,7 @@ const Cart = (_props: Props): React.ReactElement => {
         <S.Footer>
           <S.PriceWrapper>
             <S.TotalPriceText>Сумма заказа:</S.TotalPriceText>{' '}
-            <S.TotalPrice>{`${totalPrice} ₽`}</S.TotalPrice>
+            <S.TotalPrice>{`${groupDigits(totalPrice)} ₽`}</S.TotalPrice>
           </S.PriceWrapper>
           <S.OrderButton as={Link} to="/order" $standard $large>
             Оформить

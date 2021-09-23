@@ -25,7 +25,7 @@ export const OrderLayoutContent = styled.div`
   margin: 12px 0;
   background-color: ${({ theme }) => theme.colorsPalette.white};
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgb(34 60 80 / 10%);
+  box-shadow: 0 0 10px 0 rgb(34 60 80 / 0.1);
 
   @media ${({ theme }) => theme.media.tabletPortrait} {
     margin: 20px 0;

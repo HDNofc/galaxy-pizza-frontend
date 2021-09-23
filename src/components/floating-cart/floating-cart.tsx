@@ -11,7 +11,7 @@ const FloatingCart = ({ amount, ...otherProps }: Props): React.ReactElement => {
   return (
     <S.FloatingCart to="/order" {...otherProps}>
       <CartIcon />
-      <S.Text>{groupDigits(amount)} Р</S.Text>
+      <S.Text>{groupDigits(amount)} ₽</S.Text>
     </S.FloatingCart>
   );
 };
