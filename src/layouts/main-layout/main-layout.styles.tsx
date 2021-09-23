@@ -113,3 +113,14 @@ export const PizzasSection = styled.div`
     gap: 10px;
   }
 `;
+
+export const FloatingCart = styled.div`
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+
+  @media ${({ theme }) => theme.media.tabletPortrait} {
+    display: none;
+  }
+`;

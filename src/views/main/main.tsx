@@ -19,6 +19,7 @@ import Filter from 'components/filter';
 
 import filters from 'constants/filter';
 import promoImages from 'constants/promo-carousel';
+import FloatingCart from 'components/floating-cart';
 
 const Main = () => {
   const params = useParams();
@@ -26,6 +27,7 @@ const Main = () => {
 
   const pizzas = useAppSelector((state: RootState) => state.pizzas.items);
   const isLoaded = useAppSelector((state: RootState) => state.pizzas.isLoaded);
+  const totalPrice = useAppSelector((state: RootState) => state.cart.totalPrice);
 
   useEffect(() => {
     if (Object.entries(params).length === 0) {
@@ -66,6 +68,7 @@ const Main = () => {
                 .fill(0)
                 .map((_, index) => <PizzaBlockLoading key={index} />)
         }
+        floatingCart={totalPrice > 0 && <FloatingCart amount={totalPrice} />}
       />
     </AppLayout>
   );
