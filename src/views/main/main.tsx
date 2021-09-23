@@ -9,7 +9,7 @@ import { fetchPizzas, fetchPizzasByTaste } from 'redux/pizzas/thunk';
 import variables from 'styles/variables';
 
 import AppLayout from 'components/app-layout';
-import MainLayout from 'layouts/main-layout';
+import MainTemplate from 'templates/main-template';
 
 import Cart from 'components/cart';
 import PizzaBlockContainer from 'components/pizza-block-container';
@@ -56,7 +56,7 @@ const Main = () => {
 
   return (
     <AppLayout>
-      <MainLayout
+      <MainTemplate
         promo={<PromoCarousel items={promoImages} />}
         filter={<Filter onFilterItemClick={onFilterItemClick} items={filters} />}
         cart={<Cart />}

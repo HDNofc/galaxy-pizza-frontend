@@ -1,7 +1,7 @@
 import AppLayout from 'components/app-layout';
 import { useEffect } from 'react';
 import Link from 'components/link';
-import PageNotFoundLayout from 'layouts/page-not-found-layout/page-not-found-layout';
+import PageNotFoundTemplate from 'templates/page-not-found-template/page-not-found-template';
 
 const Order = () => {
   useEffect(() => {
@@ -17,7 +17,7 @@ const Order = () => {
 
   return (
     <AppLayout>
-      <PageNotFoundLayout>
+      <PageNotFoundTemplate>
         <p>Страница не найдена.</p>
         <p>
           Попробуйте начать с{' '}
@@ -25,7 +25,7 @@ const Order = () => {
             главной страницы
           </Link>
         </p>
-      </PageNotFoundLayout>
+      </PageNotFoundTemplate>
     </AppLayout>
   );
 };

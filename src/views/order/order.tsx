@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { RootState } from 'redux/store/store';
 import { clearCart, minusCartItem, plusCartItem, removeCartItem } from 'redux/cart/action';
 
-import OrderLayout from 'layouts/order-layout';
+import OrderTemplate from 'templates/order-template';
 import AppLayout from 'components/app-layout';
 import CartList from 'components/cart-list';
 
@@ -37,7 +37,7 @@ const Order = () => {
 
   return (
     <AppLayout>
-      <OrderLayout
+      <OrderTemplate
         totalCount={totalCount}
         onClearCartClick={onClearCartClick}
         totalPrice={totalPrice}

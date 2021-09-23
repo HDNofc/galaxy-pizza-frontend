@@ -1,5 +1,5 @@
 import Filter from './components/filter';
-import * as S from './main-layout.styles';
+import * as S from './main-template.styles';
 
 interface Props {
   promo: React.ReactNode;
@@ -10,7 +10,7 @@ interface Props {
   getPizzasContainerRef: (ref: HTMLDivElement | null) => void;
 }
 
-const MainLayout = ({
+const MainTemplate = ({
   promo,
   cart,
   filter,
@@ -19,7 +19,7 @@ const MainLayout = ({
   getPizzasContainerRef,
 }: Props): React.ReactElement => {
   return (
-    <S.MainLayout>
+    <S.MainTemplate>
       <S.Promo>{promo}</S.Promo>
       <Filter>{filter}</Filter>
       <S.PizzasContent ref={(el) => getPizzasContainerRef(el)}>
@@ -27,8 +27,8 @@ const MainLayout = ({
         <S.Cart>{cart}</S.Cart>
       </S.PizzasContent>
       {floatingCart && <S.FloatingCart>{floatingCart}</S.FloatingCart>}
-    </S.MainLayout>
+    </S.MainTemplate>
   );
 };
 
-export default MainLayout;
+export default MainTemplate;

@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import Button from 'components/button';
 import { Button as StyledButton } from 'components/button/button.styles';
 
-export const OrderLayout = styled.div`
+export const OrderTemplate = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -15,7 +15,7 @@ export const OrderLayout = styled.div`
   }
 `;
 
-export const OrderLayoutContent = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;

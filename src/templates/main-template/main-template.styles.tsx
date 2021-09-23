@@ -4,7 +4,7 @@ interface FilterProps {
   $withShadow?: boolean;
 }
 
-export const MainLayout = styled.div`
+export const MainTemplate = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,4 +1,4 @@
-import * as S from './order-layout.styles';
+import * as S from './order-template.styles';
 import Button from 'components/button';
 import Link from 'components/link';
 
@@ -13,15 +13,15 @@ interface Props {
   totalPrice: number;
 }
 
-const OrderLayout = ({
+const OrderTemplate = ({
   cartList,
   totalCount,
   totalPrice,
   onClearCartClick,
 }: Props): React.ReactElement => {
   return (
-    <S.OrderLayout>
-      <S.OrderLayoutContent>
+    <S.OrderTemplate>
+      <S.Content>
         <S.Header>
           <S.Title>
             Корзина <S.CartTotalCount>({totalCount})</S.CartTotalCount>
@@ -59,9 +59,9 @@ const OrderLayout = ({
             </>
           )}
         </S.Footer>
-      </S.OrderLayoutContent>
-    </S.OrderLayout>
+      </S.Content>
+    </S.OrderTemplate>
   );
 };
 
-export default OrderLayout;
+export default OrderTemplate;

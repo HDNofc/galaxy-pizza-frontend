@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import * as S from '../main-layout.styles';
+import * as S from '../main-template.styles';
 
 interface Props {
   children?: React.ReactNode;
