@@ -1,9 +1,14 @@
+import React from 'react';
 import RadioGroup, { IRadioItem } from 'components/radio-group';
 import StuffedCrustSelect from 'components/stuffed-crust-select';
 import Button from 'components/button';
+import PizzaImagePlaceholder from 'components/image-placeholder';
 
 import { ReactComponent as Vegan } from './icons/vegan.svg';
 import { ReactComponent as Hot } from './icons/hot.svg';
+
+import { ReactComponent as PizzaPlaceholderImage } from 'assets/pizza-placeholder.svg';
+
 import * as S from './pizza-block.styles';
 
 export interface IPizzaImageUrl {
@@ -56,10 +61,16 @@ const PizzaBlock = (props: Props): React.ReactElement => {
 
   return (
     <S.PizzaBlock {...otherProps}>
-      <S.Picture>
-        <source type="image/webp" srcSet={`${imageUrl.webp}`} />
-        <S.Image src={imageUrl.jpg} alt="" />
-      </S.Picture>
+      <S.ImagePlaceholder>
+        <PizzaImagePlaceholder
+          placeholderComponent={<PizzaPlaceholderImage className="pizza-placeholder-image" />}
+        >
+          <S.Picture>
+            <source type="image/webp" srcSet={`${imageUrl.webp}`} />
+            <S.Image src={imageUrl.jpg} alt="" />
+          </S.Picture>
+        </PizzaImagePlaceholder>
+      </S.ImagePlaceholder>
 
       <S.PizzaInfo>
         <S.Category>

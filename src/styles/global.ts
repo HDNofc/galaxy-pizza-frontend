@@ -6,7 +6,9 @@ export default createGlobalStyle`
   ${normalize}
   ${fonts}
 
-  * {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 

@@ -3,6 +3,10 @@ import styled from 'styled-components/macro';
 import { RadioGroup as StyledRadioGroup } from 'components/radio-group/radio-group.styles';
 import { StuffedCrustSelect as StyledStuffedCrustSelect } from '../stuffed-crust-select/stuffed-crust-select.styles';
 
+interface PictureProps {
+  $loaded?: boolean;
+}
+
 export const PizzaBlock = styled.article`
   display: flex;
   flex-direction: column;
@@ -32,8 +36,7 @@ export const Description = styled.p`
   line-height: 20px;
 `;
 
-export const Picture = styled.picture`
-  display: flex;
+export const Picture = styled.picture<PictureProps>`
   min-height: 230px;
 `;
 
@@ -42,6 +45,12 @@ export const Image = styled.img`
   height: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+`;
+
+export const ImagePlaceholder = styled.div`
+  .pizza-placeholder-image {
+    width: 79%;
+  }
 `;
 
 export const Price = styled.span`

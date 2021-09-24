@@ -2,8 +2,10 @@ import * as S from './cart-list.styles';
 import { PizzaCartItem } from 'redux/cart/contracts/state';
 
 import Counter from 'components/counter';
+import PizzaImagePlaceholder from 'components/image-placeholder';
 
 import { ReactComponent as CrossIcon } from './icons/cross.svg';
+import { ReactComponent as PizzaPlaceholderImage } from 'assets/pizza-placeholder.svg';
 
 import groupDigits from 'helpers/group-digits';
 
@@ -37,12 +39,19 @@ const CartList = ({
   return (
     <S.CartList $size={size}>
       {items.map((item, index) => (
-        <S.CartListItem key={item.cartId}>
+        <S.CartListItem key={`${item.cartId}-${item.dough}-${item.size}-${item.crust}`}>
           <S.ItemBody>
-            <picture>
-              <source type="image/webp" srcSet={item.imageUrl?.full.webp} />
-              <S.CartListImage src={item.imageUrl?.full.jpg} alt="" />
-            </picture>
+            <S.ImagePlaceholder>
+              <PizzaImagePlaceholder
+                fadeInDelay={0}
+                placeholderComponent={<PizzaPlaceholderImage className="pizza-placeholder-image" />}
+              >
+                <S.Picture>
+                  <source type="image/webp" srcSet={item.imageUrl?.full.webp} />
+                  <S.CartListImage src={item.imageUrl?.full.jpg} alt="" />
+                </S.Picture>
+              </PizzaImagePlaceholder>
+            </S.ImagePlaceholder>
             <S.ItemInfo>
               <S.ItemName>{item.name}</S.ItemName>
               <S.ItemShortDescription>{getPizzaItemShortDescription(item)}</S.ItemShortDescription>

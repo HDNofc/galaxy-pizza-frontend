@@ -5,6 +5,10 @@ interface Props {
   $size?: 'small' | 'big';
 }
 
+interface PictureProps {
+  $loaded?: boolean;
+}
+
 export const CartList = styled.ul<Props>`
   width: 100%;
   margin: 0;
@@ -22,9 +26,19 @@ export const CartListItem = styled.li`
 export const ItemBody = styled.div`
   display: flex;
   align-items: flex-start;
+`;
 
-  > picture {
-    margin: 6px 4px 0 0;
+export const Picture = styled.picture<PictureProps>`
+  display: flex;
+  margin: 6px 4px 0 0;
+`;
+
+export const ImagePlaceholder = styled.div`
+  .pizza-placeholder-image {
+    align-self: center;
+    width: 50px;
+    height: 38px;
+    margin-right: 4px;
   }
 `;
 
@@ -115,6 +129,37 @@ function getSizeBigStyles() {
       }
     }
 
+    ${ImagePlaceholder} {
+      .pizza-placeholder-image {
+        @media ${({ theme }) => theme.media.tabletPortrait} {
+          width: 70px;
+          height: 50px;
+        }
+
+        @media ${({ theme }) => theme.media.tabletLandscape} {
+          width: 120px;
+          height: 81px;
+          margin-right: 12px;
+        }
+
+        @media ${({ theme }) => theme.media.desktop} {
+          width: 180px;
+          height: 119px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    ${Picture} {
+      @media ${({ theme }) => theme.media.tabletLandscape} {
+        margin-right: 12px;
+      }
+
+      @media ${({ theme }) => theme.media.desktop} {
+        margin-right: 20px;
+      }
+    }
+
     ${CartListImage} {
       @media ${({ theme }) => theme.media.tabletPortrait} {
         width: 70px;
@@ -132,18 +177,6 @@ function getSizeBigStyles() {
     ${CartListItem} {
       @media ${({ theme }) => theme.media.desktop} {
         padding: 20px 0;
-      }
-    }
-
-    ${ItemBody} {
-      > picture {
-        @media ${({ theme }) => theme.media.tabletLandscape} {
-          margin-right: 12px;
-        }
-
-        @media ${({ theme }) => theme.media.desktop} {
-          margin-right: 20px;
-        }
       }
     }
 
