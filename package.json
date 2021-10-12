@@ -36,8 +36,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "npm run lint",
-    "build": "react-scripts build",
+    "build": "npm run lint && react-scripts build",
+    "build:production": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-heroku": "node server.js",
@@ -47,7 +47,9 @@
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint": "npm-run-all --parallel lint:js lint:css",
     "lint:fix": "npm-run-all lint:js:fix lint:css:fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docker:dev": "docker-compose -f docker-compose.dev.yml up",
+    "docker:build": "docker-compose -f docker-compose.prod.yml build"
   },
   "engines": {
     "node": "14.x"
