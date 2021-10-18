@@ -98,5 +98,10 @@
       "stylelint --fix --syntax 'css-in-js'",
       "prettier --write"
     ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "src.*.styles.ts?(x)$"
+    ]
   }
 }
