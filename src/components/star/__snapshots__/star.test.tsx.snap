@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Star> отображает корректные svg в зависимости от переданного пропса \`type\` 1`] = `
+<div
+  class="Star-sc-16jz84-0 gjzZhz"
+>
+  <svg
+    style="height: 20px;"
+  >
+    full.svg
+  </svg>
+</div>
+`;
+
+exports[`<Star> отображает корректные svg в зависимости от переданного пропса \`type\` 2`] = `
+<div
+  class="Star-sc-16jz84-0 gjzZhz"
+>
+  <svg
+    style="height: 20px;"
+  >
+    full.svg
+  </svg>
+</div>
+`;
+
+exports[`<Star> отображает корректные svg в зависимости от переданного пропса \`type\` 3`] = `
+<div
+  class="Star-sc-16jz84-0 gjzZhz"
+>
+  <svg
+    style="height: 20px;"
+  >
+    half.svg
+  </svg>
+</div>
+`;
+
+exports[`<Star> отображает корректные svg в зависимости от переданного пропса \`type\` 4`] = `
+<div
+  class="Star-sc-16jz84-0 gjzZhz"
+>
+  <svg
+    style="height: 20px;"
+  >
+    zero.svg
+  </svg>
+</div>
+`;
