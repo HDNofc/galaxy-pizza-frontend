@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StarRating> отображает корректно в зависимости от пропса \`rating\` 1`] = `
+<div
+  class="StarRating-sc-i2uazh-0 kKrkS"
+>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<StarRating> отображает корректно в зависимости от пропса \`rating\` 2`] = `
+<div
+  class="StarRating-sc-i2uazh-0 kKrkS"
+>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      zero.svg
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<StarRating> отображает корректно в зависимости от пропса \`rating\` 3`] = `
+<div
+  class="StarRating-sc-i2uazh-0 kKrkS"
+>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      half.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      zero.svg
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<StarRating> отображает корректные количество звезд в зависимости от пропса \`starAmount\` 1`] = `
+<div
+  class="StarRating-sc-i2uazh-0 kKrkS"
+>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<StarRating> отображает корректные количество звезд в зависимости от пропса \`starAmount\` 2`] = `
+<div
+  class="StarRating-sc-i2uazh-0 kKrkS"
+>
+  <div
+    class="Star-sc-16jz84-0 gjzZhz"
+  >
+    <svg
+      style="height: 20px;"
+    >
+      full.svg
+    </svg>
+  </div>
+</div>
+`;
