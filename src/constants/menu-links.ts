@@ -1,4 +1,4 @@
-import addUniqueIdToArrayOfObject from 'helpers/add-unique-id-array-of-items';
+import addUniqueIdToArrayOfObject from 'helpers/add-unique-id-to-array-of-items';
 
 import personIcon from './icons/person.svg';
 

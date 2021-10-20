@@ -1,4 +1,4 @@
-import setUniqueIdToArrayOfObject from 'helpers/add-unique-id-array-of-items';
+import setUniqueIdToArrayOfObject from 'helpers/add-unique-id-to-array-of-items';
 
 const filters = [
   {

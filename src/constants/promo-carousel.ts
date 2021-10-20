@@ -1,4 +1,4 @@
-import setUniqueIdToArrayOfObject from 'helpers/add-unique-id-array-of-items';
+import setUniqueIdToArrayOfObject from 'helpers/add-unique-id-to-array-of-items';
 
 import food1 from 'assets/images/promo/food-1.jpg';
 import food2 from 'assets/images/promo/food-2.jpg';
