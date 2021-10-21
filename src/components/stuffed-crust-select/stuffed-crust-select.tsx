@@ -5,7 +5,7 @@ import * as S from './stuffed-crust-select.styles';
 
 interface Props {
   stuffedCrusts: string[];
-  selectedStuffedCrust: number | string;
+  selectedStuffedCrust?: number | string;
   onChange: (selectedSideId: string) => void;
 }
 
