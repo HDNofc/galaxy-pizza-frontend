@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo> отображается корректно 1`] = `
+<div
+  class="Logo-sc-u87jr6-0 jDjjYh"
+>
+  <svg
+    class="LogoIcon-sc-u87jr6-2 cvzOuu"
+    height="100%"
+    width="24"
+  >
+    logo.svg
+  </svg>
+  <h1
+    class="Title-sc-u87jr6-1 gOJvaA"
+  >
+    Galaxy Pizza
+  </h1>
+</div>
+`;
+
+exports[`<Logo> отображается корректно с пропсом \`to\` 1`] = `
+<a
+  class="Link-sc-16ffk5r-0 kUJqkA Logo-sc-u87jr6-0 jDjjYh"
+  href="/"
+>
+  <svg
+    class="LogoIcon-sc-u87jr6-2 cvzOuu"
+    height="100%"
+    width="24"
+  >
+    logo.svg
+  </svg>
+  <h1
+    class="Title-sc-u87jr6-1 gOJvaA"
+  >
+    Galaxy Pizza
+  </h1>
+</a>
+`;
