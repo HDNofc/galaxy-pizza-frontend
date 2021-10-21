@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter> отображается корректно 1`] = `
+<div
+  class="Counter-sc-9bdt3x-0 fPNYnq"
+>
+  <button
+    class="Button-sc-1fut0te-0 DIwKh"
+    type="button"
+  >
+    <span
+      class="Text-sc-1fut0te-1"
+    >
+      Отнять пиццу
+    </span>
+    <svg>
+      minus.svg
+    </svg>
+  </button>
+  <span
+    class="Value-sc-9bdt3x-1 jOvzOn"
+  >
+    0
+  </span>
+  <button
+    class="Button-sc-1fut0te-0 DIwKh"
+    type="button"
+  >
+    <span
+      class="Text-sc-1fut0te-1"
+    >
+      Добавить пиццу
+    </span>
+    <svg>
+      plus.svg
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<Counter> отображается корректно с переданным пропсом \`count\` 1`] = `
+<div
+  class="Counter-sc-9bdt3x-0 fPNYnq"
+>
+  <button
+    class="Button-sc-1fut0te-0 DIwKh"
+    type="button"
+  >
+    <span
+      class="Text-sc-1fut0te-1"
+    >
+      Отнять пиццу
+    </span>
+    <svg>
+      minus.svg
+    </svg>
+  </button>
+  <span
+    class="Value-sc-9bdt3x-1 jOvzOn"
+  >
+    5
+  </span>
+  <button
+    class="Button-sc-1fut0te-0 DIwKh"
+    type="button"
+  >
+    <span
+      class="Text-sc-1fut0te-1"
+    >
+      Добавить пиццу
+    </span>
+    <svg>
+      plus.svg
+    </svg>
+  </button>
+</div>
+`;

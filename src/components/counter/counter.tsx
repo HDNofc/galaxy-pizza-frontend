@@ -8,7 +8,7 @@ interface Props {
   children?: React.ReactNode;
   onMinusClick: () => void;
   onPlusClick: () => void;
-  count: number;
+  count?: number;
 }
 
 const Counter = ({
@@ -19,9 +19,9 @@ const Counter = ({
 }: Props): React.ReactElement => {
   return (
     <S.Counter {...otherProps}>
-      <Button standard onlyIcon icon={<Minus />} text="Добавить пиццу" onClick={onMinusClick} />
+      <Button standard onlyIcon icon={<Minus />} text="Отнять пиццу" onClick={onMinusClick} />
       <S.Value>{count}</S.Value>
-      <Button standard onlyIcon icon={<Plus />} text="Отнять пиццу" onClick={onPlusClick} />
+      <Button standard onlyIcon icon={<Plus />} text="Добавить пиццу" onClick={onPlusClick} />
     </S.Counter>
   );
 };
