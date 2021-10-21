@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer> отображается корректно 1`] = `
+<div
+  class="Footer-sc-1sq4u4p-0 cla-dGb"
+>
+  <div
+    class="Content-sc-1sq4u4p-1 kFlCIn"
+  >
+    <span
+      class="Copyright-sc-1sq4u4p-4 bNGocS"
+    >
+      © Copyright
+    </span>
+    <div
+      class="MenuFooter-sc-1sq4u4p-3 eUEzlh"
+    >
+      <a
+        class="NativeLink-sc-16ffk5r-1 tmBDA ContactLink-sc-1sq4u4p-2"
+        href="tel:+78009999999"
+      >
+        8 (800) 999-99-99
+      </a>
+      <a
+        class="NativeLink-sc-16ffk5r-1 tmBDA ContactLink-sc-1sq4u4p-2"
+        href="mailto:mail@example.com"
+      >
+        mail@example.com
+      </a>
+    </div>
+  </div>
+</div>
+`;
