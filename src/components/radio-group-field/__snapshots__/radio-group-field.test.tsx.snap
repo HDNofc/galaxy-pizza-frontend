@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroupField> отображается корректно 1`] = `
+<div
+  class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+>
+  <input
+    class="Input-sc-18y3buo-2 hKbzCX"
+    name="fruits"
+    type="radio"
+    value="orange"
+  />
+  <label
+    class="Label-sc-18y3buo-1 ceQMEQ"
+  >
+    радио 1
+  </label>
+</div>
+`;
