@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PromoCarousel> отображается корректно с верным количество элементов 1`] = `
+<div
+  class="PromoCarousel-sc-1l9778m-0 gfIHaU"
+>
+  <div
+    class="swiper-container swiper-container-initialized swiper-container-horizontal"
+  >
+    <div
+      class="swiper-wrapper"
+      style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+    >
+      <div
+        class="swiper-slide swiper-slide-duplicate"
+        data-swiper-slide-index="0"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-1"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-1"
+          />
+        </div>
+      </div>
+      <div
+        class="swiper-slide swiper-slide-duplicate"
+        data-swiper-slide-index="1"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-2"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-2"
+          />
+        </div>
+      </div>
+      <div
+        class="swiper-slide swiper-slide-duplicate"
+        data-swiper-slide-index="2"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-3"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-3"
+          />
+        </div>
+      </div>
+      <div
+        class="swiper-slide"
+        data-swiper-slide-index="0"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-1"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-1"
+          />
+        </div>
+      </div>
+      <div
+        class="swiper-slide"
+        data-swiper-slide-index="1"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-2"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-2"
+          />
+        </div>
+      </div>
+      <div
+        class="swiper-slide"
+        data-swiper-slide-index="2"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-3"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-3"
+          />
+        </div>
+      </div>
+      <div
+        class="swiper-slide swiper-slide-duplicate"
+        data-swiper-slide-index="0"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-1"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-1"
+          />
+        </div>
+      </div>
+      <div
+        class="swiper-slide swiper-slide-duplicate"
+        data-swiper-slide-index="1"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-2"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-2"
+          />
+        </div>
+      </div>
+      <div
+        class="swiper-slide swiper-slide-duplicate"
+        data-swiper-slide-index="2"
+      >
+        <div
+          class="SlideContainer-sc-1l9778m-1"
+        >
+          <img
+            alt="alt-3"
+            class="SlideImage-sc-1l9778m-2 jyXlEq"
+            src="image-url-3"
+          />
+        </div>
+      </div>
+    </div>
+    <ul />
+  </div>
+</div>
+`;
