@@ -15,11 +15,7 @@ import Link from 'components/link';
 
 import groupDigits from 'helpers/group-digits';
 
-interface Props {
-  children?: React.ReactNode;
-}
-
-const Cart = (_props: Props): React.ReactElement => {
+const Cart = (): React.ReactElement => {
   const cart = useAppSelector(({ cart }: RootState) => cart);
   const dispatch: Dispatch<any> = useAppDispatch();
 

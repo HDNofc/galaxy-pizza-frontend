@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cart> отображается корректно с верным количеством элементов 1`] = `
+<div
+  class="Cart-sc-1eqnpd4-0 gmhNp"
+>
+  <div
+    class="Header-sc-1eqnpd4-1 iVioYV"
+  >
+    <h3
+      class="Title-sc-1eqnpd4-2 cXAJfc"
+    >
+      Корзина 
+      <span
+        class="CartTotalCount-sc-1eqnpd4-3 eEFesY"
+      >
+        (
+        4
+        )
+      </span>
+    </h3>
+    <button
+      class="Button-sc-1fut0te-0 hlTeFB ClearCartButton-sc-1eqnpd4-4 fqAwVH"
+      type="button"
+    >
+      <span
+        class="Text-sc-1fut0te-1"
+      >
+        очистить
+      </span>
+    </button>
+  </div>
+  <ul
+    class="CartList-sc-hb6owy-0 jBTWLT"
+  >
+    <li
+      class="CartListItem-sc-hb6owy-1 bUxpHq"
+    >
+      <div
+        class="ItemBody-sc-hb6owy-2 bCXgRP"
+      >
+        <div
+          class="ImagePlaceholder-sc-hb6owy-4 dmvjGy"
+        >
+          <div
+            class="ImagePlaceholder-sc-1lq6aod-0"
+          >
+            <div
+              class="Placeholder-sc-1lq6aod-1 eizUTG"
+            >
+              <svg
+                class="pizza-placeholder-image"
+              >
+                pizza-placeholder.svg
+              </svg>
+            </div>
+            <div
+              class="Content-sc-1lq6aod-2 iLQvsD"
+            >
+              <picture
+                class="Picture-sc-hb6owy-3 lfkRa-D"
+              >
+                <source
+                  srcset="https://api.papajohns.ru/images/catalog/thumbs/cart/64e568f97a17aa5caf0284511cde70a7.webp"
+                  type="image/webp"
+                />
+                <img
+                  alt=""
+                  class="CartListImage-sc-hb6owy-5 iHzSkv"
+                  src="https://api.papajohns.ru/images/catalog/thumbs/cart/64e568f97a17aa5caf0284511cde70a7.jpg"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ItemInfo-sc-hb6owy-6 gdDXea"
+        >
+          <span
+            class="ItemName-sc-hb6owy-7 fZhgMN"
+          >
+            Мясное барбекю
+          </span>
+          <p
+            class="ItemShortDescription-sc-hb6owy-8 eYepFn"
+          >
+            Традиционное тесто, 35 см, колбасный борт
+          </p>
+          <p
+            class="ItemFullDescription-sc-hb6owy-9 bllVyv"
+          >
+            Мясная пицца с пикантной пепперони, альпийскими колбасками, Моцареллой, луком и соусом Барбекю
+          </p>
+        </div>
+        <button
+          class="Button-sc-1fut0te-0 jOZQxY DeleteButton-sc-hb6owy-10 elyAfU"
+          type="button"
+        >
+          <span
+            class="Text-sc-1fut0te-1"
+          >
+            Удалить пиццу из корзины
+          </span>
+          <svg
+            class="cart-list-item-cross"
+          >
+            cross.svg
+          </svg>
+        </button>
+      </div>
+      <div
+        class="ItemSummaryPrice-sc-hb6owy-11 czNIxm"
+      >
+        <div
+          class="Counter-sc-9bdt3x-0 fPNYnq"
+        >
+          <button
+            class="Button-sc-1fut0te-0 DIwKh"
+            type="button"
+          >
+            <span
+              class="Text-sc-1fut0te-1"
+            >
+              Отнять пиццу
+            </span>
+            <svg>
+              minus.svg
+            </svg>
+          </button>
+          <span
+            class="Value-sc-9bdt3x-1 jOvzOn"
+          >
+            2
+          </span>
+          <button
+            class="Button-sc-1fut0te-0 DIwKh"
+            type="button"
+          >
+            <span
+              class="Text-sc-1fut0te-1"
+            >
+              Добавить пиццу
+            </span>
+            <svg>
+              plus.svg
+            </svg>
+          </button>
+        </div>
+        <span
+          class="ItemPrice-sc-hb6owy-12 iQvgly"
+        >
+          1 168 ₽
+        </span>
+      </div>
+    </li>
+    <li
+      class="CartListItem-sc-hb6owy-1 bUxpHq"
+    >
+      <div
+        class="ItemBody-sc-hb6owy-2 bCXgRP"
+      >
+        <div
+          class="ImagePlaceholder-sc-hb6owy-4 dmvjGy"
+        >
+          <div
+            class="ImagePlaceholder-sc-1lq6aod-0"
+          >
+            <div
+              class="Placeholder-sc-1lq6aod-1 eizUTG"
+            >
+              <svg
+                class="pizza-placeholder-image"
+              >
+                pizza-placeholder.svg
+              </svg>
+            </div>
+            <div
+              class="Content-sc-1lq6aod-2 iLQvsD"
+            >
+              <picture
+                class="Picture-sc-hb6owy-3 lfkRa-D"
+              >
+                <source
+                  srcset="https://api.papajohns.ru/images/catalog/thumbs/cart/Little-Italy-Thin.webp"
+                  type="image/webp"
+                />
+                <img
+                  alt=""
+                  class="CartListImage-sc-hb6owy-5 iHzSkv"
+                  src="https://api.papajohns.ru/images/catalog/thumbs/cart/Little-Italy-Thin.jpg"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ItemInfo-sc-hb6owy-6 gdDXea"
+        >
+          <span
+            class="ItemName-sc-hb6owy-7 fZhgMN"
+          >
+            Маленькая италия
+          </span>
+          <p
+            class="ItemShortDescription-sc-hb6owy-8 eYepFn"
+          >
+            Тонкое тесто, 23 см
+          </p>
+          <p
+            class="ItemFullDescription-sc-hb6owy-9 bllVyv"
+          >
+            Сыр моцарелла, пикантная пепперони, ароматная свинина, орегано, шампиньоны, черные оливки с фирменным томатным соусом
+          </p>
+        </div>
+        <button
+          class="Button-sc-1fut0te-0 jOZQxY DeleteButton-sc-hb6owy-10 elyAfU"
+          type="button"
+        >
+          <span
+            class="Text-sc-1fut0te-1"
+          >
+            Удалить пиццу из корзины
+          </span>
+          <svg
+            class="cart-list-item-cross"
+          >
+            cross.svg
+          </svg>
+        </button>
+      </div>
+      <div
+        class="ItemSummaryPrice-sc-hb6owy-11 czNIxm"
+      >
+        <div
+          class="Counter-sc-9bdt3x-0 fPNYnq"
+        >
+          <button
+            class="Button-sc-1fut0te-0 DIwKh"
+            type="button"
+          >
+            <span
+              class="Text-sc-1fut0te-1"
+            >
+              Отнять пиццу
+            </span>
+            <svg>
+              minus.svg
+            </svg>
+          </button>
+          <span
+            class="Value-sc-9bdt3x-1 jOvzOn"
+          >
+            1
+          </span>
+          <button
+            class="Button-sc-1fut0te-0 DIwKh"
+            type="button"
+          >
+            <span
+              class="Text-sc-1fut0te-1"
+            >
+              Добавить пиццу
+            </span>
+            <svg>
+              plus.svg
+            </svg>
+          </button>
+        </div>
+        <span
+          class="ItemPrice-sc-hb6owy-12 iQvgly"
+        >
+          639 ₽
+        </span>
+      </div>
+    </li>
+    <li
+      class="CartListItem-sc-hb6owy-1 bUxpHq"
+    >
+      <div
+        class="ItemBody-sc-hb6owy-2 bCXgRP"
+      >
+        <div
+          class="ImagePlaceholder-sc-hb6owy-4 dmvjGy"
+        >
+          <div
+            class="ImagePlaceholder-sc-1lq6aod-0"
+          >
+            <div
+              class="Placeholder-sc-1lq6aod-1 eizUTG"
+            >
+              <svg
+                class="pizza-placeholder-image"
+              >
+                pizza-placeholder.svg
+              </svg>
+            </div>
+            <div
+              class="Content-sc-1lq6aod-2 iLQvsD"
+            >
+              <picture
+                class="Picture-sc-hb6owy-3 lfkRa-D"
+              >
+                <source
+                  srcset="https://api.papajohns.ru/images/catalog/thumbs/cart/5f898b25ffeb3723fdc47fccc2a777a9.webp"
+                  type="image/webp"
+                />
+                <img
+                  alt=""
+                  class="CartListImage-sc-hb6owy-5 iHzSkv"
+                  src="https://api.papajohns.ru/images/catalog/thumbs/cart/5f898b25ffeb3723fdc47fccc2a777a9.jpg"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ItemInfo-sc-hb6owy-6 gdDXea"
+        >
+          <span
+            class="ItemName-sc-hb6owy-7 fZhgMN"
+          >
+            Веганская с овощами
+          </span>
+          <p
+            class="ItemShortDescription-sc-hb6owy-8 eYepFn"
+          >
+            Традиционное тесто, 30 см
+          </p>
+          <p
+            class="ItemFullDescription-sc-hb6owy-9 bllVyv"
+          >
+            Фирменный томатный соус, веганская Моцарелла, сладкий зелёный перец, шампиньоны, маслины, лук и сочные томаты
+          </p>
+        </div>
+        <button
+          class="Button-sc-1fut0te-0 jOZQxY DeleteButton-sc-hb6owy-10 elyAfU"
+          type="button"
+        >
+          <span
+            class="Text-sc-1fut0te-1"
+          >
+            Удалить пиццу из корзины
+          </span>
+          <svg
+            class="cart-list-item-cross"
+          >
+            cross.svg
+          </svg>
+        </button>
+      </div>
+      <div
+        class="ItemSummaryPrice-sc-hb6owy-11 czNIxm"
+      >
+        <div
+          class="Counter-sc-9bdt3x-0 fPNYnq"
+        >
+          <button
+            class="Button-sc-1fut0te-0 DIwKh"
+            type="button"
+          >
+            <span
+              class="Text-sc-1fut0te-1"
+            >
+              Отнять пиццу
+            </span>
+            <svg>
+              minus.svg
+            </svg>
+          </button>
+          <span
+            class="Value-sc-9bdt3x-1 jOvzOn"
+          >
+            1
+          </span>
+          <button
+            class="Button-sc-1fut0te-0 DIwKh"
+            type="button"
+          >
+            <span
+              class="Text-sc-1fut0te-1"
+            >
+              Добавить пиццу
+            </span>
+            <svg>
+              plus.svg
+            </svg>
+          </button>
+        </div>
+        <span
+          class="ItemPrice-sc-hb6owy-12 iQvgly"
+        >
+          799 ₽
+        </span>
+      </div>
+    </li>
+  </ul>
+  <div
+    class="Footer-sc-1eqnpd4-6 dutOFD"
+  >
+    <div
+      class="PriceWrapper-sc-1eqnpd4-7 gTiDIp"
+    >
+      <span
+        class="TotalPriceText-sc-1eqnpd4-8 bStYHF"
+      >
+        Сумма заказа:
+      </span>
+       
+      <span
+        class="TotalPrice-sc-1eqnpd4-9 hABHep"
+      >
+        3 774 ₽
+      </span>
+    </div>
+    <a
+      class="Link-sc-16ffk5r-0 kUJqkA Button-sc-1fut0te-0 OrderButton-sc-1eqnpd4-11 kDjXIb kpLaUN"
+      href="/order"
+    >
+      Оформить
+    </a>
+  </div>
+</div>
+`;

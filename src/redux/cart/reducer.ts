@@ -5,7 +5,7 @@ import { CartAction } from './action';
 import { CartActionsType } from './contracts/action-types';
 import { PizzaCartState } from './contracts/state';
 
-const defaultState: PizzaCartState = {
+export const defaultState: PizzaCartState = {
   items: [],
   totalCount: 0,
   totalPrice: 0,
