@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import renderWithStore from 'test-utils/render-with-store';
 import Cart from './cart';
-import { cartState } from './__stubs__/';
+import { cartState } from './__mocks__/';
 
 const stateMock = { cart: cartState };
 

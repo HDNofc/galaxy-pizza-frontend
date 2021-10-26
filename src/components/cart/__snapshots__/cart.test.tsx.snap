@@ -61,13 +61,13 @@ exports[`<Cart> отображается корректно с верным ко
                 class="Picture-sc-hb6owy-3 lfkRa-D"
               >
                 <source
-                  srcset="https://api.papajohns.ru/images/catalog/thumbs/cart/64e568f97a17aa5caf0284511cde70a7.webp"
+                  srcset=""
                   type="image/webp"
                 />
                 <img
                   alt=""
                   class="CartListImage-sc-hb6owy-5 iHzSkv"
-                  src="https://api.papajohns.ru/images/catalog/thumbs/cart/64e568f97a17aa5caf0284511cde70a7.jpg"
+                  src=""
                 />
               </picture>
             </div>
@@ -181,13 +181,13 @@ exports[`<Cart> отображается корректно с верным ко
                 class="Picture-sc-hb6owy-3 lfkRa-D"
               >
                 <source
-                  srcset="https://api.papajohns.ru/images/catalog/thumbs/cart/Little-Italy-Thin.webp"
+                  srcset=""
                   type="image/webp"
                 />
                 <img
                   alt=""
                   class="CartListImage-sc-hb6owy-5 iHzSkv"
-                  src="https://api.papajohns.ru/images/catalog/thumbs/cart/Little-Italy-Thin.jpg"
+                  src=""
                 />
               </picture>
             </div>
@@ -301,13 +301,13 @@ exports[`<Cart> отображается корректно с верным ко
                 class="Picture-sc-hb6owy-3 lfkRa-D"
               >
                 <source
-                  srcset="https://api.papajohns.ru/images/catalog/thumbs/cart/5f898b25ffeb3723fdc47fccc2a777a9.webp"
+                  srcset=""
                   type="image/webp"
                 />
                 <img
                   alt=""
                   class="CartListImage-sc-hb6owy-5 iHzSkv"
-                  src="https://api.papajohns.ru/images/catalog/thumbs/cart/5f898b25ffeb3723fdc47fccc2a777a9.jpg"
+                  src=""
                 />
               </picture>
             </div>

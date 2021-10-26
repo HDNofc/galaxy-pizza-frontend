@@ -1,6 +1,7 @@
 export const cartState = {
   items: [
     {
+      _dbId: 'id-1',
       cartId: 'cart-147',
       name: 'Мясное барбекю',
       description:
@@ -11,17 +12,18 @@ export const cartState = {
       crust: 'sausage',
       imageUrl: {
         crop: {
-          jpg: 'https://api.papajohns.ru/images/catalog/thumbs/full/f945f964cd6a8f173ceaa66cc6cb3dbb.jpg',
-          webp: 'https://api.papajohns.ru/images/catalog/thumbs/full/f945f964cd6a8f173ceaa66cc6cb3dbb.webp',
+          jpg: '',
+          webp: '',
         },
         full: {
-          jpg: 'https://api.papajohns.ru/images/catalog/thumbs/cart/64e568f97a17aa5caf0284511cde70a7.jpg',
-          webp: 'https://api.papajohns.ru/images/catalog/thumbs/cart/64e568f97a17aa5caf0284511cde70a7.webp',
+          jpg: '',
+          webp: '',
         },
       },
       amount: 2,
     },
     {
+      _dbId: 'id-2',
       cartId: 'cart-145',
       name: 'Маленькая италия',
       description:
@@ -32,17 +34,18 @@ export const cartState = {
       crust: 'none',
       imageUrl: {
         crop: {
-          jpg: 'https://api.papajohns.ru/images/catalog/thumbs/full/Little-Italy-Thin.jpg',
-          webp: 'https://api.papajohns.ru/images/catalog/thumbs/full/Little-Italy-Thin.webp',
+          jpg: '',
+          webp: '',
         },
         full: {
-          jpg: 'https://api.papajohns.ru/images/catalog/thumbs/cart/Little-Italy-Thin.jpg',
-          webp: 'https://api.papajohns.ru/images/catalog/thumbs/cart/Little-Italy-Thin.webp',
+          jpg: '',
+          webp: '',
         },
       },
       amount: 1,
     },
     {
+      _dbId: 'id-3',
       cartId: 'cart-170',
       name: 'Веганская с овощами',
       description:
@@ -53,12 +56,12 @@ export const cartState = {
       crust: 'none',
       imageUrl: {
         crop: {
-          jpg: 'https://api.papajohns.ru/images/catalog/thumbs/full/9efdd0646d0a810e36e62854f71fe94b.jpg',
-          webp: 'https://api.papajohns.ru/images/catalog/thumbs/full/9efdd0646d0a810e36e62854f71fe94b.webp',
+          jpg: '',
+          webp: '',
         },
         full: {
-          jpg: 'https://api.papajohns.ru/images/catalog/thumbs/cart/5f898b25ffeb3723fdc47fccc2a777a9.jpg',
-          webp: 'https://api.papajohns.ru/images/catalog/thumbs/cart/5f898b25ffeb3723fdc47fccc2a777a9.webp',
+          jpg: '',
+          webp: '',
         },
       },
       amount: 1,
