@@ -18,7 +18,7 @@ export type IsMulti = false;
 const GeoLocationSelector = ({
   onChange,
   items,
-  defaultValue = items[2],
+  defaultValue,
   ...otherProps
 }: Props): React.ReactElement => {
   // https://github.com/JedWatson/react-select/issues/2902#issuecomment-481194330
