@@ -102,6 +102,7 @@
   },
   "jest": {
     "coveragePathIgnorePatterns": [
+      "/src/styles/",
       "src.*.styles.ts?(x)$",
       "/src/test-utils/"
     ]
