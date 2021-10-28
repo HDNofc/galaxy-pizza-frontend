@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppLayout> отображается корректно 1`] = `
+<div
+  class="AppLayout-sc-129ecm1-0 llsGyu"
+>
+  <header
+    class="Header-sc-1n5a8uj-0 gUfVkz"
+  >
+    <div
+      class="Content-sc-1n5a8uj-1 fzAcpg"
+    >
+      <div
+        class="Logo-sc-u87jr6-0 jDjjYh"
+      >
+        <svg
+          class="LogoIcon-sc-u87jr6-2 cvzOuu"
+          height="100%"
+          width="24"
+        >
+          logo.svg
+        </svg>
+        <h1
+          class="Title-sc-u87jr6-1 gOJvaA"
+        >
+          Galaxy Pizza
+        </h1>
+      </div>
+      <button
+        class="Button-sc-1fut0te-0 ddxSye Hamburger-sc-rdyaws-0 djSxTv Hamburger-sc-1n5a8uj-11 ipUYbw"
+        type="button"
+      >
+        
+        <div
+          class="InnerWrapper-sc-rdyaws-1 dnvuvU"
+        >
+          <span />
+          <span />
+          <span />
+        </div>
+      </button>
+      <div
+        class="HeaderMenu-sc-1n5a8uj-3 Kidje"
+      >
+        <div
+          class="HeaderMenuHeader-sc-1n5a8uj-13 dqqKeV"
+        >
+          <div
+            class="GeoLocationSelector-sc-qapfha-0 dbuiYG PlanetLocation-sc-1n5a8uj-12 iFsJmy"
+          >
+            <div
+              class=" css-xqnfmi-container"
+            >
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="css-1f43avz-a11yText-A11yText"
+              />
+              <div
+                class=" css-1rp4i1k-Control"
+              >
+                <div
+                  class=" css-86rg1c-ValueContainer"
+                >
+                  <div
+                    class=" css-1ku87c9-SingleValue"
+                  >
+                    Марс
+                  </div>
+                  <input
+                    aria-autocomplete="list"
+                    class="css-wmatm6-dummyInput-DummyInput"
+                    id="react-select-2-input"
+                    readonly=""
+                    tabindex="0"
+                    value=""
+                  />
+                </div>
+                <div
+                  class=" css-e23gzz-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-1okebmr-indicatorSeparator"
+                  />
+                  <div
+                    aria-hidden="true"
+                    class=" css-16a7od2-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-tj5bde-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span
+              class="Note-sc-qapfha-1 elOmRd"
+            >
+              изменить
+            </span>
+          </div>
+          <div
+            class="Rating-sc-1n5a8uj-7 cOCvUu"
+          >
+            <span
+              class="DeliveryTime-sc-1n5a8uj-8 iKpFdZ"
+            >
+              17 минут
+            </span>
+            <span
+              class="RatingValue-sc-1n5a8uj-9 dtQpee"
+            >
+              4.8
+            </span>
+            <div
+              class="StarRating-sc-i2uazh-0 kKrkS"
+            >
+              <div
+                class="Star-sc-16jz84-0 gjzZhz"
+              >
+                <svg
+                  style="height: 20px;"
+                >
+                  full.svg
+                </svg>
+              </div>
+              <div
+                class="Star-sc-16jz84-0 gjzZhz"
+              >
+                <svg
+                  style="height: 20px;"
+                >
+                  full.svg
+                </svg>
+              </div>
+              <div
+                class="Star-sc-16jz84-0 gjzZhz"
+              >
+                <svg
+                  style="height: 20px;"
+                >
+                  full.svg
+                </svg>
+              </div>
+              <div
+                class="Star-sc-16jz84-0 gjzZhz"
+              >
+                <svg
+                  style="height: 20px;"
+                >
+                  full.svg
+                </svg>
+              </div>
+              <div
+                class="Star-sc-16jz84-0 gjzZhz"
+              >
+                <svg
+                  style="height: 20px;"
+                >
+                  full.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="HeaderMenuBody-sc-1n5a8uj-14 feGPDd"
+        >
+          <nav
+            class="Navigation-sc-1n5a8uj-4 uZPzY"
+          >
+            <ul
+              class="List-sc-1n5a8uj-5 duKDtJ"
+            >
+              <li
+                class="ListItem-sc-1n5a8uj-6 AUQnu"
+              >
+                <a
+                  class="Link-sc-16ffk5r-0 fUtkHA"
+                  href="/login"
+                >
+                  Войти
+                </a>
+              </li>
+              <li
+                class="ListItem-sc-1n5a8uj-6 bnXNgN"
+              >
+                <a
+                  class="Link-sc-16ffk5r-0 fUtkHA"
+                  href="/order"
+                >
+                  Корзина
+                </a>
+              </li>
+              <li
+                class="ListItem-sc-1n5a8uj-6 bnXNgN"
+              >
+                <a
+                  class="Link-sc-16ffk5r-0 fUtkHA"
+                  href="/about"
+                >
+                  О нас
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div
+          class="HeaderMenuFooter-sc-1n5a8uj-15 kRXrQa"
+        >
+          <a
+            class="NativeLink-sc-16ffk5r-1 tmBDA ContactLink-sc-1n5a8uj-10 dJXSlA"
+            href="tel:+78009999999"
+          >
+            8 (800) 999-99-99
+          </a>
+          <a
+            class="NativeLink-sc-16ffk5r-1 tmBDA ContactLink-sc-1n5a8uj-10 iGrMEl"
+            href="mailto:mail@example.com"
+          >
+            mail@example.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div
+    class="AppLayoutContent-sc-129ecm1-1 czMzsv"
+  >
+    <div>
+      content
+    </div>
+  </div>
+  <div
+    class="Footer-sc-1sq4u4p-0 cla-dGb"
+  >
+    <div
+      class="Content-sc-1sq4u4p-1 kFlCIn"
+    >
+      <span
+        class="Copyright-sc-1sq4u4p-4 bNGocS"
+      >
+        © Copyright
+      </span>
+      <div
+        class="MenuFooter-sc-1sq4u4p-3 eUEzlh"
+      >
+        <a
+          class="NativeLink-sc-16ffk5r-1 tmBDA ContactLink-sc-1sq4u4p-2"
+          href="tel:+78009999999"
+        >
+          8 (800) 999-99-99
+        </a>
+        <a
+          class="NativeLink-sc-16ffk5r-1 tmBDA ContactLink-sc-1sq4u4p-2"
+          href="mailto:mail@example.com"
+        >
+          mail@example.com
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
