@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hamburger> отображается корректно с пропсом \`active: false\` 1`] = `
+.c0 {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s,color 0.2s;
+  transition: background-color 0.2s,color 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 16px;
+}
+
+.c2 span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 1.5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c2 span:nth-child(1) {
+  top: 0;
+}
+
+.c2 span:nth-child(2) {
+  top: 50%;
+}
+
+.c2 span:nth-child(3) {
+  top: 100%;
+}
+
+<button
+  class="c0 c1"
+  type="button"
+>
+  
+  <div
+    class="c2"
+  >
+    <span />
+    <span />
+    <span />
+  </div>
+</button>
+`;
+
+exports[`<Hamburger> отображается корректно с пропсом \`active: true\` 1`] = `
+.c0 {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s,color 0.2s;
+  transition: background-color 0.2s,color 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 16px;
+}
+
+.c2 span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 1.5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c2 span:nth-child(1) {
+  top: 0;
+}
+
+.c2 span:nth-child(2) {
+  top: 50%;
+}
+
+.c2 span:nth-child(3) {
+  top: 100%;
+}
+
+.c2 span:nth-child(1) {
+  -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+  -ms-transform: translateY(8px) translateX(0) rotate(45deg);
+  transform: translateY(8px) translateX(0) rotate(45deg);
+}
+
+.c2 span:nth-child(2) {
+  opacity: 0;
+}
+
+.c2 span:nth-child(3) {
+  -webkit-transform: translateY(-8px) translateX(0px) rotate(-45deg);
+  -ms-transform: translateY(-8px) translateX(0px) rotate(-45deg);
+  transform: translateY(-8px) translateX(0px) rotate(-45deg);
+}
+
+<button
+  class="c0 c1"
+  type="button"
+>
+  
+  <div
+    class="c2"
+  >
+    <span />
+    <span />
+    <span />
+  </div>
+</button>
+`;
