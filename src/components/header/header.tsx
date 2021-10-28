@@ -59,6 +59,9 @@ const Header = ({ links }: Props): React.ReactElement => {
 
   const onBurgerClick = () => {
     setIsMenuOpen((prevState) => !prevState);
+    if (isMobile) {
+      window.scrollTo(0, 0);
+    }
   };
 
   useEffect(() => {

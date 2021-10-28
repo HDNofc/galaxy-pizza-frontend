@@ -3,16 +3,22 @@ import { render } from '@testing-library/react';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
-import cart, { defaultState } from 'redux/cart/reducer';
+import cart, { defaultState as cartDefaultState } from 'redux/cart/reducer';
+import planetLocation, {
+  defaultState as planetLocationDefaultState,
+} from 'redux/planet-location/reducer';
 import { ThemeProvider } from 'styled-components/macro';
 import variables from 'styles/variables';
 
+// объединить обе рендер-функции https://medium.com/nmc-techblog/custom-rendering-in-react-testing-library-done-right-e260e01ba6f7
 const reducer = combineReducers({
   cart,
+  planetLocation,
 });
 
 const originalState = {
-  cart: defaultState,
+  cart: cartDefaultState,
+  planetLocation: planetLocationDefaultState,
 };
 
 function renderWithStore(

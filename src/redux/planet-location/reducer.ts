@@ -5,7 +5,7 @@ import { LocationAction } from './action';
 import { PlanetLocationActionsType } from './contracts/action-types';
 import { IPlanetLocation } from './contracts/state';
 
-const defaultState: IPlanetLocation = {
+export const defaultState: IPlanetLocation = {
   planetLocation: defaultPlanet,
 };
 

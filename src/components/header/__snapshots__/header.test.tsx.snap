@@ -1,0 +1,861 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header> отображается корректно 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 18px;
+  word-wrap: normal;
+}
+
+.c4 {
+  height: 24px;
+  margin-right: 6px;
+}
+
+.c24 {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.c24:focus,
+.c24:hover {
+  color: #fca311;
+}
+
+.c24:active {
+  color: #ffb749;
+}
+
+.c27 {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.c27:focus,
+.c27:hover {
+  color: #fca311;
+}
+
+.c27:active {
+  color: #ffb749;
+}
+
+.c6 {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s,color 0.2s;
+  transition: background-color 0.2s,color 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.c9 {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 16px;
+}
+
+.c9 span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 1.5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c9 span:nth-child(1) {
+  top: 0;
+}
+
+.c9 span:nth-child(2) {
+  top: 50%;
+}
+
+.c9 span:nth-child(3) {
+  top: 100%;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c14 {
+  padding: 0 34px 0;
+  color: #bfbfbf;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 12px;
+  background-color: #14213d;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.c1 > .c2 {
+  margin-right: auto;
+}
+
+.c10 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 10;
+  display: none;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  margin-left: auto;
+  padding: 20px 10px 20px 12px;
+  background-color: #19336c;
+}
+
+.c21 {
+  padding-left: 34px;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.c23 {
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Montserrat',arial,helvetica,sans-serif;
+  line-height: 24px;
+  list-style: none;
+}
+
+.c23::before {
+  position: absolute;
+  top: 50%;
+  left: -34px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-image: url('path-to-icon.png');
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: '';
+}
+
+.c23:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.c25 {
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Montserrat',arial,helvetica,sans-serif;
+  line-height: 24px;
+  list-style: none;
+}
+
+.c25:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c16 {
+  margin-right: 8px;
+  margin-left: 34px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Montserrat',arial,helvetica,sans-serif;
+  line-height: 14px;
+}
+
+.c17 {
+  margin-right: 8px;
+  color: #fadb14;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Montserrat',arial,helvetica,sans-serif;
+  line-height: 14px;
+}
+
+.c29 {
+  position: relative;
+  padding-left: 34px;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Montserrat',arial,helvetica,sans-serif;
+  line-height: 24px;
+}
+
+.c29::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-image: url('phone-icon.svg');
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: '';
+}
+
+.c30 {
+  position: relative;
+  padding-left: 34px;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Montserrat',arial,helvetica,sans-serif;
+  line-height: 24px;
+}
+
+.c30::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-image: url('mail-icon.svg');
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: '';
+}
+
+.c13 {
+  margin-bottom: 4px;
+}
+
+.c11 {
+  margin-bottom: 30px;
+}
+
+.c20 {
+  margin-bottom: 30px;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.c26 > .c28:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.c19 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 15px;
+}
+
+.c19:not(:last-child) {
+  margin-right: 4px;
+}
+
+.c18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width:1280px) {
+  .c14 {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c0 {
+    min-height: 70px;
+  }
+}
+
+@media (min-width:768px) {
+  .c10 {
+    padding: 30px 40px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c10 {
+    position: static;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-left: 80px;
+    padding: 0;
+    background-color: #14213d;
+  }
+}
+
+@media (min-width:1280px) {
+  .c21 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: auto;
+    padding-left: 0;
+  }
+}
+
+@media (min-width:1280px) {
+  .c22 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:1280px) {
+  .c23::before {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c23:not(:last-child) {
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:1280px) {
+  .c23 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c25:not(:last-child) {
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:1280px) {
+  .c25 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c15 {
+    margin-left: auto;
+  }
+}
+
+@media (min-width:1280px) {
+  .c16 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width:1280px) {
+  .c17 {
+    margin-right: 4px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c29 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c29::before {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c30 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c30::before {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (min-width:1280px) {
+  .c13 {
+    margin-right: 8px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:768px) {
+  .c11 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c11 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 270px;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:768px) {
+  .c20 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c20 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:1280px) {
+  .c26 > .c28:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width:1280px) {
+  .c26 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+<header
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2 c3"
+    >
+      <svg
+        class="c4"
+        height="100%"
+        width="24"
+      >
+        logo.svg
+      </svg>
+      <h1
+        class="c5"
+      >
+        Galaxy Pizza
+      </h1>
+    </div>
+    <button
+      class="c6 c7 c8"
+      type="button"
+    >
+      
+      <div
+        class="c9"
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+    </button>
+    <div
+      class="c10"
+    >
+      <div
+        class="c11"
+      >
+        <div
+          class="c12 c13"
+        >
+          <div
+            class=" css-xqnfmi-container"
+          >
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              class="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              class=" css-1rp4i1k-Control"
+            >
+              <div
+                class=" css-86rg1c-ValueContainer"
+              >
+                <div
+                  class=" css-1ku87c9-SingleValue"
+                >
+                  Венера
+                </div>
+                <input
+                  aria-autocomplete="list"
+                  class="css-wmatm6-dummyInput-DummyInput"
+                  id="react-select-2-input"
+                  readonly=""
+                  tabindex="0"
+                  value=""
+                />
+              </div>
+              <div
+                class=" css-e23gzz-IndicatorsContainer"
+              >
+                <span
+                  class=" css-1okebmr-indicatorSeparator"
+                />
+                <div
+                  aria-hidden="true"
+                  class=" css-16a7od2-indicatorContainer"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="css-tj5bde-Svg"
+                    focusable="false"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span
+            class="c14"
+          >
+            изменить
+          </span>
+        </div>
+        <div
+          class="c15"
+        >
+          <span
+            class="c16"
+          >
+            14 минут
+          </span>
+          <span
+            class="c17"
+          >
+            4.6
+          </span>
+          <div
+            class="c18"
+          >
+            <div
+              class="c19"
+            >
+              <svg
+                style="height: 20px;"
+              >
+                full.svg
+              </svg>
+            </div>
+            <div
+              class="c19"
+            >
+              <svg
+                style="height: 20px;"
+              >
+                full.svg
+              </svg>
+            </div>
+            <div
+              class="c19"
+            >
+              <svg
+                style="height: 20px;"
+              >
+                full.svg
+              </svg>
+            </div>
+            <div
+              class="c19"
+            >
+              <svg
+                style="height: 20px;"
+              >
+                full.svg
+              </svg>
+            </div>
+            <div
+              class="c19"
+            >
+              <svg
+                style="height: 20px;"
+              >
+                half.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c20"
+      >
+        <nav
+          class="c21"
+        >
+          <ul
+            class="c22"
+          >
+            <li
+              class="c23"
+            >
+              <a
+                class="c24"
+                href="/somewhere"
+              >
+                link-1
+              </a>
+            </li>
+            <li
+              class="c25"
+            >
+              <a
+                class="c24"
+                href="/login"
+              >
+                link-2
+              </a>
+            </li>
+            <li
+              class="c25"
+            >
+              <a
+                class="c24"
+                href="/about"
+              >
+                link-3
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="c26"
+      >
+        <a
+          class="c27 c28 c29"
+          href="tel:+78009999999"
+        >
+          8 (800) 999-99-99
+        </a>
+        <a
+          class="c27 c28 c30"
+          href="mailto:mail@example.com"
+        >
+          mail@example.com
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+`;
