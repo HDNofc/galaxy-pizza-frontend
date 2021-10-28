@@ -12,6 +12,7 @@ export const defaultState: IPlanetLocation = {
 const savedPlanetLocation: any = load({
   namespace: 'planetLocation',
   states: ['planetLocation'],
+  disableWarnings: true,
 });
 const initialState: IPlanetLocation =
   savedPlanetLocation && savedPlanetLocation.planetLocation

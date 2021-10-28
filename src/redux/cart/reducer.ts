@@ -11,7 +11,7 @@ export const defaultState: PizzaCartState = {
   totalPrice: 0,
 };
 
-const savedCart: any = load({ namespace: 'cart', states: ['cart'] });
+const savedCart: any = load({ namespace: 'cart', states: ['cart'], disableWarnings: true });
 const initialState: PizzaCartState = savedCart && savedCart.cart ? savedCart.cart : defaultState;
 
 const cart = (state = initialState, action: CartAction): PizzaCartState => {
