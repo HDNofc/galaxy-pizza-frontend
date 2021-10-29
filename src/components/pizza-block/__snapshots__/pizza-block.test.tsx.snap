@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PizzaBlock> отображается корректно 1`] = `
+<article
+  class="PizzaBlock-sc-1lztd8-0 fFmVty"
+>
+  <div
+    class="ImagePlaceholder-sc-1lztd8-5 jnAVQG"
+  >
+    <div
+      class="ImagePlaceholder-sc-1lq6aod-0"
+    >
+      <div
+        class="Placeholder-sc-1lq6aod-1 eAAnAM"
+      >
+        <svg
+          class="pizza-placeholder-image"
+        >
+          pizza-placeholder.svg
+        </svg>
+      </div>
+      <div
+        class="Content-sc-1lq6aod-2 iLQvsD"
+      >
+        <picture
+          class="Picture-sc-1lztd8-3 dUIhhY"
+        >
+          <source
+            srcset="test-image-url.webp"
+            type="image/webp"
+          />
+          <img
+            alt=""
+            class="Image-sc-1lztd8-4 dvOTyR"
+            src="test-image-url.jpg"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+  <div
+    class="PizzaInfo-sc-1lztd8-7 kExtID"
+  >
+    <div
+      class="Category-sc-1lztd8-10 ZbJpL"
+    />
+    <h2
+      class="Title-sc-1lztd8-1 iIWbhI"
+    >
+      Цыпленок Флорентина
+    </h2>
+    <p
+      class="Description-sc-1lztd8-2 daMphU"
+    >
+      Сливочно-шпинатный соус, сыр моцарелла, нежная куриная грудка, хрустящий бекон, сочные томаты
+    </p>
+    <div
+      class="RadioGroup-sc-4trp2q-0 RePgg"
+    >
+      <div
+        class="RadioGroupBox-sc-4trp2q-1 ffllcf"
+        style="width: 50%; left: 0%;"
+      />
+      <div
+        class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+      >
+        <input
+          checked=""
+          class="Input-sc-18y3buo-2 hKbzCX"
+          id="dough-fat"
+          name="dough-id-1"
+          type="radio"
+          value="fat"
+        />
+        <label
+          class="Label-sc-18y3buo-1 loYKRY"
+          for="dough-fat"
+        >
+          Традиционное
+        </label>
+      </div>
+      <div
+        class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+      >
+        <input
+          class="Input-sc-18y3buo-2 hKbzCX"
+          id="dough-slim"
+          name="dough-id-1"
+          type="radio"
+          value="slim"
+        />
+        <label
+          class="Label-sc-18y3buo-1 ceQMEQ"
+          for="dough-slim"
+        >
+          Тонкое
+        </label>
+      </div>
+    </div>
+    <div
+      class="Type-sc-1lztd8-8 bDHTSv"
+    >
+      <div
+        class="RadioGroup-sc-4trp2q-0 RePgg"
+      >
+        <div
+          class="RadioGroupBox-sc-4trp2q-1 ffllcf"
+          style="width: 25%; left: 25%;"
+        />
+        <div
+          class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+        >
+          <input
+            class="Input-sc-18y3buo-2 hKbzCX"
+            id="size-23"
+            name="size-id-1"
+            type="radio"
+            value="23"
+          />
+          <label
+            class="Label-sc-18y3buo-1 ceQMEQ"
+            for="size-23"
+          >
+            23
+          </label>
+        </div>
+        <div
+          class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+        >
+          <input
+            checked=""
+            class="Input-sc-18y3buo-2 hKbzCX"
+            id="size-30"
+            name="size-id-1"
+            type="radio"
+            value="30"
+          />
+          <label
+            class="Label-sc-18y3buo-1 loYKRY"
+            for="size-30"
+          >
+            30
+          </label>
+        </div>
+        <div
+          class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+        >
+          <input
+            class="Input-sc-18y3buo-2 hKbzCX"
+            id="size-35"
+            name="size-id-1"
+            type="radio"
+            value="35"
+          />
+          <label
+            class="Label-sc-18y3buo-1 ceQMEQ"
+            for="size-35"
+          >
+            35
+          </label>
+        </div>
+        <div
+          class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+        >
+          <input
+            class="Input-sc-18y3buo-2 hKbzCX"
+            id="size-40"
+            name="size-id-1"
+            type="radio"
+            value="40"
+          />
+          <label
+            class="Label-sc-18y3buo-1 ceQMEQ"
+            for="size-40"
+          >
+            40
+          </label>
+        </div>
+      </div>
+      <div
+        class="StuffedCrustSelect-sc-1p9n0re-0"
+      >
+        <div
+          class=" css-2b097c-container"
+        >
+          <span
+            aria-atomic="false"
+            aria-live="polite"
+            aria-relevant="additions text"
+            class="css-1f43avz-a11yText-A11yText"
+          />
+          <div
+            class=" css-1asn9nl-Control"
+          >
+            <div
+              class=" css-g1d714-ValueContainer"
+            >
+              <div
+                class=" css-lgjexr-SingleValue"
+              >
+                <div
+                  class="SelectItemWrapper-sc-1p9n0re-1 jTnuqa"
+                >
+                  <img
+                    class="SelectItemImage-sc-1p9n0re-2 fsAHBE"
+                    src="none.png"
+                  />
+                  <span
+                    class="SelectItemText-sc-1p9n0re-3 jxlEAr"
+                  >
+                    Стандартный борт
+                  </span>
+                </div>
+              </div>
+              <input
+                aria-autocomplete="list"
+                class="css-wmatm6-dummyInput-DummyInput"
+                id="react-select-2-input"
+                readonly=""
+                tabindex="0"
+                value=""
+              />
+            </div>
+            <div
+              class=" css-1hb7zxy-IndicatorsContainer"
+            >
+              <span
+                class=" css-43ykx9-indicatorSeparator"
+              />
+              <div
+                aria-hidden="true"
+                class=" css-16a7od2-indicatorContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="css-tj5bde-Svg"
+                  focusable="false"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                >
+                  <path
+                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ProductPurchase-sc-1lztd8-9 czSRRl"
+    >
+      <button
+        class="Button-sc-1fut0te-0 kDjXIb"
+        type="button"
+      >
+        <span
+          class="Text-sc-1fut0te-1"
+        >
+          В корзину
+        </span>
+      </button>
+      <span
+        class="Price-sc-1lztd8-6 fgXguJ"
+      >
+        629 ₽
+      </span>
+    </div>
+  </div>
+</article>
+`;

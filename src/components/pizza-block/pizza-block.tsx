@@ -15,6 +15,7 @@ export interface IPizzaImageUrl {
   jpg: string;
   webp: string;
 }
+
 interface Props {
   id: string;
   name: string;
