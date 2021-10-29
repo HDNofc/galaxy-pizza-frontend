@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import renderWithThemeProvider from 'test-utils/render-with-theme-provider';
 import PizzaBlock from './pizza-block';
-import { pizza } from './__mocks__';
+import pizza from './__mocks__';
 
 describe('<PizzaBlock>', () => {
   it('отображается корректно', () => {

@@ -1,4 +1,4 @@
-export const pizza = {
+const pizza = {
   id: 'id-1',
   name: 'Цыпленок Флорентина',
   description:
@@ -58,3 +58,5 @@ export const pizza = {
   onStuffedCrustChange: () => {},
   onAddToCartClick: () => {},
 };
+
+export default pizza;

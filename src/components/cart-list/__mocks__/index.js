@@ -1,4 +1,4 @@
-export const items = [
+const items = [
   {
     _dbId: 'id-1',
     cartId: 'cart-147',
@@ -67,4 +67,4 @@ export const items = [
   },
 ];
 
-// export default items;
+export default items;

@@ -1,4 +1,4 @@
-export const cartState = {
+const cartState = {
   items: [
     {
       _dbId: 'id-1',
@@ -70,3 +70,5 @@ export const cartState = {
   totalCount: 4,
   totalPrice: 3774,
 };
+
+export default cartState;

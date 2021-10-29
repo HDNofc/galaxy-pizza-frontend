@@ -2,7 +2,7 @@ import userEvent from '@testing-library/user-event';
 import { PizzaCartItem } from 'redux/cart/contracts/state';
 import renderWithThemeProvider from 'test-utils/render-with-theme-provider';
 import CartList from './cart-list';
-import { items } from './__mocks__/';
+import items from './__mocks__/';
 
 const defaultProps = {
   items: items as PizzaCartItem[],
