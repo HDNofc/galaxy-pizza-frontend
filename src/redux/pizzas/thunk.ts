@@ -2,7 +2,7 @@ import axiosWrapper from 'core/axios';
 import { Dispatch } from 'redux';
 
 import { setPizzas, setLoaded } from './action';
-import { SetLoadedActionInterface, SetPizzasActionInterface } from './action-types';
+import { SetLoadedActionInterface, SetPizzasActionInterface } from './contracts/action-types';
 
 export const fetchPizzas =
   () => async (dispatch: Dispatch<SetPizzasActionInterface | SetLoadedActionInterface>) => {

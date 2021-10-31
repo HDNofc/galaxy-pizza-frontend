@@ -4,7 +4,7 @@ import {
   SetLoadedActionInterface,
   SetPizzasActionInterface,
   PizzasActionsType,
-} from './action-types';
+} from './contracts/action-types';
 
 export const setPizzas = (payload: IPizza[]): SetPizzasActionInterface => ({
   type: PizzasActionsType.SET_PIZZAS,
