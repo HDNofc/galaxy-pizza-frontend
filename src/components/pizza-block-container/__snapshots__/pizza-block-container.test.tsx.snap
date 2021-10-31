@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PizzaBlockContainer> отображается корректно 1`] = `
+<article
+  class="PizzaBlock-sc-1lztd8-0 fFmVty"
+>
+  <div
+    class="ImagePlaceholder-sc-1lztd8-5 jnAVQG"
+  >
+    <div
+      class="ImagePlaceholder-sc-1lq6aod-0"
+    >
+      <div
+        class="Placeholder-sc-1lq6aod-1 eAAnAM"
+      >
+        <svg
+          class="pizza-placeholder-image"
+        >
+          pizza-placeholder.svg
+        </svg>
+      </div>
+      <div
+        class="Content-sc-1lq6aod-2 iLQvsD"
+      >
+        <picture
+          class="Picture-sc-1lztd8-3 dUIhhY"
+        >
+          <source
+            srcset="test-fat-crop-image.webp"
+            type="image/webp"
+          />
+          <img
+            alt=""
+            class="Image-sc-1lztd8-4 dvOTyR"
+            src="test-fat-crop-image.jpg"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+  <div
+    class="PizzaInfo-sc-1lztd8-7 kExtID"
+  >
+    <div
+      class="Category-sc-1lztd8-10 ZbJpL"
+    >
+      <svg>
+        hot.svg
+      </svg>
+    </div>
+    <h2
+      class="Title-sc-1lztd8-1 iIWbhI"
+    >
+      Большая бонанза
+    </h2>
+    <p
+      class="Description-sc-1lztd8-2 daMphU"
+    >
+      Оригинальная пицца с говядиной, ароматной ветчиной, двойной порцией хрустящего бекона, соусом "Барбекю", Моцареллой, мягким молодым сыром, томатами, жгучим перцем "Халапеньо"и луком
+    </p>
+    <div
+      class="RadioGroup-sc-4trp2q-0 RePgg"
+    >
+      <div
+        class="RadioGroupBox-sc-4trp2q-1 ffllcf"
+        style="width: 50%; left: 0%;"
+      />
+      <div
+        class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+      >
+        <input
+          checked=""
+          class="Input-sc-18y3buo-2 hKbzCX"
+          id="dough-14"
+          name="dough-test-id-1"
+          type="radio"
+          value="fat"
+        />
+        <label
+          class="Label-sc-18y3buo-1 loYKRY"
+          for="dough-14"
+        >
+          Традиционное
+        </label>
+      </div>
+      <div
+        class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+      >
+        <input
+          class="Input-sc-18y3buo-2 hKbzCX"
+          id="dough-15"
+          name="dough-test-id-1"
+          type="radio"
+          value="slim"
+        />
+        <label
+          class="Label-sc-18y3buo-1 ceQMEQ"
+          for="dough-15"
+        >
+          Тонкое
+        </label>
+      </div>
+    </div>
+    <div
+      class="Type-sc-1lztd8-8 bDHTSv"
+    >
+      <div
+        class="RadioGroup-sc-4trp2q-0 RePgg"
+      >
+        <div
+          class="RadioGroupBox-sc-4trp2q-1 ffllcf"
+          style="width: 25%; left: 0%;"
+        />
+        <div
+          class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+        >
+          <input
+            checked=""
+            class="Input-sc-18y3buo-2 hKbzCX"
+            id="size-1"
+            name="size-test-id-1"
+            type="radio"
+            value="23"
+          />
+          <label
+            class="Label-sc-18y3buo-1 loYKRY"
+            for="size-1"
+          >
+            23
+          </label>
+        </div>
+        <div
+          class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+        >
+          <input
+            class="Input-sc-18y3buo-2 hKbzCX"
+            id="size-2"
+            name="size-test-id-1"
+            type="radio"
+            value="30"
+          />
+          <label
+            class="Label-sc-18y3buo-1 ceQMEQ"
+            for="size-2"
+          >
+            30
+          </label>
+        </div>
+        <div
+          class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+        >
+          <input
+            class="Input-sc-18y3buo-2 hKbzCX"
+            id="size-3"
+            name="size-test-id-1"
+            type="radio"
+            value="35"
+          />
+          <label
+            class="Label-sc-18y3buo-1 ceQMEQ"
+            for="size-3"
+          >
+            35
+          </label>
+        </div>
+        <div
+          class="RadioGroupField-sc-18y3buo-0 dsLCSU"
+        >
+          <input
+            class="Input-sc-18y3buo-2 hKbzCX"
+            id="size-4"
+            name="size-test-id-1"
+            type="radio"
+            value="40"
+          />
+          <label
+            class="Label-sc-18y3buo-1 ceQMEQ"
+            for="size-4"
+          >
+            40
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ProductPurchase-sc-1lztd8-9 czSRRl"
+    >
+      <button
+        class="Button-sc-1fut0te-0 kDjXIb"
+        type="button"
+      >
+        <span
+          class="Text-sc-1fut0te-1"
+        >
+          В корзину
+        </span>
+      </button>
+      <span
+        class="Price-sc-1lztd8-6 fgXguJ"
+      >
+        459 ₽
+      </span>
+    </div>
+  </div>
+</article>
+`;

@@ -16,7 +16,7 @@ export type IPizzaDoughTypes = 'fat' | 'slim';
 export type IPizzaCrustTypes = 'none' | 'cheese' | 'sausage';
 
 export type IPizzaDough = {
-  [key in IPizzaCrustTypes]: {
+  [key in IPizzaCrustTypes]?: {
     sizes: number[];
     price: number[];
   };

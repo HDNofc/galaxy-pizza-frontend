@@ -71,11 +71,11 @@ const PizzaBlockContainer = ({ pizzaItem }: Props): React.ReactElement => {
 
         pizzaDataWithRadioId[type as IPizzaDoughTypes][crust as IPizzaCrustTypes].sizes =
           getRadioFormatItems({
-            items: objectType[crust as IPizzaCrustTypes].sizes,
+            items: objectType[crust as IPizzaCrustTypes]!.sizes,
             prefix: 'size-',
           });
 
-        pizzaDataWithRadioId[type][crust].price = objectType[crust as IPizzaCrustTypes].price;
+        pizzaDataWithRadioId[type][crust].price = objectType[crust as IPizzaCrustTypes]!.price;
       }
     }
 
@@ -160,7 +160,6 @@ const PizzaBlockContainer = ({ pizzaItem }: Props): React.ReactElement => {
     const pizzaToCartObject = {
       _dbId: _id,
       cartId: uniqueId('cart-'),
-
       name,
       description,
       price: currentPrice,
