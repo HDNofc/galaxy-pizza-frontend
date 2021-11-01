@@ -2,7 +2,7 @@ import { IPizzasInitialState } from 'redux/store/types';
 import { PizzasAction } from './action';
 import { PizzasActionsType } from './contracts/action-types';
 
-const initialState: IPizzasInitialState = {
+export const initialState: IPizzasInitialState = {
   items: [],
   isLoaded: false,
 };
