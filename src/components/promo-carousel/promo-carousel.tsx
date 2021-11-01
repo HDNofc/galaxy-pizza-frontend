@@ -8,7 +8,14 @@ import * as S from './promo-carousel.styles';
 interface Props {
   items: {
     id: string;
-    src: string;
+    jpg: {
+      x1: string;
+      x2: string;
+    };
+    webp: {
+      x1: string;
+      x2: string;
+    };
     alt?: string;
   }[];
 }
@@ -63,7 +70,10 @@ const PromoCarousel = ({ items }: Props): React.ReactElement => {
         {items.map((slide) => (
           <SwiperSlide key={slide.id}>
             <S.SlideContainer>
-              <S.SlideImage src={slide.src} alt={slide.alt} />
+              <S.Picture>
+                <source type="image/webp" srcSet={`${slide.webp.x1} 1x, ${slide.webp.x2} 2x`} />
+                <S.SlideImage src={slide.jpg.x1} srcSet={`${slide.jpg.x2} 2x`} alt={slide.alt} />
+              </S.Picture>
             </S.SlideContainer>
           </SwiperSlide>
         ))}

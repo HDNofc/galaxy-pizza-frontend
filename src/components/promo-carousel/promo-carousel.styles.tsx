@@ -76,3 +76,5 @@ export const SlideImage = styled.img`
     max-height: 400px;
   }
 `;
+
+export const Picture = styled.picture``;
