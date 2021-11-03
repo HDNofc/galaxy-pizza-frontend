@@ -43,7 +43,7 @@ const Cart = (): React.ReactElement => {
         <S.Title>
           Корзина <S.CartTotalCount>({totalCount})</S.CartTotalCount>
         </S.Title>
-        <S.ClearCartButton text="очистить" link onClick={onClearCartClick} />
+        {items.length > 0 && <S.ClearCartButton text="очистить" link onClick={onClearCartClick} />}
       </S.Header>
 
       {items.length > 0 ? (

@@ -26,7 +26,9 @@ const OrderTemplate = ({
           <S.Title>
             Корзина <S.CartTotalCount>({totalCount})</S.CartTotalCount>
           </S.Title>
-          <S.ClearCartButton as={Button} text="очистить" link onClick={onClearCartClick} />
+          {totalPrice > 0 && (
+            <S.ClearCartButton as={Button} text="очистить" link onClick={onClearCartClick} />
+          )}
         </S.Header>
 
         <S.Body>{cartList}</S.Body>
