@@ -1,4 +1,4 @@
-name: Linters and Test
+name: Linters and Tests
 
 on:
   push:
