@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# Galaxy Pizza Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Linters and Tests](https://github.com/HDNofc/galaxy-pizza-frontend/actions/workflows/main.yaml/badge.svg)](https://github.com/HDNofc/galaxy-pizza-frontend/actions/workflows/main.yaml)
+[![codecov](https://codecov.io/gh/HDNofc/galaxy-pizza-frontend/branch/master/graph/badge.svg?token=F4P7ZQ8TI5)](https://codecov.io/gh/HDNofc/galaxy-pizza-frontend)
 
-## Available Scripts
+Это SPA-приложение, по заказу и доставке пиццы по солнечной системе.
+Получение товаров из mongoDB, фильтрация по списку товаров, корзина, выбор планеты для доставки.
 
-In the project directory, you can run:
+Для быстрого начала разработки использован [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm start`
+## Технологии
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- TypeScript
+- React
+- Redux
+- Styled Components
+- React Testing Library
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Запуск приложения
 
-### `npm test`
+### С использованием [Docker](https://www.docker.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `docker` и `docker-compose` должны быть установлены
+- `npm i` - установка зависимостей
+- `npm run docker:dev` - запуск dev-сервера
 
-### `npm run build`
+### Без использования Docker
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `npm i` - установка зависимостей
+- `npm start` - запуск dev-сервера
+- `npm test` - запуск unit-тестов
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Серверное API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Для полноценной локальной разработки необходима [серверная часть](https://github.com/HDNofc/galaxy-pizza-backend)
 
-### `npm run eject`
+## Качество кода
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Eslint
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- стандартный Eslint-конфиг Create React App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Prettier
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- форматирование кода
 
-## Learn More
+### Stylelint
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- стандартный конфиг `stylelint-config-standard`
+- сортировка правил `stylelint-config-rational-order`
+- конфиг для Styled Components `stylelint-config-styled-components`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Lint-staged и Husky
+
+Содержимое каждого коммита проверяется на соответствие правилам Eslint, Stylelint и форматированию Prettier
+
+## CI
+
+Используется [Github Actions](https://github.com/HDNofc/galaxy-pizza-frontend/actions)
+
+При пуше в ветку `master` выполняется:
+
+- проверка на качество кода
+- запуск unit-тестов
+- отправка отчета на codecov
+
+## Deploy
+
+В качество площадки используется [Heroku](https://www.heroku.com/)
